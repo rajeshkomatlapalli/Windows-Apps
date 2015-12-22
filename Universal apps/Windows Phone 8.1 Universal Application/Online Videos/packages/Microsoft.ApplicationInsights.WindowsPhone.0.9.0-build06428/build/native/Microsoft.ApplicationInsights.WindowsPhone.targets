@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CopyApplicationInsightsConfig" BeforeTargets="CopyFilesToOutputDirectory">
+    <!-- Ensure that we're copying the file to our output (needed for Native projects) -->
+    <MakeDir Directories="$(TargetDir)"
+             ContinueOnError="true" />
+    <Copy DestinationFolder="$(TargetDir)"
+          SourceFiles="$(ProjectDir)\ApplicationInsights.config"
+          ContinueOnError="true"
+          OverwriteReadOnlyFiles="true"
+          SkipUnchangedFiles="false" />
+  </Target>
+    
+  <Target Name="EnableF5" AfterTargets="CopyFilesToOutputDirectory" BeforeTargets="_ComputeAppxPackagePayload" Condition=" ('$(BuildingInsideVisualStudio)' == 'true') AND ('$(Configuration)' == 'Debug') AND (Exists('$(TargetDir)ApplicationInsights.config')) ">
+    <XmlPoke Namespaces="&lt;Namespace Prefix='ai' Uri='http://schemas.microsoft.com/ApplicationInsights/2013/Settings'/&gt;"
+             XmlInputPath="$(TargetDir)\ApplicationInsights.config"
+             Query="/ai:ApplicationInsights/ai:TelemetryChannel/ai:DeveloperMode"
+             Value="true"/>
+  </Target>
+
+  <Target Name="PackageModifiedConfig" AfterTargets="_GenerateAppxPackageRecipe" Condition=" ('$(BuildingInsideVisualStudio)' == 'true') AND ('$(Configuration)' == 'Debug') AND (Exists('$(TargetDir)\$(ProjectName).build.appxrecipe')) ">
+    <UpdateAppxRecipe RecipeFile="$(TargetDir)\$(ProjectName).build.appxrecipe"
+                      ConfigFileProjectPath="$(MSBuildProjectDirectory)\ApplicationInsights.config"
+                      ConfigFileTargetPath="$(TargetDir)ApplicationInsights.config"/>
+  </Target>
+
+  <UsingTask TaskName="UpdateAppxRecipe" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v12.0.dll">
+    <ParameterGroup>
+      <RecipeFile ParameterType="System.String" Required="true" />
+      <ConfigFileProjectPath ParameterType="System.String" Required="true" />
+      <ConfigFileTargetPath ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Reference Include="System.Xml"/>
+      <Using Namespace="System.Xml" />
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+            XmlDocument doc = new XmlDocument();
+            doc.Load(RecipeFile);
+            XmlNamespaceManager xmlnsManager = new System.Xml.XmlNamespaceManager(doc.NameTable);
+            xmlnsManager.AddNamespace("appx", "http://schemas.microsoft.com/developer/msbuild/2003");
+
+            string match = string.Format("//appx:Project/appx:ItemGroup/appx:AppxPackagedFile[@Include='{0}']/@Include", ConfigFileProjectPath);
+            XmlAttribute includeConfig = (XmlAttribute)doc.SelectSingleNode(match, xmlnsManager);
+            if (includeConfig != null)
+            {
+                includeConfig.Value = ConfigFileTargetPath;
+            }
+            doc.Save(RecipeFile);
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+</Project>

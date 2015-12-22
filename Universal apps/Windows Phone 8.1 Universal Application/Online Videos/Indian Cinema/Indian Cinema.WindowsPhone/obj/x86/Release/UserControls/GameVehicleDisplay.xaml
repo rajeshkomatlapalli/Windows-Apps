@@ -1,0 +1,37 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="OnlineVideos.UserControls.GameVehicleDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"                            >
+
+    <Grid x:Name="LayoutRoot">
+        <ListBox x:ConnectionId='2' x:Name="lbxVehicle"  Grid.Row="0"                                                Foreground="White">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel Margin="10,12,0,0" Height="130"  Orientation="Horizontal" VerticalAlignment="Top">
+                        <Image  x:Name="imgMovie" Source="{Binding Image}" VerticalAlignment="Top" Width="100" Height="130" />
+                        <StackPanel  Margin="24,-12,0,0" Orientation="Vertical" VerticalAlignment="Top">
+                            <TextBlock Text="{Binding Name}"  FontSize="36" Margin="0,0,0,10" TextWrapping="Wrap" Width="250"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <!--<toolkit:PerformanceProgressBar VerticalAlignment="Top" x:Name="MyProgressBar1" Tag="{Binding Link}"  
+                                                 IsIndeterminate="False"  Width="450"  Background="Black" Foreground="Red" HorizontalAlignment="Left">
+        </toolkit:PerformanceProgressBar>-->
+        <ProgressBar VerticalAlignment="Top" x:Name="MyProgressBar1" Tag="{Binding Link}"
+                     IsIndeterminate="False"  Width="450"  Background="Black" Foreground="Red" HorizontalAlignment="Left"></ProgressBar>
+        <Canvas>
+            <TextBlock Canvas.Top="200" Canvas.Left="80" FontSize="28" x:Name="tblkVehicle" Visibility="Collapsed"/>
+        </Canvas>
+
+    </Grid>
+</UserControl>
+

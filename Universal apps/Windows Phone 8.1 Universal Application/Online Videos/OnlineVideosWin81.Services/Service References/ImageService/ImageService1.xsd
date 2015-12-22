@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ImageService" />
+  <xs:element name="SendImageBytesToApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendImageBytesToAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ImageService" minOccurs="0" name="SendImageBytesToAppResult" nillable="true" type="q1:savingImgBytes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPovitImageBytesToApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImagePovitName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPovitImageBytesToAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ImageService" minOccurs="0" name="SendPovitImageBytesToAppResult" nillable="true" type="q2:savingImgBytes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPeopleImageBytesToApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPeopleImageBytesToAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ImageService" minOccurs="0" name="SendPeopleImageBytesToAppResult" nillable="true" type="q3:savingImgBytes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPeoplePanorImageBytesToApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPeoplePanorImageBytesToAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ImageService" minOccurs="0" name="SendPeoplePanorImageBytesToAppResult" nillable="true" type="q4:savingImgBytes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGalleryImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGalleryImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ImageService" minOccurs="0" name="GetGalleryImagesResult" nillable="true" type="q5:ArrayOfsavingImgBytes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

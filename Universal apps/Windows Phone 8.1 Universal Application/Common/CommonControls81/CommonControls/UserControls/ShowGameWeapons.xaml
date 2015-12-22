@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.ShowGameWeapons"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="#424145" Margin="0,0,0,0" >
+        <ProgressRing x:Name="progressbar" Width="50" Height="70" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+        <GridView x:Name="lstvwwapons"  SelectionChanged="lstvwwapons_SelectionChanged_1" Height="540" >
+            <GridView.ItemTemplate>
+                <DataTemplate >
+                    <Grid HorizontalAlignment="Left" Height="270" Width="250">
+                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                            <Image Source="{Binding Image}"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Bottom" Background="#3d3d3d">
+                            <TextBlock Text="{Binding Name}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" TextWrapping="Wrap" TextTrimming="WordEllipsis" FontWeight="Bold" Height="45" Margin="15,10,10,0"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <!--<VariableSizedWrapGrid  ItemHeight="115"  Orientation="Horizontal" Margin="90,0,20,10"  MaximumRowsOrColumns="10"/>-->
+                    <WrapGrid MaximumRowsOrColumns="2" VerticalChildrenAlignment="Top" Margin="0,0,0,10" ItemHeight="260" ItemWidth="260" HorizontalChildrenAlignment="Center" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+        <TextBlock   Width="400" Height="50"   x:Name="txtmsg" Text="No weapons available"  FontSize="30"   Foreground="White" Margin="-40,100,0,10" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

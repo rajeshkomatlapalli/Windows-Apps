@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="OnlineMovies.UserControls.AddQuizPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:RatingControl="using:JISoft.RatingControl"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="gridpopup" Background="#424542" Opacity="1" Height="350" Width="350"  VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="20,40,0,0">
+            <TextBlock x:Name="tbktitle" Text="Quiz Name" Margin="10,0,0,0" FontFamily="Segoe WP" FontSize="23" Foreground="{StaticResource PhoneForegroundBrush}" ></TextBlock>
+            <TextBox x:Name="tbxquizname"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="20,0,0,0">
+            <TextBlock x:Name="tblkrating" Text="Rating" Margin="10,0,0,0" FontFamily="Segoe WP" FontSize="26" Foreground="{StaticResource PhoneForegroundBrush}" ></TextBlock>
+            <RatingControl:Rating Name="rate" Background="#424542" HorizontalAlignment="Left" Margin="5,20,0,0" RatingItemCount="5" AllowSelectingZero="True" Height="40" Width="200"></RatingControl:Rating>
+            <!--<inputtoolkit:StarRatingControl Name="rate" HorizontalAlignment="Left" Margin="5,20,0,0"  NumberOfStars="5" Height="50"  Width="200"  ></inputtoolkit:StarRatingControl>-->
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Image Name="save" Source="/Images/rating/appbar.check.rest.png" Height="40" Width="40" Margin="80,20,0,0" PointerPressed="save_PointerPressed" ></Image>
+            <Image Name="cancel" Source="/Images/rating/appbar.cancel.rest.png" Margin="80,20,0,0" Height="40" Width="40" PointerPressed="cancel_PointerPressed"></Image>
+        </StackPanel>
+    </Grid>
+</UserControl>

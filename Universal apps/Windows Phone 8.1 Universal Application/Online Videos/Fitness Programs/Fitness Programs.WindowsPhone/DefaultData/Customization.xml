@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<themes>
+  <ads misuid="33459" misappid="0c52101c-439c-428e-8995-fae3279be402" admobuid="a14dcb8d835e89d"/>
+  <detailPageTitles>
+    <d2 title="characters" />
+    <d4 title="videos"/>
+  </detailPageTitles>
+  <pivottitles>
+    <pt2 title="videos"/>
+    <pt3 title="characters"/>
+  </pivottitles>
+  <mailids from ="OnlineVideos@lartsoft.com" to="feedback.at@lartsoft.com"/>
+  <mln name="show"/>
+  <prmh d1="top shows"/>
+  <movieDetail visible="true" />
+  <Aboutlinks visible="false"/>
+  <!--<songs visible="false"/>-->
+  <!--<movies visible="false"/>-->
+  <chapters visible="false"/>
+  <!--<dtailsongs visible="false"/>-->
+  <!--<dtailcast visible="true"/>-->
+  <readMore Title="more shows"/>
+  <title visible="true"/>
+  <pvtmsg msg="no videos avaliable"/>
+  <!--<DetailPage visible="false" />-->
+  <!--<CricketDetails visible="false"/>-->
+  <ContextMenu HideTitle="Hide Series" ShowTitle="Show Series" MovieListTitle="HIDE SHOWS"/>
+  <productid id="38889166-f962-e011-81d2-78e7d1fa76f8"/>
+  <emailcotask subject="Kids Tv App"/>
+  <!--<CategoryPvt visible="false" Title="shows"></CategoryPvt>-->
+  <!--<dtailcheat visible="false"/>-->
+  <downloadtheme visible="false"></downloadtheme>
+  <canvasmargin value="120, 40, 0, 0"/>
+  <textblockmargin value="-120,-55,0,0"/>
+  <textblockmargin1 value="-90,-55,0,0"/>
+  <!--<castpnm visible="true"/>-->
+  <imagemargin value="55,15,0,0"/>
+  <textcolor value="false"/>
+  <AdVisible visible="True"/>
+  <!--<dtailchapter visible="false"/>-->
+  <People Exists="True"/>
+  <PeoplePanorama Exists="True"/>
+  <!--<ratingsongs Exists="false" songratetitle="rate this song" movieratetitle="rate this show"/>-->
+  <AboutUsUpgrade visible="true"/>
+  <Upgrade Exists="true" upgrademessage="Upgrade the app to Kids TV Pro and watch all the shows Ad free" upgradelink="zune://navigate/?appID=cc79026c-054d-4ae6-9420-330993d809fc"/>
+
+</themes>

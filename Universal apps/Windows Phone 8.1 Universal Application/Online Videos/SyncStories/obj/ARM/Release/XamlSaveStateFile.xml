@@ -1,0 +1,10 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\syncstories\obj\arm\release\intermediatexaml\syncstories.dll" HashGuid="87c3a5cb-c93a-fa20-8d9e-324c6eef60e7" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\live\v5.6\windows store app xaml\references\commonconfiguration\neutral\microsoft.live.dll" HashGuid="129ce77c-af09-9d5d-b95e-bf89af6739c7" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\common.library\bin\release\common.library.dll" HashGuid="bf033f70-b4ed-5972-db09-acc61f380d49" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.common\bin\release\onlinevideos.common.dll" HashGuid="d90bd996-46e6-fd04-73f8-b79ca46108ec" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.entities\bin\release\onlinevideos.entities.dll" HashGuid="a3f002c9-553d-1954-bb47-f6ae2be68de2" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.sqlite\bin\release\onlinevideos.sqlite.dll" HashGuid="ebd27251-ff08-7f63-ecca-790987ae2bad" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -1,0 +1,507 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.MemoryGame1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    Loaded="UserControl_Loaded"
+    xmlns:conv="using:OnlineVideosCardGame"
+    xmlns:helper="using:OnlineVideosCardGame"
+    DataContext="{Binding Main, Source={StaticResource Locator}}"
+    >
+    
+    <UserControl.Resources>
+        <Style x:Key="MemoryRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid Background="#00000000">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="Unchecked" GeneratedDuration="0:0:0.2" To="Checked">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <ElasticEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                        </VisualTransition>
+                                        <VisualTransition From="Checked" GeneratedDuration="0:0:0.2" To="Unchecked">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <ElasticEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="0.8" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Margin="-4" RadiusY="10" RadiusX="10" Stroke="#FFF9F5F5" StrokeThickness="2" Width="108" Height="42"/>
+                            <Rectangle Fill="White" Opacity="0.48" RadiusY="10" RadiusX="10" Width="100" Height="34"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="CardToggleButtonStyle" TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid x:Name="grid" Background="#00000000">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="Unchecked" GeneratedDuration="0:0:0.2" To="Checked">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <ElasticEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0:0:0.2" To="-90" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="imgBack" d:IsOptimized="True"/>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgBack">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="Collapsed">
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="imgFore">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="90"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgFore">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="Visible">
+
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="Checked" GeneratedDuration="0:0:0.4" To="Unchecked">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <ElasticEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0:0:0.2" To="90" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="imgFore" d:IsOptimized="True"/>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgFore">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="Collapsed">
+
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgBack">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="Visible">
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="imgBack">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-90"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgBack">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="False">
+
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgFore">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="imgFore" Source="{Binding Image}" Visibility="{Binding imgfored}" Height="{Binding gameheight}" Width="{Binding gamewidth}" Stretch="Fill">
+                                <Image.Projection>
+                                    <PlaneProjection/>
+                                </Image.Projection>
+                            </Image>
+                            <Canvas>
+                                <Canvas.Resources>
+                                    <BeginStoryboard x:Name="new" >
+                                        <Storyboard x:Name="EaseSB">
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" RepeatBehavior="Forever" Storyboard.TargetName="imgBack">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding storyboardfromz}"/>
+                                                <EasingDoubleKeyFrame KeyTime="00:00:0.2" Value="{Binding storyboardtoz}"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" RepeatBehavior="Forever" Storyboard.TargetName="imgBack">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding storyboardfromy}"/>
+                                                <EasingDoubleKeyFrame KeyTime="00:00:0.2" Value="{Binding storyboardtoy}"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" RepeatBehavior="Forever" Storyboard.TargetName="imgBack">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding storyboardfromx}"/>
+                                                <EasingDoubleKeyFrame KeyTime="00:00:0.2" Value="{Binding storyboardtox}"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Canvas.Resources>
+                                <Image x:Name="imgBack"  Source="{Binding backimage}" Height="{Binding gameheight}" Width="{Binding gamewidth}">
+                                    <Image.Projection>
+                                        <PlaneProjection/>
+                                    </Image.Projection>
+                                </Image>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <FontFamily x:Key="GameFont">/Fonts/HEADOH_.TTF#Headline One</FontFamily>
+        <Style x:Key="CardListBoxItemStyle" TargetType="GridViewItem">
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="TabNavigation" Value="Local"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GridViewItem">
+                        <Grid Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="contentPresenter"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="SelectionStates">
+                                    <VisualState x:Name="Unselected"/>
+                                    <VisualState x:Name="Selected"/>
+                                    <VisualState x:Name="SelectedUnfocused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="LayoutStates">
+                                    <VisualState x:Name="AfterLoaded"/>
+                                    <VisualState x:Name="BeforeLoaded"/>
+                                    <VisualState x:Name="BeforeUnloaded"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MemoryListBoxStyle" TargetType="GridView">
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Background" Value="#FFFFFFFF"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="TabNavigation" Value="Once"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GridView">
+                        <ItemsPresenter Margin="0" d:LayoutOverrides="Width, Height"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MemoryButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle Fill="#FFFFFFFF" Opacity="0.48" RadiusY="10" RadiusX="10"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <DataTemplate x:Key="MemoryCardDataTemplate">
+            <Grid Width="{Binding Main.CardSize,Source={StaticResource Locator}}" Height="{Binding Main.CardSize,Source={StaticResource Locator}}" Background="#00000000" Margin="{Binding gamethick}">
+                <ToggleButton x:Name="toggle" HorizontalAlignment="Left" ClickMode="Press" Unchecked="ToggleButton_Unchecked_1" Checked="ToggleButton_Checked_1" Style="{StaticResource CardToggleButtonStyle}" VerticalAlignment="Top" IsChecked="{Binding Upside,Mode=TwoWay}" Visibility="{Binding Solved}" Padding="8"></ToggleButton>
+            </Grid>
+        </DataTemplate>
+
+        <!--<ResourceDictionary x:Key="style">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx://OnlineVideosCardGame/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
+        
+        <!--<memoria_2_Converter:DifficultyConverter x:Key="DifficultyConverter"/>-->
+        <conv:TimeConverter x:Key="TimeConverter"/>
+        
+        <Storyboard x:Name="beginnerAnim">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="StartGrid">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="Visible">
+
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="Collapsed">
+
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="StartGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-410"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    
+    <Canvas x:Name="LayoutRoot" Background="Transparent">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition From="MenuState" GeneratedDuration="0:0:0.6" To="GameState">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <ElasticEase EasingMode="EaseInOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                    <VisualTransition From="GameState" GeneratedDuration="0:0:0.6" To="EndState">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <QuinticEase EasingMode="EaseIn"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="EndGrid">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="EndGrid">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="EndGrid">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="-405"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="EndGrid">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                    <VisualTransition From="EndState" GeneratedDuration="0:0:0.6" To="MenuState">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <BackEase EasingMode="EaseInOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" To="90" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="EndGrid" d:IsOptimized="True"/>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="EndGrid">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="Collapsed">
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                    <VisualTransition From="PauseState" GeneratedDuration="0:0:0.6" To="GameState">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <ElasticEase EasingMode="EaseInOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PauseGrid">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-67.4835"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-405"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PauseGrid">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.833374"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PauseGrid">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="Visible">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="Collapsed">
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                    <VisualTransition From="PauseState" GeneratedDuration="0:0:0.6" To="MenuState">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <BackEase EasingMode="EaseInOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" To="90" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PauseGrid" d:IsOptimized="True"/>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PauseGrid">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="Collapsed">
+
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+
+                            <DoubleAnimation Duration="0:0:0.3" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PauseGrid" d:IsOptimized="True"/>
+
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="MenuState">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="GameState">
+                    <Storyboard>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="EndGrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="EndState">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="EndGrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="PauseState">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PauseGrid">
+                            <DiscreteObjectKeyFrame KeyTime="0"  Value="Visible">
+
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cardListBox">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <GridView x:Name="cardListBox"  Style="{StaticResource MemoryListBoxStyle}" 
+			ItemsSource="{Binding MemoryCardList}" ItemTemplate="{StaticResource MemoryCardDataTemplate}" ItemContainerStyle="{StaticResource CardListBoxItemStyle}"  VerticalAlignment="Top" Canvas.Left="20" Canvas.Top="60" d:LayoutOverrides="Width, HorizontalMargin" Padding="0" Visibility="Visible">
+            <!--d:LayoutOverrides="Width, HorizontalMargin"-->
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid MaximumRowsOrColumns="{Binding numberofrows}" ItemHeight="{Binding gameheight}"  ItemWidth="{Binding gamewidth}"  Orientation="Horizontal"></VariableSizedWrapGrid>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+
+        <Grid x:Name="EndGrid" RenderTransformOrigin="0.5,0.5" Width="380"  Height="380" Canvas.Left="20" Canvas.Top="100" d:LayoutOverrides="Width, Height" Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.Projection>
+                <PlaneProjection/>
+            </Grid.Projection>
+
+            <Rectangle Fill="Black" Stroke="Black"  RadiusX="20" RadiusY="20" d:LayoutOverrides="Margin"/>
+            <TextBlock x:Name="imagewintext" Text="Congratulations!"  FontSize="38" Width="280" VerticalAlignment="Top" Height="100"  Margin="-10,25,0,0" Visibility="Visible" Foreground="White"></TextBlock>
+
+            <Image x:Name="winimage" HorizontalAlignment="Left" Margin="15,220,0,0"  Source="/Images/Cup.png" Stretch="UniformToFill"  Height="80" Width="80" Visibility="Visible" ></Image>
+            <Button x:Name="btnNewGame" Visibility="Visible" Click="btnNewGame_Click_1" Margin="120,230,0,0"  Style="{StaticResource MemoryButtonStyle}" Width="180" FontSize="30" Background="#FFE5ECF1" Foreground="White" ClickMode="Press"  Content=" New game " Height="80"  FontFamily="{StaticResource GameFont}">
+                <Button.Projection>
+                    <PlaneProjection/>
+                </Button.Projection>
+            </Button>
+            <Canvas Height="35" x:Name="endcanvas" Margin="0,120,0,0" VerticalAlignment="Top" Width="270" Visibility="Visible">
+                <TextBlock TextWrapping="Wrap" Text="Moves :" FontSize="28" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="-13" Canvas.Top="1"/>
+                <TextBlock TextWrapping="Wrap"  Text="{Binding MoveCounter}" FontSize="28" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="95" Canvas.Top="1"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding TimeCounter, Converter={StaticResource TimeConverter}}" FontSize="28" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="225"/>
+                <TextBlock TextWrapping="Wrap" Text="Time :" FontSize="28"  Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="140"/>
+            </Canvas>
+        </Grid>
+
+        <Grid x:Name="PauseGrid" RenderTransformOrigin="0.5,0.5" Width="350" Height="300" Canvas.Left="65" Canvas.Top="234" d:LayoutOverrides="Width, Height" Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.Projection>
+                <PlaneProjection/>
+            </Grid.Projection>
+            <Rectangle Fill="White" Stroke="Black" Opacity="0.18" RadiusX="20" RadiusY="20" d:LayoutOverrides="Margin"/>
+            <Button x:Name="btnResume" Margin="0,0,15,64" Click="btnResume_Click_1" Style="{StaticResource MemoryButtonStyle}" Width="145" FontSize="32" Background="#FFE5ECF1" Foreground="White"  Content="Resume" Height="80" VerticalAlignment="Bottom" FontFamily="{StaticResource GameFont}" HorizontalAlignment="Right">
+
+                <Button.Projection>
+                    <PlaneProjection/>
+                </Button.Projection>
+            </Button>
+            <Button x:Name="btnPNew" Click="btnPNew_Click_1" Margin="15,0,0,64" Style="{StaticResource MemoryButtonStyle}" Width="145" FontSize="32" Background="#FFE5ECF1" Foreground="White"  Content="New game" Height="80" VerticalAlignment="Bottom" FontFamily="{StaticResource GameFont}" HorizontalAlignment="Left">
+                <Button.Projection>
+                    <PlaneProjection/>
+                </Button.Projection>
+            </Button>
+            <Canvas Height="35" Margin="0,59,0,0" VerticalAlignment="Top" Width="270">
+                <TextBlock TextWrapping="Wrap" Text="Moves:" FontSize="32" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Top="1"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding MoveCounter}" FontSize="32" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="94" Canvas.Top="1"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding TimeCounter, Converter={StaticResource TimeConverter}}" FontSize="32" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="225"/>
+                <TextBlock TextWrapping="Wrap" Text="Time:" FontSize="32" Foreground="White" FontFamily="{StaticResource GameFont}" Canvas.Left="156"/>
+            </Canvas>
+        </Grid>
+    </Canvas>
+</UserControl>

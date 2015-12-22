@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="de01fd8d-703e-4c42-b720-fa7edf422f51" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OnlineVideoService.xsd" MetadataType="Schema" ID="e8ae74fe-b726-45b2-99a0-d2e985ed2ca4" SourceId="1" SourceUrl="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OnlineVideoService.disco" MetadataType="Disco" ID="b7dd6909-8135-49f0-abdb-5747b294abf4" SourceId="1" SourceUrl="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?disco" />
+    <MetadataFile FileName="OnlineVideoService1.xsd" MetadataType="Schema" ID="56994b16-1d5a-4b87-a6f1-a7d4f5c49774" SourceId="1" SourceUrl="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OnlineVideoService.wsdl" MetadataType="Wsdl" ID="323d35f2-7ae9-418d-82ef-9f5847ee9f8e" SourceId="1" SourceUrl="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?wsdl" />
+    <MetadataFile FileName="OnlineVideoService2.xsd" MetadataType="Schema" ID="e05107b1-d587-4e92-bf36-2d57ee792d88" SourceId="1" SourceUrl="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="CommonControls.ContactUs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="ContGrid" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="LayoutRoot" Background="Transparent" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal">
+                <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" IsTapEnabled="True" Tapped="imgTitle_Tapped"/>
+                <TextBlock x:Name="PageTitle" Text="Feedback" Margin="15,18,0,2" Style="{StaticResource AboutTitleStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,0">
+                <Image Source="Images/facebook.png" Name="facebookImage" Height="35" Width="35" Margin="20,25,50,10" IsTapEnabled="True" Tapped="facebookImage_Tapped"/>
+                <TextBlock x:Name="fb" Text="facebook" Margin="0,20,0,0" IsTapEnabled="True" Tapped="fb_Tapped" Style="{StaticResource AboutUsMenuItemText}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,15,0,0">
+                <Image Source="Images/twitter.png" Margin="20,25,50,0" Name="twitter" Height="35" Width="35" IsTapEnabled="True" Tapped="twitter_Tapped"/>
+                <TextBlock x:Name="tw" Text="twitter" Margin="0,25,0,0" IsTapEnabled="True" Tapped="tw_Tapped" Style="{StaticResource AboutUsMenuItemText}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,15,0,0">
+                <Image  Source="Images/blog.png" Margin="20,25,50,0"  Name="blogger" Height="35" Width="35" IsTapEnabled="True" Tapped="blogger_Tapped"/>
+                <TextBlock x:Name="bg" Text="blog" Margin="0,25,0,0" IsTapEnabled="True" Tapped="bg_Tapped" Style="{StaticResource AboutUsMenuItemText}"/>                
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="0,15,0,0">
+                <Image  Source="Images/youtube.png" Margin="20,25,50,0"  Name="youtube" Height="35" Width="35" IsTapEnabled="True" Tapped="youtube_Tapped"/>
+                <TextBlock x:Name="yt" Text="youtube" Margin="0,25,0,0" IsTapEnabled="True" Tapped="yt_Tapped" Style="{StaticResource AboutUsMenuItemText}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="5" Orientation="Horizontal"  Margin="0,15,0,0">
+                <Image  Source="Images/email.png" Margin="20,25,50,0"   Name="SendFeedback" Height="35" Width="35" IsTapEnabled="True" Tapped="SendFeedback_Tapped"/>
+                <TextBlock x:Name="sfb" Text="send Feedback" Margin="0,25,0,0" IsTapEnabled="True" Tapped="sfb_Tapped" Style="{StaticResource AboutUsMenuItemText}"/>
+            </StackPanel>
+        </Grid>        
+        <UI:AdControl x:Name="AdContainer" Grid.Row="1"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+</Page>

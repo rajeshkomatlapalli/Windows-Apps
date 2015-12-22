@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3312974-2cf3-4f6f-8291-a31ef69ffb8e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://imageservice.lartsoft.com/ImageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImageService.xsd" MetadataType="Schema" ID="6b8bcec7-af4b-47cc-b1ea-ff11ed23dfa7" SourceId="1" SourceUrl="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImageService.wsdl" MetadataType="Wsdl" ID="839ff80a-59e1-4a03-80d1-5019320616d8" SourceId="1" SourceUrl="http://imageservice.lartsoft.com/ImageService.svc?wsdl" />
+    <MetadataFile FileName="ImageService.disco" MetadataType="Disco" ID="8effa059-3bb7-41ee-98c1-9c475ec1db6b" SourceId="1" SourceUrl="http://imageservice.lartsoft.com/ImageService.svc?disco" />
+    <MetadataFile FileName="ImageService1.xsd" MetadataType="Schema" ID="b2c43a83-7c41-4c34-9c9d-02976441a9a0" SourceId="1" SourceUrl="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImageService2.xsd" MetadataType="Schema" ID="33020f41-1e1c-45da-8b4c-6d9c3c427f5f" SourceId="1" SourceUrl="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

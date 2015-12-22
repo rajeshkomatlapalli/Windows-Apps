@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IImageService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://imageservice.lartsoft.com/ImageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ImageService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImageService_SendImageBytesToApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendImageBytesToApp" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendImageBytesToApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendImageBytesToAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPovitImageBytesToApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPovitImageBytesToApp" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPovitImageBytesToApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPovitImageBytesToAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPeopleImageBytesToApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPeopleImageBytesToApp" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPeopleImageBytesToApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPeopleImageBytesToAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPeoplePanorImageBytesToApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPeoplePanorImageBytesToApp" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_SendPeoplePanorImageBytesToApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPeoplePanorImageBytesToAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_GetGalleryImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGalleryImages" />
+  </wsdl:message>
+  <wsdl:message name="IImageService_GetGalleryImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGalleryImagesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IImageService">
+    <wsdl:operation name="SendImageBytesToApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImageService/SendImageBytesToApp" message="tns:IImageService_SendImageBytesToApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImageService/SendImageBytesToAppResponse" message="tns:IImageService_SendImageBytesToApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPovitImageBytesToApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImageService/SendPovitImageBytesToApp" message="tns:IImageService_SendPovitImageBytesToApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImageService/SendPovitImageBytesToAppResponse" message="tns:IImageService_SendPovitImageBytesToApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPeopleImageBytesToApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImageService/SendPeopleImageBytesToApp" message="tns:IImageService_SendPeopleImageBytesToApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImageService/SendPeopleImageBytesToAppResponse" message="tns:IImageService_SendPeopleImageBytesToApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPeoplePanorImageBytesToApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImageService/SendPeoplePanorImageBytesToApp" message="tns:IImageService_SendPeoplePanorImageBytesToApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImageService/SendPeoplePanorImageBytesToAppResponse" message="tns:IImageService_SendPeoplePanorImageBytesToApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGalleryImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImageService/GetGalleryImages" message="tns:IImageService_GetGalleryImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImageService/GetGalleryImagesResponse" message="tns:IImageService_GetGalleryImages_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IImageService" type="tns:IImageService">
+    <wsp:PolicyReference URI="#CustomBinding_IImageService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendImageBytesToApp">
+      <soap12:operation soapAction="http://tempuri.org/IImageService/SendImageBytesToApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPovitImageBytesToApp">
+      <soap12:operation soapAction="http://tempuri.org/IImageService/SendPovitImageBytesToApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPeopleImageBytesToApp">
+      <soap12:operation soapAction="http://tempuri.org/IImageService/SendPeopleImageBytesToApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPeoplePanorImageBytesToApp">
+      <soap12:operation soapAction="http://tempuri.org/IImageService/SendPeoplePanorImageBytesToApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGalleryImages">
+      <soap12:operation soapAction="http://tempuri.org/IImageService/GetGalleryImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImageService">
+    <wsdl:port name="CustomBinding_IImageService" binding="tns:CustomBinding_IImageService">
+      <soap12:address location="http://imageservice.lartsoft.com/ImageService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://imageservice.lartsoft.com/ImageService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

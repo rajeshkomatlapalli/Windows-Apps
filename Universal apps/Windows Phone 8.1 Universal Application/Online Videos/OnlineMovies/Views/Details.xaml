@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"  
+    xmlns:LART="using:OnlineVideos.UserControls"
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid x:Name="mainGrid" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="LayoutRoot" Margin="0,-15,0,0" Background="Transparent">
+            <Pivot x:Name="pvtMainDetails" SelectionChanged="pvtMainDetails_SelectionChanged">
+                <Pivot.Title>
+                    <StackPanel Orientation="Horizontal" Margin="0,-8,0,5">
+                        <Image Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgTitle" IsTapEnabled="True" Tapped="imgTitle_Tapped"/>
+                        <TextBlock x:Name="tblkVideosTitle" TextWrapping="NoWrap" Style="{StaticResource DetailPagePivotTitle}" />
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>
+                    white
+                </Pivot.Foreground>
+                <!--Pivot item one-->
+                <PivotItem x:Name="pvtitmDetail" Header="detail">
+                    <Grid x:Name="DetailGrid">
+                        <LART:ShowDescription x:Name="showDesc"></LART:ShowDescription>
+                    </Grid>
+                </PivotItem>                
+                <!--Pivot item Two-->
+                <PivotItem x:Name="pvtitmCast" Header="cast">
+                    <Grid x:Name="CastGrid">
+                        <LART:ShowCast x:Name="showcastList"></LART:ShowCast>
+                    </Grid>
+                </PivotItem>
+
+                <!--Pivot item three-->
+                <PivotItem x:Name="pvtitmChapters" Header="chapters">
+                    <Grid x:Name="chaptersGrid">
+                        <LART:ShowChapters x:Name="showChapterList"></LART:ShowChapters>
+                    </Grid>
+                </PivotItem>
+
+                <!--Pivot item four-->
+                <PivotItem x:Name="pvtitmSongs" Header="songs" >
+                    <Grid x:Name="SongsGrid">
+                        <LART:ShowVideos x:Name="VideoList"></LART:ShowVideos>
+                    </Grid>
+                </PivotItem>
+                
+                <!--Pivot item six-->
+                
+                <PivotItem x:Name="pvtitmAudio" Header="audio">
+                    <Grid x:Name="AudioGrid">
+                        <LART:ShowAudio x:Name="ShowAudioList"></LART:ShowAudio>
+                    </Grid>
+                </PivotItem>
+                
+                <!--Pivot item five-->
+                <PivotItem x:Name="pvtitmcomedy" Header="comedy" >
+                    <Grid x:Name="ComedyGrid">
+                        <LART:ShowComedy x:Name="ComedyList"></LART:ShowComedy>
+                    </Grid>
+                </PivotItem>
+                
+                <!--Pivot item seven-->
+                <PivotItem x:Name="pvtitmLirics" Header="lyrics">
+                    <Grid x:Name="LiricsGrid">
+                        <LART:Lyrics x:Name="showLyrics"></LART:Lyrics>
+                    </Grid>
+                </PivotItem>
+
+                <!--Pivot item eight-->
+                <PivotItem  Margin="0,-30,0,0" x:Name="gamepivot" Header="game" Foreground="White" >
+                    <Grid x:Name="GameGrid" Margin="-25,-40,0,0">
+                        <StackPanel Name="gamestk" >
+                            <LART:MemoryGame_1 x:Name="game"></LART:MemoryGame_1>
+                        </StackPanel>
+                    </Grid>
+                </PivotItem>
+            </Pivot>            
+            <ProgressBar
+            VerticalAlignment="Top"
+            x:Name="performanceProgressBar"/>
+        </Grid>        
+        <!--<StackPanel Name="adstaCast" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,0" >
+        </StackPanel>-->
+        <UI:AdControl 
+            x:Name="adstaCast" 
+            Grid.Row="1"
+            Height="70" 
+            Width="400"            
+            IsAutoRefreshEnabled="True"
+            />
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>            
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="ReShare" x:Name="Share" Click="Share_Click"/>
+                <AppBarButton Icon="Add" x:Name="btnadd" Label="add" Click="btnadd_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

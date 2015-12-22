@@ -1,0 +1,112 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.VideoFavorite_New"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+        <UserControl.Resources>
+            <Style x:Key="SampleContainerStyle" TargetType="GridViewItem">
+                <Setter Property="Width" Value="Auto"/>
+            </Style>
+        </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"  >
+
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="snap">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid x:Name="itemsgrid">
+            <ProgressRing x:Name="progressbar"  Style="{StaticResource DetailsPageProgressRing}"/>
+            <GridView x:ConnectionId='4' x:Name="lstvwsongs"                                                  Style="{StaticResource VideosGridHeight}" ItemContainerStyle="{StaticResource SampleContainerStyle}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:ConnectionId='5' Margin="5,10,0,0"  HorizontalAlignment="Center"                                         >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:ConnectionId='6' Style="{StaticResource ShowVideosImage}"  Source="{Binding ThumbnailImage}" Grid.Column="0"                                  />
+                            <Grid Grid.Column="1" Style="{StaticResource VideosTitleGrid}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" x:Name="tblkChapter" Text="{Binding Title}" Tag="{Binding Contextvalue}" Style="{StaticResource ShowVideosTitle}"/>
+                                <HyperlinkButton x:ConnectionId='7'                              Grid.Row="1" x:Name="tblkChapter1" Style="{StaticResource ShowVideosHyperLink}" Content="{Binding DownloadStatus}"/>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--<VariableSizedWrapGrid  ItemHeight="115"  Orientation="Horizontal" Margin="90,0,20,10"  MaximumRowsOrColumns="10"/>-->
+                        <WrapGrid  Style="{StaticResource videoswrpagrid}"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+            </GridView>
+            <TextBlock x:Name="txtmsg" Style="{StaticResource VideoFavoriteMessage}"  Text="No videos available" Visibility="Collapsed" />
+        </Grid>
+        <Grid Margin="0,0,0,0" Visibility="Collapsed" x:Name="snapgrid">
+            <ProgressRing x:Name="progressbarsnap" IsActive="True"  Style="{StaticResource ShowVideosSnapProgressRing}" />
+            <StackPanel>
+                <!--<ScrollViewer Height="600" VerticalScrollBarVisibility="Auto" ZoomMode="Disabled">-->
+                <ListView x:ConnectionId='1' x:Name="itemlistview"                                                   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,-20,0,-10"  HorizontalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:ConnectionId='2'  Height="90" Source="{Binding ThumbnailImage}"   Grid.Column="0"                                  >
+                                </Image>
+                                <TextBlock x:ConnectionId='3' Grid.Column="1" x:Name="tblkChapter"  Style="{StaticResource SnapShowVideosTextBlock}" Text="{Binding Title}" Tag="{Binding Contextvalue}"                                          />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--</ScrollViewer>-->
+                <TextBlock    x:Name="txtmsg1"  Style="{StaticResource NoDataMessage}"   Visibility="Collapsed"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
+

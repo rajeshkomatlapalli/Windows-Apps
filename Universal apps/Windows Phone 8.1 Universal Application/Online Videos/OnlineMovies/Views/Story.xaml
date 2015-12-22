@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.Story"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,5,0,0" Orientation="Horizontal">
+            <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+            <TextBlock x:Name="tblkVideosTitle" Text=""  Style="{StaticResource DetailPagePivotTitle}" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                <StackPanel x:Name="onl" Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock  Text="Description" Margin="0,10,0,0" FontSize="20"></TextBlock>
+                    <Image x:Name="onlinedescimg" Source="/Images/online.png" Margin="20,0,0,0" Height="40" Width="40" PointerPressed="onlinedescimg_PointerPressed"/>
+                    <Image x:Name="edit"  Source="/Images/PlayerImages/edit.png" Margin="25,0,0,0" Stretch="Fill" Height="40" Width="40" PointerPressed="edit_PointerPressed"/>
+                    <TextBlock x:Name="txtlength" Visibility="Visible" Margin="100,30,0,0" HorizontalAlignment="Right" Foreground="White" FontSize="20"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBox x:Name="tblkdes"  TextChanged="tblkdes_TextChanged_1"  Width="380" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="125" TextWrapping="Wrap" HorizontalAlignment="Left" ></TextBox>
+                    <TextBlock x:Name="txtlimit" Visibility="Collapsed" Margin="30,-5,0,0" Text="max text limit 150 characters" Foreground="Red" FontSize="20"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="15,20,0,0">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock 
+                        x:Name="localtblk" 
+                        Text="Image From Local" FontSize="18"/>
+                    <Image 
+                        x:Name="storylocalimg" 
+                        Visibility="Visible" 
+                        Stretch="Fill" 
+                        Source="/Images/fromlocal.png" 
+                        Height="200" 
+                        Width="160" 
+                        HorizontalAlignment="Left" 
+                        Margin="-5,15,0,0" 
+                        PointerPressed="storylocalimg_PointerPressed"/>
+                </StackPanel>
+                <StackPanel 
+                    Orientation="Vertical" 
+                    Margin="80,0,0,0">
+                    <TextBlock 
+                        x:Name="onlinetblk" 
+                        Text="Image From Online" 
+                        Margin="-40,0,0,0" FontSize="18"/>
+                    <Image 
+                        x:Name="storyonlineimg" 
+                        Stretch="Fill" 
+                        Visibility="Visible" 
+                        Source="/Images/fromonline.png" 
+                        Height="200" 
+                        Width="160" 
+                        HorizontalAlignment="Left" 
+                        Margin="-40,15,0,0" 
+                        PointerPressed="storyonlineimg_PointerPressed_1"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+ 
+            <UI:AdControl x:Name="adstackpl" Grid.Row="2"                       
+                      Height="80" IsAutoRefreshEnabled="True" Width="400"/>
+        
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Save" Label="save" x:Name="btnsave" Click="btnsave_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

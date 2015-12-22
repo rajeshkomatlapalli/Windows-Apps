@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D6848F0-1FB1-485E-8BD3-669208384B00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideosCardGame</RootNamespace>
+    <AssemblyName>OnlineVideosCardGame</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Content Include="Fonts\HEADOH_.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Converter\TimeConverter.cs" />
+    <Compile Include="GameInstance.cs" />
+    <Compile Include="GenericMessage!1.cs" />
+    <Compile Include="Helper\CallDatacontextMethodAction.cs" />
+    <Compile Include="ICleanup.cs" />
+    <Compile Include="IExecuteWithObject.cs" />
+    <Compile Include="IMessenger.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="MemoryViewModelLocator.cs" />
+    <Compile Include="MessageBase.cs" />
+    <Compile Include="Messenger.cs" />
+    <Compile Include="Model\AppState.cs" />
+    <Compile Include="Model\MemoryCard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyChangedMessage!1.cs" />
+    <Compile Include="PropertyChangedMessageBase.cs" />
+    <Compile Include="SilverlightSerializer.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="WeakAction!1.cs" />
+    <Compile Include="WeakAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Library\Common.Library.csproj">
+      <Project>{e5caa85f-49e8-4eed-a860-dc862780b5c2}</Project>
+      <Name>Common.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{e618fd1f-f7f8-42d3-a60e-878e6e49a224}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{d5bc68f8-6ee0-4eab-a650-39a5a0800509}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="Windows, Version=8.1" />
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

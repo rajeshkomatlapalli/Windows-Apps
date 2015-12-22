@@ -1,0 +1,163 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.VideoGamesDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid
+        x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        
+        <Grid
+            x:Name="LayoutRoot"
+            Grid.Row="0"
+            Background="Transparent">
+            
+            <Pivot
+                x:Name="pvtMainDetails">
+                <Pivot.Title>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0,0,0,0">
+                        <Image x:ConnectionId='1'
+                            Style="{StaticResource DetailPagePivotTitleImage}"
+                            x:Name="imgTitle"
+                                                                    />
+                        <TextBlock
+                            x:Name="tblkVideosTitle"
+                            Style="{StaticResource DetailPagePivotTitle}"/>
+                    </StackPanel>
+                </Pivot.Title>
+                
+                <PivotItem
+                    x:Name="pvtitmDetail"
+                    Header="detail">
+                    <Grid
+                        x:Name="DetailGrid">
+                        <LART:ShowDescription
+                            x:Name="showDesc"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="cheatpivot"
+                    Header="cheats"
+                    Foreground="White"
+                    Margin="0,-30,0,0">
+                    <Grid
+                        x:Name="cheatGrid">
+                        <LART:ShowCheatCode
+                            x:Name="showchetcode"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmSongs"
+                    Header="videos"
+                    Foreground="White">
+                    <Grid
+                        x:Name="showVideogrid">
+                        <LART:ShowVideos
+                            x:Name="VideosList"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmWeapons"
+                    Header="weapons"
+                    Foreground="White">
+                    <Grid
+                        x:Name="showWeapongrid">
+                        <LART:GameWeaponsDisplay
+                            x:Name="WeaponsList"/>
+                    </Grid>
+                </PivotItem>
+               
+                <PivotItem
+                    x:Name="pvtitmVehicle"
+                    Header="vehicles"
+                    Foreground="White">
+                    <Grid
+                        x:Name="showVehiclegrid">
+                        <LART:GameVehicleDisplay
+                            x:Name="VehicleList"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmCast"
+                    Header="characters"
+                    Foreground="White">
+                    <Grid
+                        x:Name="castgrid">
+                        <LART:ShowCast/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmmissions"
+                    Header="missions"
+                    Foreground="White">
+                    <Grid
+                        x:Name="missionsgrid">
+                        <!--<LART:GameMissionsDisplay/>-->
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmachievements"
+                    Header="achievements"
+                    Foreground="White">
+                    <Grid
+                        x:Name="achievementgrid">
+                        <!--<LART:VideoGameAchievements/>-->
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmacontrol"
+                    Header="controls"
+                    Foreground="White">
+                    <Grid
+                        x:Name="controlsgrid">
+                        <!--<LART:VideoGameControls/>-->
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="gamepivot"
+                    Header="gamepivot"
+                    Margin="0,-30,0,0"
+                    Foreground="White">
+                    <Grid
+                        x:Name="GameGrid">
+                        <StackPanel
+                            x:Name="gamestk">
+                            <LART:MemoryGame_1
+                                x:Name="game"/>
+                        </StackPanel>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+            
+            <ProgressBar
+                VerticalAlignment="Top"
+                x:Name="performanceProgressBar"
+                Foreground="Red"/>
+        </Grid>
+        <StackPanel
+            x:Name="adstasongs"
+            Grid.Row="1"
+            Orientation="Vertical"
+            Margin="-4,10,0,0"></StackPanel>
+    </Grid>
+</Page>
+

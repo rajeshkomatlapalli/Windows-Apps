@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.PersonDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+    <Viewbox>
+        <Grid Margin="0,0,0,0">
+            <ProgressRing x:Name="progressbar" Width="50" Height="70" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+
+                <!--<TextBlock x:Name="tbBiography" Text="biography" Margin="57,-42,0,0" FontSize="24" FontFamily="Segoe UI" FontWeight="Bold"/>-->
+                <Grid Margin="5,20,0,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" ZoomMode="Disabled" HorizontalScrollBarVisibility="Disabled" Height="600">
+                        <TextBlock   x:Name="tblkcastdesc" TextTrimming="WordEllipsis" Width="900" Margin="50,0,36,0"  TextWrapping="Wrap" FontSize="26"></TextBlock>
+
+                    </ScrollViewer>
+                </Grid>
+                <Canvas>
+
+                    <TextBlock  Canvas.Top="220" Canvas.Left="80" FontSize="28" x:Name="tblkCanvasBiodata"  Visibility="Collapsed"/>
+                </Canvas>
+            </StackPanel>
+
+        </Grid>
+    </Viewbox>
+</UserControl>

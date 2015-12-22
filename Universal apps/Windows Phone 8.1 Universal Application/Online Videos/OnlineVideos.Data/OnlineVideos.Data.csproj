@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E884A056-F6D7-4221-A11D-388E1DEBB890}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos.Data</RootNamespace>
+    <AssemblyName>OnlineVideos.Data</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOTANDROID;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NOTANDROID;WINDOWS_PHONE_APP;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\Common.Library\Common.Library.csproj">
+      <Project>{e5caa85f-49e8-4eed-a860-dc862780b5c2}</Project>
+      <Name>Common.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="Windows, Version=8.1" />
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\AddShow.cs">
+      <Link>AddShow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ConditionTypeAttribute.cs">
+      <Link>ConditionTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\CricketCast.cs">
+      <Link>CricketCast.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\CricketMatch.cs">
+      <Link>CricketMatch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DataManager.cs">
+      <Link>DataManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownloadManager.cs">
+      <Link>DownloadManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownloadManagerDailyMotion.cs">
+      <Link>DownloadManagerDailyMotion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownLoadVideos.cs">
+      <Link>DownLoadVideos.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\EntityHelper.cs">
+      <Link>EntityHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\FavoritesManager.cs">
+      <Link>FavoritesManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\History.cs">
+      <Link>History.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\OnlineShow.cs">
+      <Link>OnlineShow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ParentalControlManager.cs">
+      <Link>ParentalControlManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\PeopleDownloadFromBlog.cs">
+      <Link>PeopleDownloadFromBlog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\PopupManager.cs">
+      <Link>PopupManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\QuizManager.cs">
+      <Link>QuizManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\RatingManager.cs">
+      <Link>RatingManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SaveTileImage.cs">
+      <Link>SaveTileImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SearchHistoryManager.cs">
+      <Link>SearchHistoryManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SearchManager.cs">
+      <Link>SearchManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowCastManager.cs">
+      <Link>ShowCastManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowDownloadForBlogs.cs">
+      <Link>ShowDownloadForBlogs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowsDownloadManager.cs">
+      <Link>ShowsDownloadManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\StoryManager.cs">
+      <Link>StoryManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SyncFavouritesManager.cs">
+      <Link>SyncFavouritesManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\XMLDataManager.cs">
+      <Link>XMLDataManager.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

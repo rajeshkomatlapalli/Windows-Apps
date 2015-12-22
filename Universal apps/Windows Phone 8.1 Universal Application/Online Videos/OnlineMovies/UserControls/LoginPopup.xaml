@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.LoginPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Popup x:Name="mypopMessage" Margin="10,220,0,0">
+            <Grid x:Name="gridpopup" Background="#424542" Opacity="1" Height="450" Width="450"  VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tbktitle" Grid.Row="0"  FontFamily="Segoe WP" FontSize="50" Foreground="{StaticResource PhoneForegroundBrush}" HorizontalAlignment="Center"></TextBlock>
+                <StackPanel Grid.Row="1" x:Name="stkpnlpwd" Orientation="Horizontal">
+                    <TextBlock x:Name="tblkuserpwd" Text="Password" Width="150" FontSize="30" ></TextBlock>
+                    <TextBlock x:Name="tblk" Visibility="Collapsed" Foreground="Red"  ></TextBlock>
+                </StackPanel>
+                <PasswordBox x:Name="tbxuserpwd" Grid.Row="2" HorizontalAlignment="Left" LostFocus="tbxuserpwd_LostFocus" GotFocus="tbxuserpwd_GotFocus" Width="370" Height="70"></PasswordBox>
+                <StackPanel Grid.Row="3" x:Name="stkpnlretype" Orientation="Horizontal">
+                    <TextBlock x:Name="tblkretype" Text="Confirm Password" Margin="15,35,0,0" FontSize="30"></TextBlock>
+                    <TextBlock x:Name="tblkreenter" Visibility="Collapsed" Foreground="Red" GotFocus="tblkreenter_GotFocus" ></TextBlock>
+                </StackPanel>
+                <PasswordBox x:Name="tbxretype" Grid.Row="4" HorizontalAlignment="Left"  Height="70" Width="370"></PasswordBox>
+                <StackPanel Grid.Row="5" x:Name="btnstk" Orientation="Horizontal">
+                    <Button x:Name="btn" Height="80" Width="150" ClickMode="Press" Click="btn_Click"></Button>
+                    <Button x:Name="cancelbtn"  Content="Cancel" ClickMode="Press"  Width="150" Height="80" Click="cancelbtn_Click"></Button>
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <ProgressBar VerticalAlignment="Top" Foreground="White" x:Name="_performanceProgressBar"/>
+    </Grid>
+</UserControl>

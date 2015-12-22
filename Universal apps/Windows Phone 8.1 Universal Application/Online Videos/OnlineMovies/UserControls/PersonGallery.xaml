@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.PersonGallery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+                <ItemsWrapGrid/>
+            </ItemsPanelTemplate>
+        </Grid.Resources>
+
+        <Grid x:Name="GalleryGrid" Grid.Row="0">
+
+            <GridView x:Name="lbxGallery" SelectionChanged="lbxGallery_SelectionChanged_1">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5,10,0,0">
+                            <Image x:Name="imgGallery" Stretch="UniformToFill" Source="{Binding Thumbnail}" Height="150" Width="100" Tag="{Binding Title}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+            
+                <Canvas>
+                <TextBlock Canvas.Top="180" Canvas.Left="70" FontSize="24" Margin="-20,0,0,0" x:Name="tblkGallery"  Visibility="Collapsed"/>
+                </Canvas>
+                <ProgressBar VerticalAlignment="Center" x:Name="_performanceProgressBargallery" Foreground="White"/>
+            </Grid>
+            <StackPanel  Name="adstackpl" Grid.Row="1" Orientation="Vertical"  Margin="0,0,0,0" Height="80" >
+            </StackPanel>
+        
+    </Grid>
+</UserControl>

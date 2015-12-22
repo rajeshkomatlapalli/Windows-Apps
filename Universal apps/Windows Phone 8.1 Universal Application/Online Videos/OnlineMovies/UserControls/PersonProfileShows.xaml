@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.PersonProfileShows"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <ListView x:Name="lbxFilmography" Width="470"  Foreground="White" Margin="13,0,0,0" SelectionChanged="lbxFilmography_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="200">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="115"/>
+                            <ColumnDefinition Width="350"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0" Margin="-25,0,0,0" x:Name="imgMovie" Source="{Binding Image}" VerticalAlignment="Top" Width="90" Height="150"/>
+                        <StackPanel Grid.Column="1" Grid.Row="0" Margin="-10,0,0,0" Height="210">
+                            <TextBlock Text="{Binding Title}" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Margin="10,0,0,0"></TextBlock>
+                            <StackPanel Margin="10,5,0,0" Orientation="Horizontal">
+                                <Image Width="139" Height="18" Source="{Binding RatingImage}"/>
+                                <TextBlock Text="{Binding RelaseDate}" FontSize="20" Margin="70,0,0,0"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Genre}" FontSize="20" Margin="10,5,0,0"></TextBlock>
+                            <StackPanel Orientation="Horizontal"  Margin="10,10,0,0">
+                                <TextBlock Text="Language: " FontSize="20"  ></TextBlock>
+                                <TextBlock Text="{Binding SubTitle}" FontSize="20" TextWrapping="Wrap" ></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</UserControl>

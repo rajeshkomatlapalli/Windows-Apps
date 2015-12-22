@@ -1,0 +1,56 @@
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.winmd
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.pri
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.dll
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.dll
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.dll
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.pri
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.pri
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.pri
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.csprojResolveAssemblyReference.cache
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.winmd
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.winmdobj
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.compile.pdb
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\priconfig.xml
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\priconfig.xml.intermediate
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\layout.resfiles
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\layout.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\resources.resfiles
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\resources.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\pri.resfiles
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\pri.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\qualifiers.txt
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\qualifiers.txt.intermediate
+E:\Present Code_Mohan Rajesh\Windows phone 8.1 run time\Win Phone 8.1 Apps\Online Videos\BackgroundPlayer\obj\ARM\Release\MultipleQualifiersPerDimensionFound.txt
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.winmd
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\BackgroundPlayer.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Common.Library.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\OnlineVideos.Entities.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\bin\ARM\Release\Onlinevideos.Sqlite.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.csprojResolveAssemblyReference.cache
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.winmd
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.winmdobj
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\BackgroundPlayer.compile.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\priconfig.xml
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\priconfig.xml.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\layout.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\layout.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\resources.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\resources.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\pri.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\pri.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\qualifiers.txt
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\qualifiers.txt.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\BackgroundPlayer\obj\ARM\Release\MultipleQualifiersPerDimensionFound.txt

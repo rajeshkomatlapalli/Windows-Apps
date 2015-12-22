@@ -1,0 +1,16 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoft.advertising.winrt.ui.winmd" HashGuid="6588494d-37e3-4bf8-bf82-6a4bc10c0818" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.playerframework.xaml.win81\3.0.0.1\references\commonconfiguration\neutral\microsoft.playerframework.dll" HashGuid="2952eb76-a585-9fe4-80b2-385cfa72b102" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoftadvertising.winmd" HashGuid="0dde57b7-8c99-5b9a-0771-4cdcca925c59" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\common.library\bin\release\common.library.dll" HashGuid="1c83b810-1a4d-1a1c-d24e-fbd33fad1b63" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\packages\microsoft.applicationinsights.1.1.0\lib\portable-win81+wpa81\microsoft.applicationinsights.dll" HashGuid="184a8242-0b85-444e-2346-c2473c1d6ceb" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\packages\microsoft.applicationinsights.windowsapps.1.1.0\lib\win81\microsoft.applicationinsights.extensibility.windows.dll" HashGuid="0cfd8f3d-feff-7167-8f6d-52f443177ca5" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\packages\microsoft.applicationinsights.persistencechannel.1.1.0\lib\portable-win81+wpa81\microsoft.applicationinsights.persistencechannel.dll" HashGuid="983b187d-c490-3a7c-dca7-d8a8fa4d0cb1" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.common\bin\release\onlinevideos.common.dll" HashGuid="84967ec5-450e-269f-d352-b6cacc6520ed" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.entities\bin\release\onlinevideos.entities.dll" HashGuid="625901ef-1dc4-053f-8293-431dcc727b15" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideos.sqlite\bin\release\onlinevideos.sqlite.dll" HashGuid="45574f15-747d-60d5-2556-07d30cb5a454" />
+    <ReferenceAssembly PathName="e:\present code_mohan rajesh\universal apps\windows phone 8.1 universal application\online videos\onlinevideoscardgame\bin\release\onlinevideoscardgame.dll" HashGuid="b23ff275-a827-3ed9-1bb7-f0f21044d449" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

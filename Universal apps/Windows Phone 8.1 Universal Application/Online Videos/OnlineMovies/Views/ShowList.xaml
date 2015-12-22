@@ -1,0 +1,494 @@
+﻿<Page
+    x:Class="OnlineVideos.Shows"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Loaded="Page_Loaded"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Opacity="5" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Transparent" Grid.Row="0">
+
+            <Pivot x:Name="pvtVideos" SelectionChanged="pvtVideos_SelectionChanged">
+                <Pivot.Title>
+                    <StackPanel Orientation="Horizontal" Margin="-15,-18,0,0">
+                        <Image 
+                            Style="{StaticResource DetailPageHubTitleImage}" 
+                            x:Name="imgTitle"
+                            PointerPressed="imgTitle_PointerPressed"/>
+                        <TextBlock 
+                            x:Name="tblkVideosTitle" 
+                            TextWrapping="NoWrap" 
+                            Style="{StaticResource DetailPagePivotTitle}" />
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>
+                    white
+                </Pivot.Foreground>
+                <PivotItem x:Name="pvtcat">
+                    <Grid>
+                        <ListView 
+                            x:Name="lbxCategory" 
+                            Width="470" 
+                            SelectionChanged="lbxCategory_SelectionChanged" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="60">
+                                        <StackPanel 
+                                            Margin="15,10,0,0" 
+                                            Height="50">
+                                            <TextBlock 
+                                                x:Name="tblkcategory" 
+                                                Text="{Binding CategoryName}" 
+                                                Style="{StaticResource tblkcategory}" 
+                                                TextWrapping="Wrap" 
+                                                Margin="0,0,0,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem x:Name="pvttop" Header="top rated">
+                    <Grid>
+                        <ListView 
+                            x:Name="lbxTopRated" 
+                            Width="470" 
+                            SelectionChanged="lbxTopRated_SelectionChanged" 
+                            Foreground="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="170">
+                                        <FlyoutBase.AttachedFlyout>
+                                            <MenuFlyout 
+                                                x:Name="menuflyout" 
+                                                Opened="menuflyout_Opened_1">
+                                                <MenuFlyoutItem 
+                                                    x:Name="deletetoprated" 
+                                                    Text="delete" 
+                                                    Click="deletetoprated_Click"/>
+                                            </MenuFlyout>
+                                        </FlyoutBase.AttachedFlyout>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="115"/>
+                                            <ColumnDefinition Width="350"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image
+                                            Margin="-10,0,0,0"
+                                            Grid.Column="0" 
+                                            Grid.Row="0" 
+                                            x:Name="imgMovie" 
+                                            Source="{Binding Image}" 
+                                            VerticalAlignment="Top" 
+                                            Width="90" 
+                                            Height="160" 
+                                            Visibility="{Binding Isvisible}"/>
+                                        <StackPanel 
+                                            Grid.Column="1" 
+                                            Grid.Row="0" 
+                                            Margin="10,5,0,0" 
+                                            Height="210">
+                                            <TextBlock 
+                                                Text="{Binding Title}" 
+                                                FontSize="20" 
+                                                FontWeight="Bold" 
+                                                Width="320"                                                 
+                                                TextTrimming="WordEllipsis" 
+                                                TextWrapping="Wrap" 
+                                                Margin="0,0,0,0"/>
+                                            <!--<TextBlock 
+                                                Text="{Binding FileSize}" 
+                                                FontSize="22" 
+                                                Margin="0,0,0,0" 
+                                                Visibility="{Binding FileSize, TargetNullValue=Collapsed}"/>-->
+                                            <StackPanel
+                                                Margin="10,5,0,0" 
+                                                Orientation="Horizontal">
+                                                <Image x:Name="aa"
+                                                    Width="139" 
+                                                    Height="18" 
+                                                    Source="{Binding RatingImage}" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                                <TextBlock 
+                                                    Text="{Binding RelaseDate}" 
+                                                    FontSize="20" 
+                                                    Margin="0,0,0,0" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                            <TextBlock 
+                                                Text="{Binding Genre}" 
+                                                FontSize="20" 
+                                                Margin="10,5,0,0" 
+                                                Visibility="{Binding GenreIsvisible}"/>
+                                            <StackPanel 
+                                                Orientation="Horizontal" 
+                                                Margin="10,5,0,0">
+                                                <TextBlock 
+                                                    Style="{StaticResource Languagetext}" 
+                                                    FontSize="20" 
+                                                    Visibility="{Binding SubTitle, TargetNullValue=Collapsed}"/>
+                                                <TextBlock 
+                                                    Text="{Binding SubTitle}" 
+                                                    FontSize="20" 
+                                                    TextWrapping="Wrap" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Canvas>
+                            <TextBlock 
+                                Canvas.Top="160" 
+                                Canvas.Left="90" 
+                                Foreground="White" 
+                                TextWrapping="Wrap" 
+                                Width="450" 
+                                FontSize="28" 
+                                x:Name="tblkToprated" 
+                                Visibility="Collapsed"/>
+                        </Canvas>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem x:Name="pvtitmrecent" Header="recent">
+                    <Grid>
+                        <ListView 
+                            x:Name="lbxRecentlyAdded" 
+                            Width="470" 
+                            SelectionChanged="lbxRecentlyAdded_SelectionChanged" 
+                            Foreground="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="170">
+                                        <FlyoutBase.AttachedFlyout>
+                                            <MenuFlyout 
+                                                x:Name="menuflyout1" 
+                                                Opened="menuflyout1_Opened">
+                                                <MenuFlyoutItem 
+                                                    x:Name="deleterecent" 
+                                                    Text="delete" 
+                                                    Click="deleterecent_Click"/>
+                                            </MenuFlyout>
+                                        </FlyoutBase.AttachedFlyout>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="115"/>
+                                            <ColumnDefinition Width="350"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image 
+                                            Grid.Column="0" 
+                                            Grid.Row="0" 
+                                            x:Name="imgMovie" 
+                                            Source="{Binding Image}" 
+                                            VerticalAlignment="Top" 
+                                            Width="90" 
+                                            Height="160"/>
+                                        <StackPanel 
+                                            Grid.Column="1" 
+                                            Grid.Row="0" 
+                                            Margin="10,0,0,0" 
+                                            Height="210">
+                                            <TextBlock 
+                                                Text="{Binding Title}" 
+                                                FontSize="20" 
+                                                FontWeight="Bold" 
+                                                Width="320" 
+                                                Height="40" 
+                                                TextTrimming="WordEllipsis" 
+                                                TextWrapping="Wrap" 
+                                                Margin="0,0,0,0"/>
+                                            <!--<TextBlock 
+                                                Text="{Binding FileSize}" 
+                                                FontSize="20" 
+                                                Margin="0,0,0,0" 
+                                                Visibility="{Binding FileSize, TargetNullValue=Collapsed}"/>-->
+                                            <StackPanel 
+                                                Margin="10,0,0,0" 
+                                                Orientation="Horizontal">
+                                                <Image 
+                                                    Width="139" 
+                                                    Height="18" 
+                                                    Source="{Binding RatingImage}" 
+                                                    />
+                                                <TextBlock 
+                                                    Text="{Binding RelaseDate}" 
+                                                    FontSize="20" 
+                                                    Margin="70,0,0,0" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                            <TextBlock 
+                                                Text="{Binding Genre}" 
+                                                FontSize="20" 
+                                                Margin="10,5,0,0" 
+                                                Visibility="{Binding Isvisible}"/>
+                                            <StackPanel 
+                                                Orientation="Horizontal" 
+                                                Margin="10,5,0,0">
+                                                <TextBlock 
+                                                    Style="{StaticResource Languagetext}" 
+                                                    FontSize="20" 
+                                                    Visibility="{Binding SubTitle, TargetNullValue=Collapsed}"/>
+                                                <TextBlock 
+                                                    Text="{Binding SubTitle}" 
+                                                    FontSize="20" 
+                                                    TextWrapping="Wrap" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Canvas>
+                            <TextBlock 
+                                Canvas.Top="160" 
+                                Canvas.Left="90" 
+                                Foreground="White" 
+                                TextWrapping="Wrap" 
+                                Width="450" 
+                                FontSize="28" 
+                                x:Name="tblkrecent" 
+                                Visibility="Collapsed"/>
+                        </Canvas>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem 
+                    x:Name="pvttamil" 
+                    Header="tamil" 
+                    Visibility="Collapsed">
+                    <Grid>
+                        <ListView 
+                            x:Name="lbxTamilAdded" 
+                            Width="470" 
+                            SelectionChanged="lbxTamilAdded_SelectionChanged_1" 
+                            Foreground="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="170">
+                                        <FlyoutBase.AttachedFlyout>
+                                            <MenuFlyout 
+                                                x:Name="menuflyout2" 
+                                                Opened="menuflyout2_Opened">
+                                                <MenuFlyoutItem 
+                                                    x:Name="deletetamil" 
+                                                    Text="delete" 
+                                                    Click="deletetamil_Click"/>
+                                            </MenuFlyout>
+                                        </FlyoutBase.AttachedFlyout>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="115"/>
+                                            <ColumnDefinition Width="350"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image 
+                                            Grid.Column="0" 
+                                            Grid.Row="0" 
+                                            x:Name="imgMovie" 
+                                            Source="{Binding Image}" 
+                                            VerticalAlignment="Top" 
+                                            Width="90" 
+                                            Height="160"/>
+                                        <StackPanel 
+                                            Grid.Column="1" 
+                                            Grid.Row="0" 
+                                            Margin="10,0,0,0" 
+                                            Height="210">
+                                            <TextBlock 
+                                                Text="{Binding Title}" 
+                                                FontSize="20" 
+                                                FontWeight="Bold" 
+                                                Width="320" 
+                                                Height="40" 
+                                                TextTrimming="WordEllipsis" 
+                                                TextWrapping="Wrap" 
+                                                Margin="5,0,0,0"/>
+                                            <!--<TextBlock 
+                                                Text="{Binding FileSize}" 
+                                                FontSize="20" 
+                                                Margin="0,0,0,0" 
+                                                Visibility="{Binding FileSize, TargetNullValue=Collapsed}"/>-->
+                                            <StackPanel 
+                                                Margin="10,0,0,0" 
+                                                Orientation="Horizontal">
+                                                <Image 
+                                                    Width="139" 
+                                                    Height="18" 
+                                                    Source="{Binding RatingImage}" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                                <TextBlock 
+                                                    Text="{Binding RelaseDate}" 
+                                                    FontSize="20" 
+                                                    Margin="70,0,0,0" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                            <TextBlock 
+                                                Text="{Binding Genre}" 
+                                                FontSize="20" 
+                                                Margin="10,5,0,0" 
+                                                Visibility="{Binding GenreIsvisible}"/>
+                                            <StackPanel 
+                                                Orientation="Horizontal" 
+                                                Margin="10,5,0,0">
+                                                <TextBlock 
+                                                    Style="{StaticResource Languagetext}" 
+                                                    FontSize="20" 
+                                                    Visibility="{Binding SubTitle, TargetNullValue=Collapsed}"/>
+                                                <TextBlock 
+                                                    Text="{Binding SubTitle}" 
+                                                    FontSize="20" 
+                                                    TextWrapping="Wrap" 
+                                                    Visibility="{Binding Isvisible}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem Header="upcoming movies"  x:Name="pvtupcoming" Visibility="Collapsed">
+                    <Grid>
+                        <ListView x:Name="lbxUpcomingAdded" Width="470" SelectionChanged="lbxUpcomingAdded_SelectionChanged_1" Foreground="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="200">
+                                        <!--<toolkit:ContextMenuService.ContextMenu>
+                                            <toolkit:ContextMenu  Opened="ContextMenu_Opened_4">
+                                                <toolkit:MenuItem x:Name="deleteupcoming"  Header="delete"  Click="deleteupcoming_Click_1">
+                                                </toolkit:MenuItem>
+                                            </toolkit:ContextMenu>
+                                        </toolkit:ContextMenuService.ContextMenu>-->
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="115"/>
+                                            <ColumnDefinition Width="350"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Grid.Column="0" Grid.Row="0" x:Name="imgMovie" Source="{Binding Image}" VerticalAlignment="Top" Width="100" Height="170"/>
+                                        <StackPanel Grid.Column="1" Grid.Row="0" Margin="15,0,0,0" Height="210">
+                                            <TextBlock Text="{Binding Title}" FontSize="24" FontWeight="Bold" Width="320" Height="40" TextTrimming="WordEllipsis" TextWrapping="Wrap" Margin="10,0,0,0"></TextBlock>
+                                            <TextBlock Text="{Binding FileSize}" FontSize="22" Margin="0,0,0,0"  Visibility="{Binding FileSize, TargetNullValue=Collapsed}"></TextBlock>
+
+                                            <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                                                <Image Width="139" Height="18" Source="{Binding RatingImage}" Visibility="{Binding Isvisible}"/>
+                                                <TextBlock Text="{Binding RelaseDate}" FontSize="22" Margin="70,0,0,0" Visibility="{Binding Isvisible}"></TextBlock>
+                                            </StackPanel>
+                                            <TextBlock Text="{Binding Genre}" FontSize="22" Margin="10,10,0,0" Visibility="{Binding GenreIsvisible}"></TextBlock>
+                                            <StackPanel Orientation="Horizontal"  Margin="10,10,0,0">
+                                                <TextBlock Style="{StaticResource Languagetext}" FontSize="22" Visibility="{Binding SubTitle, TargetNullValue=Collapsed}"></TextBlock>
+                                                <TextBlock Text="{Binding SubTitle}" FontSize="22" TextWrapping="Wrap" Visibility="{Binding Isvisible}"></TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Canvas>
+                            <TextBlock Canvas.Top="160" Canvas.Left="90" Foreground="White"  TextWrapping="Wrap" Width="450" FontSize="28" x:Name="tblkupcoming" Visibility="Collapsed"/>
+                        </Canvas>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem x:Name="pvtdownload" Visibility="Collapsed">
+                    <Grid Name="downloadGrid">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ListView 
+                                x:Name="lbxdownloading" 
+                                Grid.Row="0" 
+                                Width="470" 
+                                Foreground="White">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid 
+                                            Background="Transparent" 
+                                            Margin="0,0,0,30">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="380"/>
+                                                <ColumnDefinition Width="50"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0">
+                                                <StackPanel Orientation="Vertical">
+                                                    <TextBlock 
+                                                        Text="{Binding Title}" 
+                                                        Foreground="{StaticResource PhoneAccentBrush}" 
+                                                        FontWeight="Bold"/>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="Status: "/>
+                                                        <ProgressBar 
+                                                            x:Name="MyProgressBar" 
+                                                            Value="{Binding ChapterProgressPosition}"  
+                                                            IsIndeterminate="False" 
+                                                            Width="150" 
+                                                            Background="Black" 
+                                                            Foreground="Red" 
+                                                            HorizontalAlignment="Right">
+                                                        </ProgressBar>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Column="1">
+                                                <Image 
+                                                    x:Name="img1" 
+                                                    Source="{Binding RequestUri}" 
+                                                    Width="80" 
+                                                    Height="80"/>
+                                            </Grid>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <Canvas>
+                                <TextBlock 
+                                    Text="No current downloads" 
+                                    Canvas.Top="200" 
+                                    Canvas.Left="80" 
+                                    FontSize="28" 
+                                    x:Name="tblkNoDownloads" 
+                                    Visibility="Collapsed"/>
+                            </Canvas>
+                        </Grid>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+            <ProgressBar
+            VerticalAlignment="Top"
+            x:Name="performanceProgressBar"/>
+        </Grid>
+        <UI:AdControl x:Name="adstackpl" Grid.Row="1"                      
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" Label="Add" x:Name="btnadd" Click="btnadd_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

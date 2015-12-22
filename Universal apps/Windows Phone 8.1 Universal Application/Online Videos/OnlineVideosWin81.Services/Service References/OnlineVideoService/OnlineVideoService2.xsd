@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OnlineVideosService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OnlineVideosService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBlogInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlogInfo" nillable="true" type="tns:BlogInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlogInfo" nillable="true" type="tns:ArrayOfBlogInfo" />
+  <xs:complexType name="BlogInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlogType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogInfo" nillable="true" type="tns:BlogInfo" />
+  <xs:complexType name="ArrayOfFavorites">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Favorites" nillable="true" type="tns:Favorites" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavorites" nillable="true" type="tns:ArrayOfFavorites" />
+  <xs:complexType name="Favorites">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_AnonymousId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_Hstatus" type="xs:int" />
+      <xs:element minOccurs="0" name="_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="_LastUpdated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_LinkType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_favourite" type="xs:int" />
+      <xs:element minOccurs="0" name="_historyMoviename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_historycount" type="xs:int" />
+      <xs:element minOccurs="0" name="_historyid" type="xs:int" />
+      <xs:element minOccurs="0" name="_movieId" type="xs:int" />
+      <xs:element minOccurs="0" name="_rating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_remove" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_songno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Favorites" nillable="true" type="tns:Favorites" />
+  <xs:complexType name="ArrayOfRating">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rating" nillable="true" type="tns:Rating" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRating" nillable="true" type="tns:ArrayOfRating" />
+  <xs:complexType name="Rating">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="_movieId" type="xs:int" />
+      <xs:element minOccurs="0" name="_rating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_ratingdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_songno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rating" nillable="true" type="tns:Rating" />
+</xs:schema>

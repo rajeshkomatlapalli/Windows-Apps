@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.AddCast_New"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate  x:Key="tblkcat">
+            <TextBlock Foreground="Black"  Text="{Binding}" ></TextBlock>
+        </DataTemplate>
+    </Page.Resources>
+
+
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="0.80*"></RowDefinition>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10,10,0">
+                <Image x:ConnectionId='8' Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgtitle"                                         />
+                <TextBlock x:Name="tblkVideosTitle" FontSize="20" Style="{StaticResource CastPageHeaderText}" Width="335"/>
+            </StackPanel>
+            <Line X1="25" Margin="0,20,0,0" Y1="0" X2="650" Y2="0" Stroke="Gray" StrokeDashCap="Round" StrokeEndLineCap="Round"></Line>
+        </StackPanel>
+        <Grid x:Name="ContentPanel"  Grid.Row="1" Margin="-20,-10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="0" Margin="20,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Style="{StaticResource Personnametitle}" Margin="15,-10,0,0" FontSize="16"></TextBlock>
+                    <TextBlock x:Name="valid" Text="Required" FontSize="16" Foreground="Red" Margin="10,4,0,0" Visibility="Collapsed"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" >
+                    <TextBox x:ConnectionId='6'  x:Name="tblkpersonname" Visibility="Visible"  PlaceholderText="Enter Name" FontSize="20" HorizontalAlignment="Left" Margin="15,8,0,0"  VerticalAlignment="Top" Width="360" Height="42"  Foreground="#FF3E3EA4"                                                                                                                  ></TextBox>
+                    
+                    <ListBox x:ConnectionId='7' x:Name="listBox" Height="150"  Margin="15,-1,0,0" Width="360" Background="White"  HorizontalAlignment="Left"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top" Visibility="Collapsed"                                              >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="17" Text="{Binding Name}" Tag="{Binding PersonID}"></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel x:Name="desstk" Orientation="Vertical" Grid.Row="1" Margin="20,30,0,0">
+                <StackPanel x:Name="onl" Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource Persondecriptiontitle}" Margin="15,0,0,0" FontSize="16"></TextBlock>
+                    <Image x:ConnectionId='4' Source="/Images/online.png" Margin="15,-15,0,0" Height="38" Width="38" x:Name="persondes"                              ></Image>
+                    <Image x:ConnectionId='5' x:Name="edit"  Source="/Images/PlayerImages/edit.png" Margin="15,-15,0,0" Stretch="Fill" Height="38" Width="38"                        ></Image>
+                    <TextBlock x:Name="txtlength" Visibility="Visible"  Margin="80,10,0,0" HorizontalAlignment="Right" Foreground="White" FontSize="20"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:ConnectionId='3' x:Name="tblkdes" Width="360" Margin="15,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="20"  TextWrapping="Wrap" HorizontalAlignment="Left"                                     Height="100"></TextBox>                        
+                    </StackPanel>
+                    <TextBlock x:Name="txtlimit" Visibility="Collapsed" Margin="15,5,0,0" Text="max text limit 4000 characters" Foreground="Red" FontSize="20"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" x:Name="rolestk" Grid.Row="2" Margin="20,8,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Style="{StaticResource Personroletitle}" Margin="15,0,0,0" FontSize="16" ></TextBlock>
+                    <TextBlock x:Name="validrole" Text="Required" FontSize="16" Foreground="Red" Margin="30,4,0,0" Visibility="Collapsed"></TextBlock>
+                </StackPanel>
+                <ComboBox x:Name="lpicrole" Margin="10,0,0,0"  ItemTemplate="{StaticResource tblkcat}" HorizontalAlignment="Left" Width="360"  FontSize="20" >
+                   
+                </ComboBox>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="30,0,0,0">
+                <StackPanel x:Name="persononlocalstk" Orientation="Vertical">
+                    <TextBlock  Text="Local Image" Margin="25,0,0,0" FontSize="16"></TextBlock>
+                    <Image x:ConnectionId='2' Source="/Images/peoplefromlocal.png"  x:Name="personlocalimg" Height="110" Margin="10,15,0,0" Width="120"                                  ></Image>
+                </StackPanel>
+                <StackPanel x:Name="persononlinestk" Orientation="Vertical" Margin="80,0,0,0">
+                    <TextBlock  Text="Online Image" Margin="25,0,0,0" FontSize="16"></TextBlock>
+                    <Image x:ConnectionId='1' Source="/Images/peoplefromonline.png" x:Name="persononlineimg" Height="110" Margin="10,15,0,0" Width="120"                                   ></Image>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
+        <UI:AdControl x:Name="adstackpl" Grid.Row="2"                      
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='9' Icon="Save" Label="save" x:Name="save_btn"                     />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+

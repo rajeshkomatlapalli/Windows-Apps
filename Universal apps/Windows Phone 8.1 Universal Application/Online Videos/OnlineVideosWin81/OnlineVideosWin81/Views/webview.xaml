@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.webview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bi}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="88"/>
+        </Grid.RowDefinitions>
+        <WebView x:Name="yutubeMedia" KeyDown="yutubeMedia_KeyDown" Margin="0,0,0,0"/>
+        <StackPanel Grid.Row="1">
+            <AppBar x:Name="BottomAppBar" IsOpen="True" IsSticky="True" Height="88" VerticalAlignment="Bottom">
+                <StackPanel  Orientation="Horizontal" Margin="0,0,0,0">
+                    <Button x:Name="BackButton" Click="BackButton_Click" Style="{StaticResource BackButtonStyle}"/>
+                </StackPanel>
+            </AppBar>
+        </StackPanel>
+    </Grid>
+</Page>

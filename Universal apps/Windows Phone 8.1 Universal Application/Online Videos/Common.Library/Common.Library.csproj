@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5CAA85F-49E8-4EED-A860-DC862780B5C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Library</RootNamespace>
+    <AssemblyName>Common.Library</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOTANDROID;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP;NOTANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\AboutUsProperties.cs">
+      <Link>AboutUsProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\AppResources.cs">
+      <Link>AppResources.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\AppSettings.cs">
+      <Link>AppSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\BackgroundHelper.cs">
+      <Link>BackgroundHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\BackgroundWorker.cs">
+      <Link>BackgroundWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ConditionTypeAttribute.cs">
+      <Link>ConditionTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\DeviceHelp.cs">
+      <Link>DeviceHelp.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\DeviceHelper.cs">
+      <Link>DeviceHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\Exceptions.cs">
+      <Link>Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ImageHelper.cs">
+      <Link>ImageHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\LiveTileHelper.cs">
+      <Link>LiveTileHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\MenuProperties.cs">
+      <Link>MenuProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\NetworkHelper.cs">
+      <Link>NetworkHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\PhoneHelp.cs">
+      <Link>PhoneHelp.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\PhoneHelper.cs">
+      <Link>PhoneHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ResourceHelper.cs">
+      <Link>ResourceHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\Resources.cs">
+      <Link>Resources.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ScreenResolutionForPopup.cs">
+      <Link>ScreenResolutionForPopup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\SettingsHelper.cs">
+      <Link>SettingsHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\Storage.cs">
+      <Link>Storage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\StorageHelper.cs">
+      <Link>StorageHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ValidationHelper.cs">
+      <Link>ValidationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\ValueMonitor.cs">
+      <Link>ValueMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Library\VisibilityConverter.cs">
+      <Link>VisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="Windows, Version=8.1" />
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

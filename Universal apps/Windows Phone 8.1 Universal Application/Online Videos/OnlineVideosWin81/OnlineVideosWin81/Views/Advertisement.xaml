@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.Advertisement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:AdRotator="using:AdRotator"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="GroupedItemDetails">
+            <Grid HorizontalAlignment="Center" x:Name="grd">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="stk" Orientation="Horizontal" Width="470" Height="170">
+                    <Border x:Name="normalborder">
+                        <Image Height="190" Width="160" Margin="0" Stretch="Fill">
+                            <Image.Source>
+                                <BitmapImage UriSource="{Binding LandingImage}" CreateOptions="IgnoreImageCache"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                    </Border>
+                    <StackPanel Orientation="Vertical" Background="Transparent" x:Name="detailstk" Margin="50,0,0,0">
+                        <Image Source="{Binding RatingBitmapImage}"   Visibility="Visible" HorizontalAlignment="Left" Margin="0,10,0,20" ></Image>
+                        <TextBlock  Text="{Binding ReleaseDate}" FontSize="20" Margin="0,10,0,20"></TextBlock>
+                        <TextBlock Text="{Binding SubTitle}" FontSize="20" Margin="0,10,0,20"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" x:Name="dd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.10*"/>
+            <RowDefinition Height="0.90*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Left" Grid.Row="0">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,10,0,0">
+                <!--<Button x:Name="BackButton" Click="BackButton_Click_1" Style="{StaticResource BackButtonStyle}"   />-->
+                <AppBarButton Icon="Back" x:Name="BackButton" Click="BackButton_Click"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="tblkTitle"  Style="{StaticResource DetailPageHeaderText}" ></TextBlock>
+                </StackPanel>
+                
+            </StackPanel>
+        </Viewbox>
+        
+        <Grid Grid.Row="1">
+            <GridView x:Name="grdvwDetails" BorderThickness="0" Margin="100,20,0,0"  IsHitTestVisible="False"
+              ItemTemplate="{StaticResource GroupedItemDetails}"
+              Background="Transparent" ></GridView>
+            
+            <StackPanel  x:Name="advisible"   HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="elapsedtimetblk" FontSize="18" Margin="60,0,0,0" ></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="65,15,0,0">
+                    <!--<UI:AdControl Height="250" Width="300" x:Name="AdControl" ApplicationId="{StaticResource adApplicationId}" AdUnitId="{StaticResource adUnitId}"/>-->
+                    <!--<AdRotator:AdRotatorControl x:Name="AdRotator12duplex" AdHeight="250" AdWidth="300" SettingsUrl="{StaticResource SettingsUrl}"/>-->
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

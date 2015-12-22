@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.MoviesFavorite"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:LART="using:OnlineVideosWin81.Controls"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar" IsOpen="False" IsSticky="True" Opened="BottomAppBar_Opened" Closed="BottomAppBar_Closed" VerticalAlignment="Bottom">
+            <Grid Margin="30,0,0,0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Button Style="{StaticResource RemoveFavoriteAppBarButtonStyle}" Click="Fav_Click"  Margin="0,0,0,-20"/>
+                    <TextBlock
+                                x:Name="TextLabel"
+                                Text="Remove Favorites"
+                                Margin="0,0,2,0"
+                                FontSize="12"
+                                TextAlignment="Center"
+                                Width="100"
+                                MaxHeight="32"
+                                TextTrimming="WordEllipsis"
+                                Style="{StaticResource BasicTextStyle}"/>
+                    
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bi}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.10*"/>
+            <RowDefinition Height="0.90*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="20,15,0,0" Orientation="Horizontal">
+                <Button x:Name="BackButton" Click="BackButton_Click_1" Style="{StaticResource BackButtonStyle}" Margin="26,10,0,0"/>
+                <TextBlock x:Name="tblkTitle" Text="Favorites" Style="{StaticResource DetailPageHeaderText}"  ></TextBlock>
+            </StackPanel>
+        </Viewbox>
+        <ScrollViewer x:Name="scroll"  HorizontalScrollBarVisibility="Auto" Grid.Row="1" ZoomMode="Disabled" VerticalScrollBarVisibility="Disabled" Margin="0,15,0,20">
+            <Viewbox HorizontalAlignment="Left">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid  Grid.Column="0">
+                        <LART:VideoFavorite Margin="25,10,0,0" x:Name="videofavorite"></LART:VideoFavorite>
+                    </Grid>
+                    <Grid  Grid.Column="1" x:Name="AddControlvisable1">
+                        
+                    </Grid>
+                </Grid>
+            </Viewbox>            
+        </ScrollViewer>
+        
+    </Grid>
+</Page>

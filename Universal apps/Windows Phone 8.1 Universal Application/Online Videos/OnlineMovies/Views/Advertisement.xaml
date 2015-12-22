@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.Advertisement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    mc:Ignorable="d"
+    xmlns:Rating="using:JISoft.RatingControl"
+    Loaded="Advertisement_Loaded"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+
+    <Grid x:Name="LayoutRoot" Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <!--<TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>-->
+            <TextBlock x:Name="tblkTitle" Margin="9,-7,0,0" FontSize="24" Style="{StaticResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="190"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" x:Name="imgMovie" VerticalAlignment="Top" Width="100" Height="170" />
+                <StackPanel Grid.Column="1" Grid.Row="0" Margin="10,0,0,0" Height="190">
+                    <TextBlock x:Name="tblkTitle1" FontSize="22" FontWeight="Bold" TextWrapping="Wrap" Foreground="White" Margin="10,0,0,0"></TextBlock>
+                    <StackPanel x:Name="Ratestack" Margin="0,10,0,0" Orientation="Horizontal">
+                        <!--<Rating:Rating x:Name="rate" Background="White" Tag="{Binding MovieId}" Height="25" Width="139"></Rating:Rating>-->
+                        <Image Width="130" Height="20" x:Name="ratingimage"></Image>
+                        <TextBlock x:Name="tblRelease" FontSize="22" Margin="10,0,0,0" Foreground="White"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <StackPanel  x:Name="advisible"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+                <TextBlock x:Name="elapsedtimetblk" FontSize="18" Margin="0,0,0,0" TextWrapping="Wrap"></TextBlock>
+                <StackPanel Orientation="Vertical" Margin="0,300,0,0" >                    
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <UI:AdControl Height="70" Width="400" x:Name="adstackpl"/>
+        </Grid>
+    </Grid>
+</Page>

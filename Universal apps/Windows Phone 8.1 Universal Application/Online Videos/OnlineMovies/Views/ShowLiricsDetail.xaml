@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.ShowLiricsDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    xmlns:LART="using:CommonControls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal"  Margin="12,17,0,10" >
+                <Image x:Name="imgTitle"   Style="{StaticResource DetailPageHubTitleImage}" KeyDown="imgTitle_KeyDown"/>
+                <TextBlock x:Name="tblkLyricTitle"  TextWrapping="NoWrap"  Style="{StaticResource DetailPagePivotTitle}" />
+            </StackPanel>
+            <!--<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">-->
+                <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <ListView x:Name="lbxLyricsList" Margin="0,35,0,8" Foreground="White" VerticalAlignment="Top"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <!--Code to be Modified-->
+                                <!-- <LART:ScrollableTextBlock x:Name="tblkDescription" LineHeight="50" Text="{Binding Description}" Margin="0,0,50,20" Width="470" FontSize="28" MinHeight="600" HorizontalAlignment="Left" VerticalAlignment="Top"  Foreground="White" />-->
+                                <TextBlock x:Name="tblkDescription" Text="{Binding Description}" TextWrapping="Wrap" Width="380" Foreground="White" FontSize="28"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Canvas>
+                    <TextBlock Canvas.Top="200" Canvas.Left="80" Text="lyrics not available" FontSize="28" x:Name="tblkFavNoLyricsDescription" Visibility="Collapsed" Foreground="White"/>
+                </Canvas>
+                <StackPanel Name="adstaLyrics" Grid.Row="2" Orientation="Vertical"  Margin="-4,10,0,0">
+                </StackPanel>
+            </Grid>
+        <UI:AdControl x:Name="adstackpl" Grid.Row="1"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+    <!--</Grid>-->
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" x:Name="btnadd" Click="btnadd_Click"></AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

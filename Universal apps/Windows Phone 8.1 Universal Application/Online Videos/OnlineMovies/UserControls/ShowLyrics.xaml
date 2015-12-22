@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.ShowLyrics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <ListBox x:Name="lbxLyricsList" Margin="0,-30,0,8" Grid.Row="0" SelectionChanged="lbxLyricsList_SelectionChanged" Foreground="White" VerticalAlignment="Top">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/ArrowImg.png" Height="43" Width="43" VerticalAlignment="Center" Margin="10,30,20,0" Tag="{Binding SongID}"/>
+                            <TextBlock Text="{Binding Title}" Name="tblkchno" Margin="-2,30,0,0" Width="400" FontSize="28" VerticalAlignment="Center" TextWrapping="Wrap" Tag="{Binding Link}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Canvas>
+            <TextBlock Canvas.Top="200" Canvas.Left="80" FontSize="28" x:Name="tblkFavNoLyrics" Visibility="Collapsed" Foreground="White"/>
+        </Canvas>
+    </Grid>
+</UserControl>

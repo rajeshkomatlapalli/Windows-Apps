@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CultureDescriptors>
+    <AdCultureDescriptor CultureName="en-US">
+      <Probabilities Probability="60" AdType="PubCenter" AppID="0c52101c-439c-428e-8995-fae3279be402" SecondaryID="33459" />
+      <Probabilities Probability="15" AdType="AdMob" AppID="a14dcb8d835e89d"/>
+      <Probabilities Probability="10" AdType="AdDuplex" AppID="36295"/>
+      <Probabilities Probability="15" AdType="MobFox" AppID="b4de6d894439b2edd40dd94aebf81da2" IsTest="false"/>
+    </AdCultureDescriptor>
+    <AdCultureDescriptor CultureName="en-IN">
+      <Probabilities Probability="60" AdType="PubCenter" AppID="0c52101c-439c-428e-8995-fae3279be402" SecondaryID="33459" />
+      <Probabilities Probability="15" AdType="AdMob" AppID="a14dcb8d835e89d"/>
+      <Probabilities Probability="10" AdType="AdDuplex" AppID="36295"/>
+      <Probabilities Probability="15" AdType="MobFox" AppID="b4de6d894439b2edd40dd94aebf81da2" IsTest="false"/>
+    </AdCultureDescriptor>
+    <AdCultureDescriptor CultureName="en-GB">
+      <Probabilities Probability="60" AdType="PubCenter" AppID="0c52101c-439c-428e-8995-fae3279be402" SecondaryID="33459" />
+      <Probabilities Probability="15" AdType="AdMob" AppID="a14dcb8d835e89d"/>
+      <Probabilities Probability="10" AdType="AdDuplex" AppID="36295"/>
+      <Probabilities Probability="15" AdType="MobFox" AppID="b4de6d894439b2edd40dd94aebf81da2" IsTest="false"/>
+    </AdCultureDescriptor>
+    <AdCultureDescriptor CultureName="default">
+      <Probabilities Probability="60" AdType="PubCenter" AppID="0c52101c-439c-428e-8995-fae3279be402" SecondaryID="33459" />
+      <Probabilities Probability="15" AdType="AdMob" AppID="a14dcb8d835e89d"/>
+      <Probabilities Probability="10" AdType="AdDuplex" AppID="36295"/>
+      <Probabilities Probability="15" AdType="MobFox" AppID="b4de6d894439b2edd40dd94aebf81da2" IsTest="false"/>
+    </AdCultureDescriptor>
+  </CultureDescriptors>
+</AdSettings>

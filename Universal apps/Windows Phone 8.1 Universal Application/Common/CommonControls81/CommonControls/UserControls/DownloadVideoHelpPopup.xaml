@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.DownloadVideoHelpPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Viewbox>
+        <Grid x:Name="RootGrid" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Vertical" VerticalAlignment="Top" Margin="10,-10,0,0">
+                <Image x:Name="imgclose"  Source="/Images/appbar.close.rest.png" Tapped="imgclose_Tapped" VerticalAlignment="Top" Margin="0,15,15,15"    HorizontalAlignment="Right"></Image>
+                <TextBlock x:Name="tblkVideosTitle" Margin="0,-20,0,10"  FontSize="30" FontFamily="Calibri" FontWeight="Normal"  Foreground="White" ></TextBlock>
+                <Line x:Name="tt" X1="1000" Y1="0" StrokeStartLineCap="Round" Margin="15,10,15,0" StrokeEndLineCap="Round" StrokeThickness="2" Stroke="White"></Line>
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" ZoomMode="Disabled"    Grid.Row="1" Height="450">
+                <ListView x:Name="lbxhelp" IsHitTestVisible="False"  Foreground="White" Width="600" Grid.Row="1" Margin="0,10,0,10"   Background="Transparent" >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <StackPanel Orientation="Vertical" Margin="10,0,0,10">
+                                <TextBlock x:Name="tblkhelp" Width="520"  Foreground="White" Margin="0,0,20,0" Text="{Binding HelpText}" FontSize="18" TextWrapping="Wrap"></TextBlock>
+                                <Border Margin="8,-67,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    <Image Height="100" Width="160" Margin="0" Stretch="Fill">
+                                        <Image.Source>
+                                            <BitmapImage UriSource="{Binding DownLoadImage}" CreateOptions="IgnoreImageCache"></BitmapImage>
+                                        </Image.Source>
+                                    </Image>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView >
+            </ScrollViewer>
+        </Grid>
+    </Viewbox>
+</UserControl>

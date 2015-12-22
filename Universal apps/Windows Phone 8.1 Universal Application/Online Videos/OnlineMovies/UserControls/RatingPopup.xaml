@@ -1,0 +1,67 @@
+﻿<UserControl
+    x:Class="OnlineMovies.UserControls.RatingPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:RatingControl="using:JISoft.RatingControl"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Popup x:Name="mypopMessage" Margin="10,220,0,0" >
+            <Grid 
+                x:Name="gridpopup" 
+                Background="#424542" 
+                Opacity="1" 
+                Height="450" 
+                Width="450" 
+                VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock 
+                    x:Name="tbktitle" 
+                    Text="Rating" 
+                    Grid.Row="0" 
+                    Margin="0,40,0,0" 
+                    FontFamily="Segoe WP" 
+                    FontSize="50" 
+                    Foreground="{StaticResource PhoneForegroundBrush}" 
+                    HorizontalAlignment="Center"
+                    />
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <RatingControl:Rating
+                        Name="rate" 
+                        Margin="0,80,0,0" 
+                        RatingItemCount="5" 
+                        Height="50" 
+                        Width="200">
+                    </RatingControl:Rating>
+                    <StackPanel Orientation="Horizontal">
+                        <Image 
+                            Name="save" 
+                            Source="/Images/rating/appbar.check.rest.png" 
+                            Margin="120,50,0,0" 
+                            PointerPressed="save_PointerPressed">
+                        </Image>
+                        <Image 
+                            Name="cancel" 
+                            Source="/Images/rating/appbar.cancel.rest.png" 
+                            Margin="80,50,0,0" 
+                            PointerPressed="cancel_PointerPressed">
+                        </Image>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <ProgressBar VerticalAlignment="Top" Foreground="White" x:Name="_performanceProgressBar"/>        
+    </Grid>
+</UserControl>

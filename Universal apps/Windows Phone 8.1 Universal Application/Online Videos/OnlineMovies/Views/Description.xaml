@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="Indian_Cinema.Views.Description"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel 
+            x:Name="TitlePanel" 
+            Grid.Row="0" 
+            Margin="10,17,0,28" 
+            Orientation="Horizontal">
+            <Image 
+                Style="{StaticResource DetailPageHubTitleImage}" 
+                x:Name="imgTitle" 
+                PointerPressed="imgTitle_PointerPressed"/>
+            <TextBlock 
+                x:Name="tblkVideosTitle" 
+                Text="Description" 
+                Foreground="White" 
+                Style="{StaticResource DetailPagePivotTitle}" />
+        </StackPanel>
+
+        <TextBlock 
+            x:Name="txtlimit" 
+            Grid.Row="1" 
+            Visibility="Collapsed" 
+            Margin="30,-5,0,0" 
+            Text="*max text limit 150 characters" 
+            Foreground="Red" 
+            FontSize="15"/>
+        <Grid 
+            x:Name="ContentPanel" 
+            Grid.Row="2" 
+            Margin="12,0,12,0">
+            <StackPanel Orientation="Vertical">
+                <TextBox 
+                    x:Name="txtdes" 
+                    TextChanged="txtdes_TextChanged_1" 
+                    Background="White" 
+                    Foreground="Black" 
+                    Height="480" 
+                    Width="450" 
+                    TextWrapping="Wrap"/>
+                <TextBlock 
+                    x:Name="txtlength" 
+                    Visibility="Visible" 
+                    HorizontalAlignment="Right" 
+                    Foreground="White" 
+                    FontSize="20"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton 
+                Icon="Save"
+                Label="save"
+                x:Name="savebtn" 
+                Click="savebtn_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

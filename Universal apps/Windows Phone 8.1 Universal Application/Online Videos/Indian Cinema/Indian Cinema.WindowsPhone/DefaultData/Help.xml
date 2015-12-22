@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<description>
+  <de id="1">
+    <c title="Search">
+      <des>1. Go to the menu section of the panorama page.</des>
+      <des>2. Type search keyword in the search box and click on search icon.</des>
+      <des>3. The movies pivot finds all the movies whose title or cast match the search string.</des>
+      <des>4. Songs pivot finds all the songs whose names match the search string.</des>
+    </c>
+  </de>
+  <de id="2">
+    <c title="Top/Recent">
+      <des>1. The movies which are rated more are displayed first in top rated movie section</des>
+      <des>2. The movies which are added recently are displayed first in recent movie section</des>
+    </c>
+  </de>
+  <de id="3">
+    <c title="Favorites">
+      <des>1. Select the movie you want to add as a favorite, that will take you to the movie detail page.</des>
+      <des>2. In that you have Add Favorite link.Click on that then your movie will be added as a favorite.</des>
+      <des>3. you can view that favorite movie by Clicking on favorite in main page.</des>
+      <des>4. If you want to add song as a favorite ,go to the songs section in the details page click on love symbol then that song will be dispalyed on the favorite page.</des>
+      <des>5. To download your favorite song and view it offline,you can do this by clicking on Download icon available to right of the song,once the song gets downloaded the icon will be changed to delete icon.</des>
+      <des>6. To delete the downloaded song from your phone , then tap on the delete icon available on right side of the song.</des>
+      <des>7. To pin the Favorite Songs page to start screen , Click on pin icon available on the application bar to dispaly it as a live tile on the start screen.</des>
+      <des>8. Next time to watch the song click on the live tile, which opens favorite songs page.</des>
+      <des>9. To Unpin the favorite Livetile from the start screen click on the unpin button available on the application bar in Favorite songs page.</des>
+      <des>10. To download all favorite songs in one go, click on the download all button available on the application bar.</des>
+      <des>11. To play all favorite songs after opening the favorite songs page, click on the play all button available on the application bar.</des>
+    </c>
+  </de>
+  <de id="4">
+    <c title="History">
+      <des>1. Everytime a movie chapter or song is played it is stored in the history list.</des>
+      <des>2. History list remembers the last thirty chapters and also the last thirty songs.</des>
+      <des>3. History list can be viewed from the menu section in the paranorama page.</des>
+    </c>
+  </de>
+  <de id="5">
+    <c title="Broken links">
+      <des>1. Chapters and songs pivots in the movie detail page has broken link icons for each of the chapter or song.</des>
+      <des>2. Clicking on this icon takes you to the feedback page with the message and topic field pre-populated with the topic, movie name and the link.</des>
+      <des>3. Click on the send mail button to submit the link, time zone, device name to us for furthur troubleshooting.</des>
+
+    </c>
+  </de>
+  <de id="6">
+    <c title="Cast details">
+      <des>1. Go to the menu section of the panorama page. Select movie list, which takes to you the movie list page with genre, top rated and recent pivots.</des>
+      <des>2. Select a movie from either genre, top rated, recent pivots which takes you to the movie detail page.</des>
+      <des>3. Go to one of the genre pivots in the movie detail page and select one of the cast to see their profile page.</des>
+      <des>4. Cast Profile panorama page has three sections with cast biography, gallery and related movies.</des>
+    </c>
+  </de>
+  <de id="7">
+    <c title="Live tiles">
+      <des>1. To pin a movie to start screen, select the movie and go to detail page.</des>
+      <des>2. Click on pin icon to dispaly it as a live tile on the start screen.</des>
+      <des>3. Next time to watch the movie click on the live tile, which opens detail page of the movie.</des>
+      <des>4. To unpin the live tile from start screen, go to detail page click on unpin icon.</des>
+    </c>
+  </de>
+  <de id="8">
+    <c title="Lyrics">
+      <des>1. Go to movie list page by clicking on movie List option in Main Menu and then select a movie.</des>
+      <des>2. In movie detail page, goto lyrics pivot, tap on a song title to open the lyrics detail page</des>
+      <des>3. In lyrics detail page some lines have english translation available in the line next to it.</des>
+    </c>
+  </de>
+  <de id="9">
+    <c title="Mathing Game">
+      <des>1. Go to movie list page by clicking on movie List option in Main Menu and then select a movie.</des>
+      <des>2. In movie detail page, goto the game pivot, which shows several images arranged in a grid with rows and columns</des>
+      <des>3. Click on each image tile to show to show the actor image on the other side of the image tile.</des>
+      <des>4. Each game has two images for the same actor. Hit those two images in succession to match them.</des>
+      <des>5. Once two images are matched, those images are removed from the game. Repeat this process until all images are removed.</des>
+      <des>6. Number of column and rows for the game are determined by the number of cast available for the movie. If the number of cast is less than 6 game won't be available</des>
+      <des>7. Cast = 6   -> 4 rows x 3 columns</des>
+      <des>8. Cast = 10  -> 4 rows x 5 columns</des>
+      <des>9. Cast = 15 -> 5 rows x 6 columns</des>
+    </c>
+  </de>
+  <de id="10">
+    <c title="Create Custom Ringtones">
+      <des>1. Select a movie from the movie list page and goto the audio pivot.</des>
+      <des>2. Pick a song from the list of audio files to edit and save as a ringtone.</des>
+      <des>3. Click on the ringtone icon on the right of the selected song title.</des>
+      <des>4. Once in Create ringtone page listen to the song and choose part of the song to use as ringtone.</des>
+      <des>5. Specify the part of the song to use for ringtone using Begin Time and End Time buttons.</des>
+      <des>6. Use Begin Time button to specify the start of ringtone and End Time for the end of ringtone.</des>
+      <des>7. Observe the File Size and Duration values displayed at the bottom of the page.</des>
+      <des>8. File size should be less than 1MB and duration should be less than 40 seconds.</des>
+      <des>9. Now select the preview button on the App Bar menu to preview the ringtone and click on the save icon to finish.</des>
+      <des>10. In Save ringtone page you can check the "Make this my ringtone" check box to make the current ringtone as your default.</des>
+    </c>
+  </de>
+  <de id="11">
+    <c title="Add Movie">
+      <des>1. Go to movie list page by tapping on Movie List option in Main Menu.</des>
+      <des>2. Click on '+' appbar button.</des>
+      <des>3. Enter the Movie Name.</des>
+      <des>4. Enter the description manually or by choosing web icon on the top of description box which navigates to the browser.Navigate to the appropriate web page and copy the text</des>
+      <des>5. Description can also be edited using the edit icon on the top of description box</des>
+      <des>6. Choose Category for the Movie Language</des>
+      <des>7. Choose Image for movie from local folder or online</des>
+      <des>8. Click on save appbar icon</des>
+      <des>9. To delete the newly added movie press and hold the movie in movie list page.</des>
+      <des>10.Select delete from context menu.</des>
+    </c>
+  </de>
+  <de id="12">
+    <c title="Add Cast">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Swipe to the cast section.</des>
+      <des>3. Choose 'add cast' from appbar menu.</des>
+      <des>4. Enter the Person Name or choose from the Drop down list if the person  already exists.</des>
+      <des>5. Enter the description manually or by choosing web icon on the top of description box which navigates to the browser.Navigate to the appropriate web page and copy the text</des>
+      <des>6. Description can also be edited using the edit icon on the top of description box</des>
+      <des>7. Choose Role for the Person</des>
+      <des>8. Choose Image for person from local folder or online</des>
+      <des>9. Click on save appbar icon</des>
+      <des>10.To delete the person,press and hold the person in the cast section.</des>
+      <des>11.select delete from context menu.</des>
+    </c>
+  </de>
+  <de id="13">
+    <c title="Add Chapters">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Swipe to the Chapters section.</des>
+      <des>3. Choose 'add chapters' from appbar menu which navigates to youtube.</des>
+      <des>4. Search for the appropriate video in youtube.</des>
+      <des>5. Click on the folder icon at the bottom.</des>
+      <des>6. Choose the videos by selecting the checkbox in the Online Links Page</des>
+      <des>7. Click on the save icon at the bottom.</des>
+      <des>8. To delete the chapter press and hold the chapter in the chapters section.</des>
+      <des>9. select delete link from context menu.</des>
+    </c>
+  </de>
+  <de id="14">
+    <c title="Add Songs">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Swipe to the Songs section.</des>
+      <des>3. Choose 'add songs' from appbar menu which navigates to youtube.</des>
+      <des>4. Search for the appropriate video in youtube.</des>
+      <des>5. Click on the folder icon at the bottom.</des>
+      <des>6. Choose the videos by selecting the checkbox in the Online Links Page</des>
+      <des>7. Click on the save icon at the bottom.</des>
+      <des>8. To delete the song press and hold the song in the songs section.</des>
+      <des>9. select delete link from context menu.</des>
+    </c>
+  </de>
+  <de id="15">
+    <c title="Add Audio">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Swipe to the audio section.</des>
+      <des>3. Choose 'add audio' from appbar menu.</des>
+      <des>4. Choose the audio language in the pop up.</des>
+      <des>5. Enter the url manually or choose from the Drop down list.</des>
+      <des>6. Navigate to the page where audio songs are listed and click on the folder icon at the bottom.</des>
+      <des>7. Choose the audio songs by selecting the checkbox in the Online Links Page</des>
+      <des>8. Click on the save icon at the bottom.</des>
+      <des>9. To delete the audio press and hold the audio in the audios section.</des>
+      <des>10.select delete link from context menu.</des>
+    </c>
+  </de>
+  <de id="16">
+    <c title="Add Lyrics">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Swipe to the Lyrics section.</des>
+      <des>3. Choose the song from the list to add lyrics.</des>
+      <des>4. Tap on the '+' icon at the bottom.</des>
+      <des>5. Navigate to the page where lyrics are present and copy the text.</des>
+      <des>6. To delete the Lyrics press and hold the related audio in the audios section.</des>
+      <des>7. select delete link from context menu.</des>
+    </c>
+  </de>
+  <de id="17">
+    <c title="Share This Movie">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Choose 'share this movie' from appbar menu in details page.</des>
+    </c>
+  </de>
+</description>

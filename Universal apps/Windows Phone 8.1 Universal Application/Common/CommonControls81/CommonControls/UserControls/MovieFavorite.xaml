@@ -1,0 +1,44 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.MovieFavorite"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="GroupImageTextCollectionTemplate">
+            <StackPanel Orientation="Horizontal" Width="380" Height="170"  Background="#54a0a9" RightTapped="StackPanel_RightTapped_1">
+                <Border Margin="5,10,0,5">
+                    <Image Source="{Binding LandingImage}" Tag="{Binding Title}"   Width="130" Height="160" Stretch="Fill"   VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Border>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                    <TextBlock  Text="{Binding Title}" TextWrapping="Wrap" FontFamily="Segoe UI" Width="200"  Margin="5,10,10,0"  FontSize="18"  Foreground="Black" ></TextBlock>
+                    <TextBlock Text="{Binding Genre}" FontSize="15" Margin="5,10,0,0" FontFamily="Segoe UI" TextTrimming="WordEllipsis" Foreground="Black" ></TextBlock>
+
+                    <Image Source="{Binding RatingBitmapImage}" Margin="5,10,0,0"  HorizontalAlignment="Left" ></Image>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ProgressRing x:Name="progressbar" Width="50" Height="70" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+
+        <StackPanel Orientation="Vertical">
+            <!--<TextBlock x:Name="tbRelatedMovies" Text="related Movies" Margin="50,30,0,0" FontSize="40" FontFamily="Calibri"/>-->
+            <GridView x:Name="grdvwfavoriteMovies" SelectionChanged="grdvwRelatedMovies_SelectionChanged" ItemTemplate="{StaticResource GroupImageTextCollectionTemplate}" >
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid MaximumRowsOrColumns="4"  VerticalChildrenAlignment="Top" ItemWidth="380" HorizontalChildrenAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+            </GridView>
+        </StackPanel>
+
+        <!--<TextBlock   Width="400" Height="50"   x:Name="txtmsg"   FontSize="30"   Foreground="White" Margin="10,280,0,10" Visibility="Collapsed"/>-->
+        <TextBlock    Style="{ StaticResource MovieFavoriteMessage}" HorizontalAlignment="Center" VerticalAlignment="Center"  x:Name="txtmsg" Foreground="White" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

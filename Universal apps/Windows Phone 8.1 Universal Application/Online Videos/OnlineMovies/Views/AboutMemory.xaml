@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="OnlineVideos.AboutMemory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,17,0,28" Orientation="Horizontal">
+            <Image Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+            <TextBlock x:Name="tblkVideosTitle"  Text="ABOUT THIS APP"  Style="{StaticResource DetailPagePivotTitle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="78"/>
+            </Grid.RowDefinitions>
+            <StackPanel Margin="12,0,0,0" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBlock Text="Application Version:  " FontSize="20" Foreground="White"></TextBlock>
+                <TextBlock x:Name="AppVersion" FontSize="20" TextWrapping="Wrap" Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Margin="12,0,0,0" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="Network Type :  " FontSize="20" Foreground="White"></TextBlock>
+                <TextBlock x:Name="txtNetworktype" FontSize="20" TextWrapping="Wrap" Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Margin="12,0,0,0" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="Device Total Memory:  " FontSize="20" Foreground="White"></TextBlock>
+                <TextBlock x:Name="txtdevicetotalmemory" FontSize="20" TextWrapping="Wrap" Foreground="White"></TextBlock>
+                <TextBlock Text="MB" FontSize="20" Margin="5,0,0,0" TextWrapping="Wrap" Foreground="White"></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="12,0,0,0" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="Current Memory Usage:  " FontSize="20" Foreground="White"></TextBlock>
+                <TextBlock x:Name="txtmemoryUsage" FontSize="20" TextWrapping="Wrap" Foreground="White"></TextBlock>
+                <TextBlock Text="MB" FontSize="20" Margin="5,0,0,0" TextWrapping="Wrap" Foreground="White"></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="12,0,0,0" Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="Peak Memory Usage:  " FontSize="20" Foreground="White"></TextBlock>
+                <TextBlock x:Name="txtpeakmemoryUsage" FontSize="20" TextWrapping="Wrap" Foreground="White"></TextBlock>
+                <TextBlock Text="MB" FontSize="20" Margin="5,0,0,0" TextWrapping="Wrap" Foreground="White"></TextBlock>
+            </StackPanel>
+            <Button x:Name="btnagentlog" Content="Background Agent Log" Click="btnagentlog_Click" Grid.Row="5" Height="70" Foreground="White" BorderBrush="White"/>
+        </Grid>
+        <UI:AdControl x:Name="adstackpl" Grid.Row="2"                      
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+</Page>

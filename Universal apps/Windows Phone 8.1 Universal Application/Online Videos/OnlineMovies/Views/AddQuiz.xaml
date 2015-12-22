@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.AddQuiz"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource ContentControlFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,-5,0,28" Orientation="Horizontal">
+            <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+            <TextBlock x:Name="tblkVideosTitle" Text="Add Quiz"  Style="{StaticResource DetailPagePivotTitle}" />
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-15,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,-10,0,0">
+                <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                    <TextBlock x:Name="valid1" Text="Required" FontSize="15" Foreground="Red" Margin="250,0,0,0" Height="20" HorizontalAlignment="Center" Visibility="Collapsed"></TextBlock>
+                    <TextBox x:Name="questiontbx" HorizontalAlignment="Left" FontSize="20" Height="37" Width="310" PlaceholderText="Add Question" Margin="0,2,0,0"></TextBox>
+                </StackPanel>
+                <Image x:Name="question" Source="/Images/online.png" Margin="10,5,0,0" Height="45" Width="45" PointerPressed="question_PointerPressed"></Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,0">
+                <TextBox x:Name="option1tbx" HorizontalAlignment="Left" FontSize="20" Height="37" Width="310" PlaceholderText="Add Option A" Margin="0,2,0,0"></TextBox>
+                <Image x:Name="option1" Source="/Images/online.png" Margin="10,0,0,0" Height="45" Width="45" PointerPressed="question_PointerPressed"></Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,0,0,0">
+                <TextBox x:Name="option2tbx" HorizontalAlignment="Left" FontSize="20" Height="37" Width="310" PlaceholderText="Add Option B" Margin="0,3,0,0"></TextBox>
+                <Image x:Name="option2" Source="/Images/online.png" Margin="10,0,0,0" Height="45" Width="45" PointerPressed="question_PointerPressed"></Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0,0,0,0">
+                <TextBox x:Name="option3tbx" HorizontalAlignment="Left" FontSize="20" Height="37" Width="310" PlaceholderText="Add Option C" Margin="0,3,0,0"></TextBox>
+                <Image x:Name="option3" Source="/Images/online.png" Margin="10,0,0,0" Height="45" Width="45" PointerPressed="question_PointerPressed"></Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="0,0,0,0">
+                <TextBox x:Name="option4tbx" HorizontalAlignment="Left" FontSize="20" Height="37" Width="310" PlaceholderText="Add Option D" Margin="0,3,0,0"></TextBox>
+                <Image x:Name="option4" Source="/Images/online.png" Margin="10,0,0,0" Height="45" Width="45" PointerPressed="question_PointerPressed"></Image>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="10,-5,0,0">
+                <TextBlock x:Name="anstblk" FontSize="20" Text="Choose Answer" Height="40" Margin="-5,10,10,0"></TextBlock>
+                <ComboBox Width="200" x:Name="lpickranswers" ItemsSource="{Binding Items}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="15,-5,0,0">
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock x:Name="localtblk" FontSize="18" Foreground="White" Text="Image From Local"></TextBlock>
+                    <Image x:Name="userlocalimg"  Visibility="Visible" Source="/Images/fromlocal.png" Height="160" Width="120" HorizontalAlignment="Left" Margin="15,5,0,0" PointerPressed="userlocalimg_PointerPressed"></Image>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="60,0,0,0">
+                    <TextBlock x:Name="onlinetblk" FontSize="18" Foreground="White" Text="Image From Online"></TextBlock>
+                    <Image x:Name="useronlineimg"  Visibility="Visible" Source="/Images/fromonline.png" Height="160" Width="120" HorizontalAlignment="Left" Margin="10,5,0,0" PointerPressed="useronlineimg_PointerPressed"></Image>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnsave" Icon="Save" Label="Save" Click="btnsave_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.DanceDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid" >
+        <Grid.RowDefinitions   >
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="LayoutRoot" Grid.Row="0" Background="Transparent">
+            <Pivot x:ConnectionId='1' x:Name="pvtMainDetails"                                                     >
+                <Pivot.Title>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <Image x:ConnectionId='2' Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle"                                         />
+                        <TextBlock x:Name="tblkVideosTitle" Style="{StaticResource DetailPagePivotTitle}"/>
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>
+                    white
+                </Pivot.Foreground>
+                <PivotItem x:Name="pvtitmDetail" Header="detail">
+                    <Grid x:Name="DetailGrid">
+                        <LART:ShowDescription x:Name="showDesc" />
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:Name="pvtitmSongs" Header="videos" Foreground="White">
+                    <Grid  x:Name="showVideogrid">
+                        <LART:ShowVideos x:Name="VideosList"/>
+                    </Grid>
+                </PivotItem>
+                </Pivot>
+                <ProgressBar
+            VerticalAlignment="Top"
+            x:Name="performanceProgressBar" Foreground="Red"/>
+        </Grid>
+        <StackPanel Name="adstaSongs" Grid.Row="1" Orientation="Vertical" >
+        </StackPanel>
+   </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='3' x:Name="btnshare" Label="Share this"                       />
+                <AppBarButton x:ConnectionId='4' x:Name="btnadd" Label="Add"                     />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+

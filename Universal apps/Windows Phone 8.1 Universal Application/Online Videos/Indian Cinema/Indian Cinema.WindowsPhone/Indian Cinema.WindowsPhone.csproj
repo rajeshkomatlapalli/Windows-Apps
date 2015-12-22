@@ -1,0 +1,2013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F24DAA85-2801-4009-B7EC-01413749A453}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos</RootNamespace>
+    <AssemblyName>Indian Cinema.WindowsPhone</AssemblyName>
+    <DefaultLanguage>en</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/03a21a6b-ff4d-439b-8b04-192c267818c5/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/Indian Cinema.WindowsPhone-1</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>false</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\210x210.png" />
+    <Content Include="Assets\310x150.png" />
+    <Content Include="Assets\62x62.png" />
+    <Content Include="Assets\70x70.png" />
+    <Content Include="Assets\99x99.png" />
+    <Content Include="Assets\ApplicationIcon - %28150x150%29.scale-100.png" />
+    <Content Include="Assets\ApplicationIcon - %2844x44%29.scale-100.png" />
+    <Content Include="Assets\ApplicationIcon -%2871x71%29.png" />
+    <Content Include="Assets\ApplicationIcon -%2871x71%29.scale-100.png" />
+    <Content Include="Assets\ApplicationIcon -%2871x71%29.scale-240.png" />
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="Assets\SplashScreenImage - sdk.jpg" />
+    <Content Include="Assets\SplashScreenImage.scale-100.jpg" />
+    <Content Include="Assets\Square71x71Logo.scale-140.png" />
+    <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="Fonts\Milleni Gem.ttf" />
+    <Content Include="Images\Zindagi-Ka-Safar%28Rajesh-Khanna%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\AboutUs.xaml.cs">
+      <Link>About Us\AboutUs.xaml.cs</Link>
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\ContactUs.xaml.cs">
+      <Link>About Us\ContactUs.xaml.cs</Link>
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\Feedback.xaml.cs">
+      <Link>About Us\Feedback.xaml.cs</Link>
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\SendMail.cs">
+      <Link>About Us\SendMail.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\Upgrade.xaml.cs">
+      <Link>About Us\Upgrade.xaml.cs</Link>
+      <DependentUpon>Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\AudioFavorite.xaml.cs">
+      <Link>UserControls\AudioFavorite.xaml.cs</Link>
+      <DependentUpon>AudioFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\AudioHistory.xaml.cs">
+      <Link>UserControls\AudioHistory.xaml.cs</Link>
+      <DependentUpon>AudioHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ComedyHistory.xaml.cs">
+      <Link>UserControls\ComedyHistory.xaml.cs</Link>
+      <DependentUpon>ComedyHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\FavoriteShows.xaml.cs">
+      <Link>UserControls\FavoriteShows.xaml.cs</Link>
+      <DependentUpon>FavoriteShows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\FavoriteVideos.xaml.cs">
+      <Link>UserControls\FavoriteVideos.xaml.cs</Link>
+      <DependentUpon>FavoriteVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\FavouriteComedy.xaml.cs">
+      <Link>UserControls\FavouriteComedy.xaml.cs</Link>
+      <DependentUpon>FavouriteComedy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\GameVehicleDisplay.xaml.cs">
+      <Link>UserControls\GameVehicleDisplay.xaml.cs</Link>
+      <DependentUpon>GameVehicleDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\GameWeaponsDisplay.xaml.cs">
+      <Link>UserControls\GameWeaponsDisplay.xaml.cs</Link>
+      <DependentUpon>GameWeaponsDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\LoginPopup.xaml.cs">
+      <Link>UserControls\LoginPopup.xaml.cs</Link>
+      <DependentUpon>LoginPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\Lyrics.xaml.cs">
+      <Link>UserControls\Lyrics.xaml.cs</Link>
+      <DependentUpon>Lyrics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\MemoryGame_1.xaml.cs">
+      <Link>UserControls\MemoryGame_1.xaml.cs</Link>
+      <DependentUpon>MemoryGame_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonDetail.xaml.cs">
+      <Link>UserControls\PersonDetail.xaml.cs</Link>
+      <DependentUpon>PersonDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonGallery.xaml.cs">
+      <Link>UserControls\PersonGallery.xaml.cs</Link>
+      <DependentUpon>PersonGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonGalleryPopup.xaml.cs">
+      <Link>UserControls\PersonGalleryPopup.xaml.cs</Link>
+      <DependentUpon>PersonGalleryPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonProfileShows.xaml.cs">
+      <Link>UserControls\PersonProfileShows.xaml.cs</Link>
+      <DependentUpon>PersonProfileShows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\RatingControl.xaml.cs">
+      <Link>UserControls\RatingControl.xaml.cs</Link>
+      <DependentUpon>RatingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowAudio.xaml.cs">
+      <Link>UserControls\ShowAudio.xaml.cs</Link>
+      <DependentUpon>ShowAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowCast.xaml.cs">
+      <Link>UserControls\ShowCast.xaml.cs</Link>
+      <DependentUpon>ShowCast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowChapters.xaml.cs">
+      <Link>UserControls\ShowChapters.xaml.cs</Link>
+      <DependentUpon>ShowChapters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowCheatCode.xaml.cs">
+      <Link>UserControls\ShowCheatCode.xaml.cs</Link>
+      <DependentUpon>ShowCheatCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowComedy.xaml.cs">
+      <Link>UserControls\ShowComedy.xaml.cs</Link>
+      <DependentUpon>ShowComedy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowDescription.xaml.cs">
+      <Link>UserControls\ShowDescription.xaml.cs</Link>
+      <DependentUpon>ShowDescription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowHistory.xaml.cs">
+      <Link>UserControls\ShowHistory.xaml.cs</Link>
+      <DependentUpon>ShowHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowLyrics.xaml.cs">
+      <Link>UserControls\ShowLyrics.xaml.cs</Link>
+      <DependentUpon>ShowLyrics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowVideos.xaml.cs">
+      <Link>UserControls\ShowVideos.xaml.cs</Link>
+      <DependentUpon>ShowVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\VideosHistory.xaml.cs">
+      <Link>UserControls\VideosHistory.xaml.cs</Link>
+      <DependentUpon>VideosHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\AddReminder.cs">
+      <Link>View Models\AddReminder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\Adds\LoadAdds.cs">
+      <Link>View Models\LoadAdds.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\AutoComplete.cs">
+      <Link>View Models\AutoComplete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\BackGroundCheck.cs">
+      <Link>View Models\BackGroundCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\CreateCustomImage.cs">
+      <Link>View Models\CreateCustomImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\Data\ThemeableImage.cs">
+      <Link>View Models\ThemeableImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\ImageConverter.cs">
+      <Link>View Models\ImageConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\ParaConverter.cs">
+      <Link>View Models\ParaConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\Project.cs">
+      <Link>View Models\Project.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\ShowDetail.cs">
+      <Link>View Models\ShowDetail.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\TextTrimmer.cs">
+      <Link>View Models\TextTrimmer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\TimerHelper.cs">
+      <Link>View Models\TimerHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\AboutMemory.xaml.cs">
+      <Link>Views\AboutMemory.xaml.cs</Link>
+      <DependentUpon>AboutMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\AddCast_New.xaml.cs">
+      <Link>Views\AddCast_New.xaml.cs</Link>
+      <DependentUpon>AddCast_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Advertisement.xaml.cs">
+      <Link>Views\Advertisement.xaml.cs</Link>
+      <DependentUpon>Advertisement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\BackAgentError.xaml.cs">
+      <Link>Views\BackAgentError.xaml.cs</Link>
+      <DependentUpon>BackAgentError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Browser.xaml.cs">
+      <Link>Views\Browser.xaml.cs</Link>
+      <DependentUpon>Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\CastHub.xaml.cs">
+      <Link>Views\CastHub.xaml.cs</Link>
+      <DependentUpon>CastHub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\CategoryDetails.xaml.cs">
+      <Link>Views\CategoryDetails.xaml.cs</Link>
+      <DependentUpon>CategoryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\CharacterDetail.xaml.cs">
+      <Link>Views\CharacterDetail.xaml.cs</Link>
+      <DependentUpon>CharacterDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\CricketDetail.xaml.cs">
+      <Link>Views\CricketDetail.xaml.cs</Link>
+      <DependentUpon>CricketDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\DanceDetailPage.xaml.cs">
+      <Link>Views\DanceDetailPage.xaml.cs</Link>
+      <DependentUpon>DanceDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Description.xaml.cs">
+      <Link>Views\Description.xaml.cs</Link>
+      <DependentUpon>Description.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Details.xaml.cs">
+      <Link>Views\Details.xaml.cs</Link>
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Help.xaml.cs">
+      <Link>Views\Help.xaml.cs</Link>
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\LinksFromOnline.xaml.cs">
+      <Link>Views\LinksFromOnline.xaml.cs</Link>
+      <DependentUpon>LinksFromOnline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\MoviesFavorites.xaml.cs">
+      <Link>Views\MoviesFavorites.xaml.cs</Link>
+      <DependentUpon>MoviesFavorites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\MoviesHistory.xaml.cs">
+      <Link>Views\MoviesHistory.xaml.cs</Link>
+      <DependentUpon>MoviesHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\MoviesList.xaml.cs">
+      <Link>Views\MoviesList.xaml.cs</Link>
+      <DependentUpon>MoviesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\MusicDetail.xaml.cs">
+      <Link>Views\MusicDetail.xaml.cs</Link>
+      <DependentUpon>MusicDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\OfflineVideoPlayer.xaml.cs">
+      <Link>Views\OfflineVideoPlayer.xaml.cs</Link>
+      <DependentUpon>OfflineVideoPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\OnlineImages_New.xaml.cs">
+      <Link>Views\OnlineImages_New.xaml.cs</Link>
+      <DependentUpon>OnlineImages_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\OnlineLinks.xaml.cs">
+      <Link>Views\OnlineLinks.xaml.cs</Link>
+      <DependentUpon>OnlineLinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\PersonGalleryPopup.xaml.cs">
+      <Link>Views\PersonGalleryPopup.xaml.cs</Link>
+      <DependentUpon>PersonGalleryPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\PhotoChooser_New.xaml.cs">
+      <Link>Views\PhotoChooser_New.xaml.cs</Link>
+      <DependentUpon>PhotoChooser_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Search.xaml.cs">
+      <Link>Views\Search.xaml.cs</Link>
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Settings.xaml.cs">
+      <Link>Views\Settings.xaml.cs</Link>
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\ShowDetails.xaml.cs">
+      <Link>Views\ShowDetails.xaml.cs</Link>
+      <DependentUpon>ShowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\ShowLiricsDetail.xaml.cs">
+      <Link>Views\ShowLiricsDetail.xaml.cs</Link>
+      <DependentUpon>ShowLiricsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\ShowList.xaml.cs">
+      <Link>Views\ShowList.xaml.cs</Link>
+      <DependentUpon>ShowList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Story.xaml.cs">
+      <Link>Views\Story.xaml.cs</Link>
+      <DependentUpon>Story.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\UserBrowserPage.xaml.cs">
+      <Link>Views\UserBrowserPage.xaml.cs</Link>
+      <DependentUpon>UserBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\UserUpload.xaml.cs">
+      <Link>Views\UserUpload.xaml.cs</Link>
+      <DependentUpon>UserUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\VideoGamesDetail.xaml.cs">
+      <Link>Views\VideoGamesDetail.xaml.cs</Link>
+      <DependentUpon>VideoGamesDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Youtube.xaml.cs">
+      <Link>Views\Youtube.xaml.cs</Link>
+      <DependentUpon>Youtube.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Information console.xaml.cs">
+      <DependentUpon>Information console.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RatingPopup_New.xaml.cs">
+      <DependentUpon>RatingPopup_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View Models\AppInsights.cs" />
+    <Compile Include="View Models\Manipulations\InputProcessor.cs" />
+    <Compile Include="View Models\Manipulations\ManipulationFilter.cs" />
+    <Compile Include="View Models\Manipulations\ManipulationManager.cs" />
+    <Compile Include="View Models\State.cs" />
+    <Compile Include="View Models\WebViewWrapper.cs" />
+    <Compile Include="Views\HelpMenu.xaml.cs">
+      <DependentUpon>HelpMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicSettings.xaml.cs">
+      <DependentUpon>MusicSettings.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\FeedbackTopics.xml">
+      <Link>About Us\FeedbackTopics.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\appbar.feature.email.rest.png">
+      <Link>About Us\Images\appbar.feature.email.rest.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\blog.png">
+      <Link>About Us\Images\blog.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\email.png">
+      <Link>About Us\Images\email.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\facebook.png">
+      <Link>About Us\Images\facebook.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\twitter.png">
+      <Link>About Us\Images\twitter.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\youtube.png">
+      <Link>About Us\Images\youtube.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.add.rest.png">
+      <Link>Images\appbar.add.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.cancel.rest.png">
+      <Link>Images\appbar.cancel.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.check.rest.png">
+      <Link>Images\appbar.check.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.feature.email.rest.png">
+      <Link>Images\appbar.feature.email.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.feature.search.rest.png">
+      <Link>Images\appbar.feature.search.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.folder.rest %282%29.png">
+      <Link>Images\appbar.folder.rest %282%29.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.sync.rest.png">
+      <Link>Images\appbar.sync.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.transport.pause.rest.png">
+      <Link>Images\appbar.transport.pause.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.transport.play.rest.png">
+      <Link>Images\appbar.transport.play.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\ArrowImg.png">
+      <Link>Images\ArrowImg.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\broken.png">
+      <Link>Images\broken.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\chain-broke.png">
+      <Link>Images\chain-broke.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Fav.png">
+      <Link>Images\Fav.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\NotFav.png">
+      <Link>Images\NotFav.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Personimage.jpg">
+      <Link>Images\Personimage.jpg</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\pin.png">
+      <Link>Images\pin.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\appbar.cancel.rest.png">
+      <Link>Images\rating\appbar.cancel.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\appbar.check.rest.png">
+      <Link>Images\rating\appbar.check.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\gobutton.png">
+      <Link>Images\rating\gobutton.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img1.png">
+      <Link>Images\rating\img1.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img10.png">
+      <Link>Images\rating\img10.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img11.png">
+      <Link>Images\rating\img11.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img2.png">
+      <Link>Images\rating\img2.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img3.png">
+      <Link>Images\rating\img3.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img4.png">
+      <Link>Images\rating\img4.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img5.png">
+      <Link>Images\rating\img5.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img6.png">
+      <Link>Images\rating\img6.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img7.png">
+      <Link>Images\rating\img7.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img8.png">
+      <Link>Images\rating\img8.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img9.png">
+      <Link>Images\rating\img9.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\sharemovie.png">
+      <Link>Images\sharemovie.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\unpin.png">
+      <Link>Images\unpin.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\favorites.png">
+      <Link>Images\MainMenu\favorites.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\getstarted.png">
+      <Link>Images\MainMenu\getstarted.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\history.png">
+      <Link>Images\MainMenu\history.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\movielist.png">
+      <Link>Images\MainMenu\movielist.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\settings.png">
+      <Link>Images\MainMenu\settings.png</Link>
+    </Content>
+    <Content Include="Assets\ApplicationIcon - %28store%29.png" />
+    <Content Include="Assets\Logo.scale-240.png" />
+    <Content Include="Assets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\SplashScreen.scale-240.png" />
+    <Content Include="Assets\Square71x71Logo.scale-240.png" />
+    <Content Include="Assets\StoreLogo.scale-240.png" />
+    <Content Include="Assets\WideLogo.scale-240.png" />
+    <Content Include="Claps.mp3" />
+    <Content Include="DefaultData\Customization.xml" />
+    <Content Include="DefaultData\defaultAdSettings.xml" />
+    <Content Include="DefaultData\Help.xml" />
+    <Content Include="DefaultData\HelpMenu.xml" />
+    <Content Include="DefaultData\ShowTopAudioLinks.xml" />
+    <Content Include="DefaultData\SpeechTitles.xml" />
+    <Content Include="Extensions\Extras.xml" />
+    <Content Include="Images\1 nenokkadine.jpg" />
+    <Content Include="Images\10 Enradhukulla.jpg" />
+    <Content Include="Images\1000 abaddalu.jpg" />
+    <Content Include="Images\125.jpg" />
+    <Content Include="Images\143.jpg" />
+    <Content Include="Images\180.jpg" />
+    <Content Include="Images\1850-jem-medium.jpg" />
+    <Content Include="Images\190px-Golmaal_3.jpg" />
+    <Content Include="Images\1920-Evil Returns.jpg" />
+    <Content Include="Images\1942lovestory.jpg" />
+    <Content Include="Images\2 States.jpg" />
+    <Content Include="Images\220px-Annayya_2000_Poster.jpg" />
+    <Content Include="Images\220px-Bujjigaadu_poster.jpg" />
+    <Content Include="Images\220px-Sivaji_The_Boss.jpg" />
+    <Content Include="Images\220px-Velayutham_poster.jpg" />
+    <Content Include="Images\3-Idiots.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\3679-makkhi-medium.jpg" />
+    <Content Include="Images\3G.jpg" />
+    <Content Include="Images\555-tamil.jpg" />
+    <Content Include="Images\555.jpg" />
+    <Content Include="Images\7aumArivu.jpg" />
+    <Content Include="Images\Aa Naluguru.jpg" />
+    <Content Include="Images\Aadi.jpg" />
+    <Content Include="Images\aadu.jpg" />
+    <Content Include="Images\aadukalam.jpg" />
+    <Content Include="Images\Aagadu.jpg" />
+    <Content Include="Images\aahakalyanam.jpg" />
+    <Content Include="Images\Aakrosh.jpg" />
+    <Content Include="Images\Aarambam.jpg" />
+    <Content Include="Images\aaru.jpg" />
+    <Content Include="Images\Aarya2.jpg" />
+    <Content Include="Images\Aashiqui2.jpg" />
+    <Content Include="Images\Aata.jpg" />
+    <Content Include="Images\Aatma.jpg" />
+    <Content Include="Images\AayirathilOruvan.jpg" />
+    <Content Include="Images\Ab-Tak-Chappan-2.jpg" />
+    <Content Include="Images\abbai-class-ammayi-mass.jpg" />
+    <Content Include="Images\ABCD - AnyBody Can Dance.jpg" />
+    <Content Include="Images\ABCD.jpg" />
+    <Content Include="Images\ABCD2.jpg" />
+    <Content Include="Images\Action Jackson.jpg" />
+    <Content Include="Images\Action-Replayy.jpg" />
+    <Content Include="Images\Action3d.jpg" />
+    <Content Include="Images\Adavari Matalaku Ardhale Verule.jpg" />
+    <Content Include="Images\adavi kachina vennela.jpg" />
+    <Content Include="Images\add image.png" />
+    <Content Include="Images\adda.jpg" />
+    <Content Include="Images\adhurs.jpg" />
+    <Content Include="Images\AdiSankara.jpg" />
+    <Content Include="Images\Aditya369.jpg" />
+    <Content Include="Images\agadam.jpg" />
+    <Content Include="Images\Agent-Vinod.jpg" />
+    <Content Include="Images\Agneepath.jpg" />
+    <Content Include="Images\Ahana Pellanta.jpg" />
+    <Content Include="Images\ahanapellanta.jpg" />
+    <Content Include="Images\Aisha.jpg" />
+    <Content Include="Images\Aiyya.jpg" />
+    <Content Include="Images\Ajab Gazabb Love.jpg" />
+    <Content Include="Images\Ajab-Prem-Ki-Ghazab-Kahani.jpg" />
+    <Content Include="Images\Akkada Ammayi Ikkada Abbayi.jpg" />
+    <Content Include="Images\Ala Ela-%282014%29.jpg" />
+    <Content Include="Images\Alaipaythey.jpg" />
+    <Content Include="Images\alias janaki.jpg" />
+    <Content Include="Images\All-The-Best.jpg" />
+    <Content Include="Images\Allari Priyudu.jpg" />
+    <Content Include="Images\allari.jpg" />
+    <Content Include="Images\AllariPriyudu.jpg" />
+    <Content Include="Images\Alludu Seenu.jpg" />
+    <Content Include="Images\Ammoru.jpg" />
+    <Content Include="Images\Anaamika.jpg" />
+    <Content Include="Images\anand.jpg" />
+    <Content Include="Images\anandam.jpg" />
+    <Content Include="Images\Anbesivam.jpg" />
+    <Content Include="Images\AndhariBandhuvaya.jpg" />
+    <Content Include="Images\andhrudu.jpg" />
+    <Content Include="Images\Anegan_Poster.jpg" />
+    <Content Include="Images\Angaar.jpg" />
+    <Content Include="Images\Angadi Theru.jpg" />
+    <Content Include="Images\anjaan.jpg" />
+    <Content Include="Images\anjaana-anjaani.jpg" />
+    <Content Include="Images\anji.jpg" />
+    <Content Include="Images\Anna %28Thalaivaa%29.jpg" />
+    <Content Include="Images\Anna.jpg" />
+    <Content Include="Images\annamayya.jpg" />
+    <Content Include="Images\Anniyan.jpg" />
+    <Content Include="Images\AnthakuMundhuAaTaruvatha.jpg" />
+    <Content Include="Images\Anthapuram.jpg" />
+    <Content Include="Images\AnukokundaOkaRoju.jpg" />
+    <Content Include="Images\apan.jpg" />
+    <Content Include="Images\Apna-Sapna-Money-Money.jpg" />
+    <Content Include="Images\appbar.close.rest.png" />
+    <Content Include="Images\appbar.folder.rest.png" />
+    <Content Include="Images\appbar.new.rest.png" />
+    <Content Include="Images\aravindtwo.jpg" />
+    <Content Include="Images\Arima Nambi.jpg" />
+    <Content Include="Images\Arima-Nambi.jpg" />
+    <Content Include="Images\Arundhati.jpg" />
+    <Content Include="Images\Arya.jpg" />
+    <Content Include="Images\Ashok.jpg" />
+    <Content Include="Images\AshtaChemma.jpg" />
+    <Content Include="Images\athadu.jpg" />
+    <Content Include="Images\athidi.jpg" />
+    <Content Include="Images\Atif Aslam.jpg" />
+    <Content Include="Images\attarintiki daredi.jpg" />
+    <Content Include="Images\aurangzeb.jpg" />
+    <Content Include="Images\autonagarsurya.jpg" />
+    <Content Include="Images\AvanIvan.jpg" />
+    <Content Include="Images\Avunanna Kadanna.jpg" />
+    <Content Include="Images\Ayan.jpg" />
+    <Content Include="Images\Azhar.jpg" />
+    <Content Include="Images\Baabul.jpg" />
+    <Content Include="Images\Baadshah.jpg" />
+    <Content Include="Images\baahubali.jpg" />
+    <Content Include="Images\Baahubalihin.jpg" />
+    <Content Include="Images\Baahubalitamil.jpg" />
+    <Content Include="Images\Baashha.jpg" />
+    <Content Include="Images\Bachna-ae-Haseeno.jpg" />
+    <Content Include="Images\Bad Boy.jpg" />
+    <Content Include="Images\Badlapur.jpg" />
+    <Content Include="Images\Badri.jpg" />
+    <Content Include="Images\bahubali.jpg" />
+    <Content Include="Images\Bajirao Mastani.jpg" />
+    <Content Include="Images\Bajrangi Bhaijaan.jpg" />
+    <Content Include="Images\Bale_Bale_Magadivoy_Telugu_Poster.jpg" />
+    <Content Include="Images\balu.jpg" />
+    <Content Include="Images\Balupu.jpg" />
+    <Content Include="Images\Banaras.jpg" />
+    <Content Include="Images\band baaja.JPG" />
+    <Content Include="Images\Band-Baaja-Baaraat.jpg" />
+    <Content Include="Images\Bandipotu.jpg" />
+    <Content Include="Images\BANG BANG.jpg" />
+    <Content Include="Images\Bangaram.jpg" />
+    <Content Include="Images\Bangaru Kodipetta.jpg" />
+    <Content Include="Images\bangaru-kodipetta.jpg" />
+    <Content Include="Images\BangaruBullodu.jpg" />
+    <Content Include="Images\baratheeyudu.jpg" />
+    <Content Include="Images\Barfi.jpg" />
+    <Content Include="Images\BavagaruBagunnara.jpg" />
+    <Content Include="Images\beeruva-20141118165639-13984.jpg" />
+    <Content Include="Images\Beeruva.jpg" />
+    <Content Include="Images\Bench Talkies.jpg" />
+    <Content Include="Images\Bengal_Tiger.jpg" />
+    <Content Include="Images\Besharam.jpg" />
+    <Content Include="Images\Best of Kishore Kumar.jpg" />
+    <Content Include="Images\Bewakoofiyaan.jpg" />
+    <Content Include="Images\Bhaag-Milkha-Bhaag.jpg" />
+    <Content Include="Images\bhadram.jpg" />
+    <Content Include="Images\bhagam-bhag.jpg" />
+    <Content Include="Images\bhai.jpg" />
+    <Content Include="Images\Bhairava Dweepam.jpg" />
+    <Content Include="Images\Bheemavaram Bullodu.jpg" />
+    <Content Include="Images\Bheja-fry-2.jpg" />
+    <Content Include="Images\Bhoothnath Returns.jpg" />
+    <Content Include="Images\Bhoothnath.jpg" />
+    <Content Include="Images\Billa.jpg" />
+    <Content Include="Images\Bindaas.jpg" />
+    <Content Include="Images\biriyani.jpg" />
+    <Content Include="Images\Bobbili simham.jpg" />
+    <Content Include="Images\BobbiliRaja.jpg" />
+    <Content Include="Images\Bobby Jasoos.jpg" />
+    <Content Include="Images\Bobby.jpg" />
+    <Content Include="Images\bodyguard.jpg" />
+    <Content Include="Images\Bol Bachchan.jpg" />
+    <Content Include="Images\Bombay Talkies.jpg" />
+    <Content Include="Images\bombay.jpg" />
+    <Content Include="Images\Bommarillu-Movie-poster.jpg" />
+    <Content Include="Images\Boss.jpg" />
+    <Content Include="Images\Boss_engira_bhaskaran.jpg" />
+    <Content Include="Images\boys.jpg" />
+    <Content Include="Images\BreakKeBaad.jpg" />
+    <Content Include="Images\brindavan.jpg" />
+    <Content Include="Images\brindavancolony.jpg" />
+    <Content Include="Images\Brother.jpg" />
+    <Content Include="Images\brotherofbommali.jpg" />
+    <Content Include="Images\Bruce Lee.jpg" />
+    <Content Include="Images\Bullett Raja.jpg" />
+    <Content Include="Images\Bunny.jpg" />
+    <Content Include="Images\Businessman.jpg" />
+    <Content Include="Images\Cameraman Ganga Tho Rambabu.jpg" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\Cash.jpg" />
+    <Content Include="Images\Chaarfutiya Chhokare.jpg" />
+    <Content Include="Images\chakkiligintha.jpg" />
+    <Content Include="Images\Chal-Chala-Chal.jpg" />
+    <Content Include="Images\Chalte-chalte.jpg" />
+    <Content Include="Images\chammak challo.jpg" />
+    <Content Include="Images\ChancePeDance.jpg" />
+    <Content Include="Images\Chandamama Kathalu.jpg" />
+    <Content Include="Images\Chandamama.jpg" />
+    <Content Include="Images\Chandrakala.jpg" />
+    <Content Include="Images\chandramukhi.jpg" />
+    <Content Include="Images\ChandramukhiTamil.jpg" />
+    <Content Include="Images\Chanti.jpg" />
+    <Content Include="Images\Chashme Buddoor.jpg" />
+    <Content Include="Images\chennai express.jpg" />
+    <Content Include="Images\chiller-party.jpg" />
+    <Content Include="Images\ChinaTown.jpg" />
+    <Content Include="Images\Chinnadana Nee Kosam1.jpg" />
+    <Content Include="Images\Chinnadana Nee Kosam2.jpg" />
+    <Content Include="Images\Chirutha.jpg" />
+    <Content Include="Images\Cinema Chupista Mama.jpg" />
+    <Content Include="Images\citylight.jpg" />
+    <Content Include="Images\club60.jpg" />
+    <Content Include="Images\Cocoktail.jpg" />
+    <Content Include="Images\Cokestuido.jpg" />
+    <Content Include="Images\Coolie_Telugu.jpg" />
+    <Content Include="Images\courierboykalyan.jpg" />
+    <Content Include="Images\Courier_Boy_Kalyan_Poster.jpg" />
+    <Content Include="Images\Criminal.jpg" />
+    <Content Include="Images\Cup.png" />
+    <Content Include="Images\current.jpg" />
+    <Content Include="Images\D-Day.jpg" />
+    <Content Include="Images\DaanaVeeraSooraKarna.jpg" />
+    <Content Include="Images\Daawat E Ishq.jpg" />
+    <Content Include="Images\Dabangg 2.jpg" />
+    <Content Include="Images\Dabangg.jpg" />
+    <Content Include="Images\damarukam.jpg" />
+    <Content Include="Images\Dangerous-Ishhq.jpg" />
+    <Content Include="Images\Daruvu.jpg" />
+    <Content Include="Images\Dasavatharam.jpg" />
+    <Content Include="Images\david.jpg" />
+    <Content Include="Images\dedh ishqiya.jpg" />
+    <Content Include="Images\deewana.jpg" />
+    <Content Include="Images\Default.jpg" />
+    <Content Include="Images\DeivaThirumagal.jpg" />
+    <Content Include="Images\Delhi-Belly.jpg" />
+    <Content Include="Images\DenikainaReady.jpg" />
+    <Content Include="Images\Department.jpg" />
+    <Content Include="Images\Desamuduru.jpg" />
+    <Content Include="Images\Desi-Boyz.jpg" />
+    <Content Include="Images\desingu.jpg" />
+    <Content Include="Images\Devadas.jpg" />
+    <Content Include="Images\Devadasu2.jpg" />
+    <Content Include="Images\Devaraya.jpg" />
+    <Content Include="Images\Devatha.JPG" />
+    <Content Include="Images\devudu chesina manushulu.jpg" />
+    <Content Include="Images\Devudu.jpg" />
+    <Content Include="Images\Devullu.jpg" />
+    <Content Include="Images\dfordopidi.jpg" />
+    <Content Include="Images\Dhada.jpg" />
+    <Content Include="Images\Dhammu.jpg" />
+    <Content Include="Images\Dharma Kshetram.jpg" />
+    <Content Include="Images\Dhee.jpg" />
+    <Content Include="Images\dheerudu.jpg" />
+    <Content Include="Images\Dhoni.jpg" />
+    <Content Include="Images\Dhoom-2.jpg" />
+    <Content Include="Images\Dhoom3.jpg" />
+    <Content Include="Images\dikkulu.jpg" />
+    <Content Include="Images\Dil dhadakne do.jpg" />
+    <Content Include="Images\Dil-Maange-More.jpg" />
+    <Content Include="Images\Dil.jpg" />
+    <Content Include="Images\Dilchahtahai.jpg" />
+    <Content Include="Images\Dilse.jpg" />
+    <Content Include="Images\Dilthopagalhi.jpg" />
+    <Content Include="Images\Dilwale.jpg" />
+    <Content Include="Images\Dishkiyaaoon.jpg" />
+    <Content Include="Images\DJ.jpg" />
+    <Content Include="Images\do-dooni-chaar.jpg" />
+    <Content Include="Images\dochey1.jpg" />
+    <Content Include="Images\Don.jpg" />
+    <Content Include="Images\Don2.jpg" />
+    <Content Include="Images\donseenu.jpg" />
+    <Content Include="Images\Dookudu.jpg" />
+    <Content Include="Images\doosukeltha.jpg" />
+    <Content Include="Images\dostana.jpg" />
+    <Content Include="Images\Double-Dhamaal.jpg" />
+    <Content Include="Images\Drishyam.jpg" />
+    <Content Include="Images\Drushyam.jpg" />
+    <Content Include="Images\DubaiSeenu.jpg" />
+    <Content Include="Images\Dum-Maaro-Dum.jpg" />
+    <Content Include="Images\dynamite1.jpg" />
+    <Content Include="Images\Ee-Rojullo.jpg" />
+    <Content Include="Images\Eega.jpg" />
+    <Content Include="Images\Ek Tha Tiger.jpg" />
+    <Content Include="Images\Ek Thi Daayan.jpg" />
+    <Content Include="Images\Ek Villain.jpg" />
+    <Content Include="Images\Ek-Aur-Ek-Gyarah.jpg" />
+    <Content Include="Images\Ek-Main-Aur-Ekk-Tu.jpg" />
+    <Content Include="Images\ekaloveyudu.jpg" />
+    <Content Include="Images\Ekk-Deewana-Tha.jpg" />
+    <Content Include="Images\ekniranjan.jpg" />
+    <Content Include="Images\Eli.jpg" />
+    <Content Include="Images\Emraan Hashmi.jpg" />
+    <Content Include="Images\Enakkul_Oruvan_poster.jpg" />
+    <Content Include="Images\Endhiran.jpg" />
+    <Content Include="Images\endrendrum punnagai.jpg" />
+    <Content Include="Images\Endukante-Premanta.jpg" />
+    <Content Include="Images\Engeyum Eppothum.jpg" />
+    <Content Include="Images\Engheyum-Kaadhal.jpg" />
+    <Content Include="Images\english_vinglish.jpg" />
+    <Content Include="Images\erra - Copy.jpg" />
+    <Content Include="Images\FamilyCircus.jpg" />
+    <Content Include="Images\fanaa.jpg" />
+    <Content Include="Images\Ferrari-Ki-Sawaari.jpg" />
+    <Content Include="Images\File-Chaarfutiya_First_Look.jpg" />
+    <Content Include="Images\Fitting-Master.jpg" />
+    <Content Include="Images\Force.jpg" />
+    <Content Include="Images\fromlocal.png" />
+    <Content Include="Images\fromonline.png" />
+    <Content Include="Images\Fugly.jpg" />
+    <Content Include="Images\Gaalipatam.jpg" />
+    <Content Include="Images\Gabbar-Singh.jpg" />
+    <Content Include="Images\Gaddam Gang.jpg" />
+    <Content Include="Images\Gali-Gali-Chor-Hai.jpg" />
+    <Content Include="Images\Gamyam.jpg" />
+    <Content Include="Images\ganesh.jpg" />
+    <Content Include="Images\gang.jpg" />
+    <Content Include="Images\Gangleader.jpg" />
+    <Content Include="Images\Garam-Masala.jpg" />
+    <Content Include="Images\gayakudu.jpg" />
+    <Content Include="Images\Geethanjali.jpg" />
+    <Content Include="Images\GeethanjaliOld.JPG" />
+    <Content Include="Images\Gentleman_1993_poster.jpg" />
+    <Content Include="Images\Ghajini.jpg" />
+    <Content Include="Images\Ghajini1.jpg" />
+    <Content Include="Images\ghanchakkar.jpg" />
+    <Content Include="Images\Gharana_mogudu_poster.jpg" />
+    <Content Include="Images\Gharshana.jpg" />
+    <Content Include="Images\Ghatothkachudu.jpg" />
+    <Content Include="Images\Gitanjali.jpg" />
+    <Content Include="Images\Go Goa Gone.jpg" />
+    <Content Include="Images\go.jpg" />
+    <Content Include="Images\Godavari.jpg" />
+    <Content Include="Images\golmaal.jpg" />
+    <Content Include="Images\Gopala Gopala.jpg" />
+    <Content Include="Images\gori tere pyaar mein.jpg" />
+    <Content Include="Images\gouravam.jpg" />
+    <Content Include="Images\Govinda Govinda.jpg" />
+    <Content Include="Images\Govindudu Andarivadele.jpg" />
+    <Content Include="Images\grandmasti.jpg" />
+    <Content Include="Images\GreekuVeerudu.jpg" />
+    <Content Include="Images\gulaab gang.jpg" />
+    <Content Include="Images\Gundamma_Katha.jpg" />
+    <Content Include="Images\Gunday.jpg" />
+    <Content Include="Images\gundejaarigallanthayyinde.jpg" />
+    <Content Include="Images\Gundello_Godari.jpg" />
+    <Content Include="Images\guzaarish.jpg" />
+    <Content Include="Images\Haider.jpg" />
+    <Content Include="Images\Hamari Adhuri Kahani.jpg" />
+    <Content Include="Images\Happy Ending.jpg" />
+    <Content Include="Images\Happy New Year.jpg" />
+    <Content Include="Images\Happydays.jpg" />
+    <Content Include="Images\Hasee Toh Phasee.jpg" />
+    <Content Include="Images\Hawaizaada.jpg" />
+    <Content Include="Images\heartAttack.jpg" />
+    <Content Include="Images\Heartless.jpg" />
+    <Content Include="Images\Hero.jpg" />
+    <Content Include="Images\Heroine.jpg" />
+    <Content Include="Images\Heropanti.jpg" />
+    <Content Include="Images\Highway.jpg" />
+    <Content Include="Images\Himmatwala.jpg" />
+    <Content Include="Images\Hitler.jpg" />
+    <Content Include="Images\Holiday.jpg" />
+    <Content Include="Images\Housefull-2.jpg" />
+    <Content Include="Images\hrudaya kaleyam.jpg" />
+    <Content Include="Images\Hub\Background.jpg" />
+    <Content Include="Images\Hub\Logo.png" />
+    <Content Include="Images\Hub\Title.png" />
+    <Content Include="Images\Hulchul.jpg" />
+    <Content Include="Images\HUM TUM.jpg" />
+    <Content Include="Images\Hum-aapke-hain-koun.jpg" />
+    <Content Include="Images\Hum-dil-de-chuke-sanam.jpg" />
+    <Content Include="Images\humpty sharma ki dulhania.jpg" />
+    <Content Include="Images\HUMRAAZ.jpg" />
+    <Content Include="Images\Humshakals.jpg" />
+    <Content Include="Images\hungama.jpg" />
+    <Content Include="Images\I IMAGE.jpg" />
+    <Content Include="Images\I-Am-In-Love.jpg" />
+    <Content Include="Images\i-me-aur-main.jpg" />
+    <Content Include="Images\I.jpg" />
+    <Content Include="Images\Iddarammayilatho.jpg" />
+    <Content Include="Images\idhu kathirvelan kadhal.jpg" />
+    <Content Include="Images\Idiot.jpg" />
+    <Content Include="Images\Ihatelovestories.jpg" />
+    <Content Include="Images\IIVP.jpg" />
+    <Content Include="Images\IloveNewYear.jpg" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\indianflag.jpg" />
+    <Content Include="Images\Indian_%281996_film%29_poster.jpg" />
+    <Content Include="Images\IndiranChandiran.jpg" />
+    <Content Include="Images\indra.jpg" />
+    <Content Include="Images\Inidhu-Inidhu12.jpg" />
+    <Content Include="Images\Inimey.jpg" />
+    <Content Include="Images\intinta annamayya.jpg" />
+    <Content Include="Images\irandam ulagam.jpg" />
+    <Content Include="Images\Ishaqzaade.jpg" />
+    <Content Include="Images\Ishkq-in-Paris.jpg" />
+    <Content Include="Images\Ishq.jpg" />
+    <Content Include="Images\Issaq.jpg" />
+    <Content Include="Images\ItluSravaniSubramanyam.jpg" />
+    <Content Include="Images\Jaane-Tu...-Ya-Jaane-Na.jpg" />
+    <Content Include="Images\Jab Tak Hai Jaan.jpg" />
+    <Content Include="Images\Jab-We-Met.jpg" />
+    <Content Include="Images\jabardasth.jpg" />
+    <Content Include="Images\JadoogaduMovie.jpg" />
+    <Content Include="Images\Jadugadu-Movie-Stills-chaibiscuit.net004.jpg" />
+    <Content Include="Images\JagadekaVeerudu.jpg" />
+    <Content Include="Images\jai ho.jpg" />
+    <Content Include="Images\Jalsa.jpg" />
+    <Content Include="Images\Jamba Lakidi Pamba.jpg" />
+    <Content Include="Images\james.jpg" />
+    <Content Include="Images\Janaki Ramudu.jpg" />
+    <Content Include="Images\Janda Pai Kapiraju.jpg" />
+    <Content Include="Images\Jannat-2.jpg" />
+    <Content Include="Images\Jannat.jpg" />
+    <Content Include="Images\Jayam.jpg" />
+    <Content Include="Images\Jayammanaderaa.jpg" />
+    <Content Include="Images\Jayantabhai-Ki-Luv-Story.jpg" />
+    <Content Include="Images\Jazbaa.jpg" />
+    <Content Include="Images\jeeva-tamil-movie.jpg" />
+    <Content Include="Images\jenda pai kapiraju.jpg" />
+    <Content Include="Images\Jhootha-sahi.jpg" />
+    <Content Include="Images\Jigarthanda.jpg" />
+    <Content Include="Images\Jil.jpg" />
+    <Content Include="Images\jilla.jpg" />
+    <Content Include="Images\JISM2.jpg" />
+    <Content Include="Images\Jodhaaakbar.jpg" />
+    <Content Include="Images\Jodi-Breakers.jpg" />
+    <Content Include="Images\joker.jpg" />
+    <Content Include="Images\Jolly-LLB.jpg" />
+    <Content Include="Images\Joru-Full-Movie - Copy.jpg" />
+    <Content Include="Images\Journey.jpg" />
+    <Content Include="Images\julayi.jpg" />
+    <Content Include="Images\jyo.jpg" />
+    <Content Include="Images\Kaadhalkottai.jpg" />
+    <Content Include="Images\KaakaKaakaThePolice.jpg" />
+    <Content Include="Images\Kaaka_Muttai.jpg" />
+    <Content Include="Images\Kaanchi.jpg" />
+    <Content Include="Images\Kaaval.jpg" />
+    <Content Include="Images\kaavalan.jpg" />
+    <Content Include="Images\kadali.jpg" />
+    <Content Include="Images\Kadavul_paathi_mirugam_paathi.jpg" />
+    <Content Include="Images\Kahaani.jpg" />
+    <Content Include="Images\Kahona-pyar-hi.jpg" />
+    <Content Include="Images\kai-raja-kai-.jpg" />
+    <Content Include="Images\Kal Ho Naa Ho.jpg" />
+    <Content Include="Images\kalicharan.jpg" />
+    <Content Include="Images\Kalisundham Raa.jpg" />
+    <Content Include="Images\Kaminey.jpg" />
+    <Content Include="Images\Kanche.jpg" />
+    <Content Include="Images\KandukondeinKandukondein.jpg" />
+    <Content Include="Images\KANK.jpg" />
+    <Content Include="Images\Karthik-Calling-Karthik.jpg" />
+    <Content Include="Images\Karthikeya.jpg" />
+    <Content Include="Images\Kaththi.jpg" />
+    <Content Include="Images\Kaththi_poster.jpg" />
+    <Content Include="Images\Katti Batti.jpg" />
+    <Content Include="Images\kedi.jpg" />
+    <Content Include="Images\kevvu keka.jpg" />
+    <Content Include="Images\Khadgam_Poster.jpg" />
+    <Content Include="Images\khaidi.jpg" />
+    <Content Include="Images\Khaleja.jpg" />
+    <Content Include="Images\khamoshiyan.jpg" />
+    <Content Include="Images\Khatarnak.jpg" />
+    <Content Include="Images\Khiladi 786.jpg" />
+    <Content Include="Images\Khuda-Gawah.jpg" />
+    <Content Include="Images\kick.jpg" />
+    <Content Include="Images\kick2.jpg" />
+    <Content Include="Images\Kill dil.jpg" />
+    <Content Include="Images\Killer.jpg" />
+    <Content Include="Images\Kismatkonnection.jpg" />
+    <Content Include="Images\Kismet Love Paisa Dilli.jpg" />
+    <Content Include="Images\Kisna.jpg" />
+    <Content Include="Images\kiss.jpg" />
+    <Content Include="Images\kites.jpg" />
+    <Content Include="Images\KnockOut.jpg" />
+    <Content Include="Images\ko.jpg" />
+    <Content Include="Images\Kochadaiiyaan.jpg" />
+    <Content Include="Images\Komaram-Puli.jpg" />
+    <Content Include="Images\komban-movie-poster_141863421900.jpg" />
+    <Content Include="Images\komban.jpg" />
+    <Content Include="Images\Konchem-Ishtam-Konchem-Kashtam.jpg" />
+    <Content Include="Images\Kondaveeti donga.jpg" />
+    <Content Include="Images\Kotha Bangaru Lokam.jpg" />
+    <Content Include="Images\Kotha Janta.jpg" />
+    <Content Include="Images\Krishna.jpg" />
+    <Content Include="Images\krrish-3.jpg" />
+    <Content Include="Images\Kuch-Kuch-Hota-Hai.jpg" />
+    <Content Include="Images\kuch-na-kaho.jpg" />
+    <Content Include="Images\kumari21.jpg" />
+    <Content Include="Images\kushi.jpg" />
+    <Content Include="Images\KYA SUPER KOOL HAIN HUM.jpg" />
+    <Content Include="Images\Laddu Babu.jpg" />
+    <Content Include="Images\Ladies-Vs-Ricky-Bahl.jpg" />
+    <Content Include="Images\lagaan.jpg" />
+    <Content Include="Images\Lage-Raho-Munna-Bhai.jpg" />
+    <Content Include="Images\Lakshmi Raave Maa Intiki.jpg" />
+    <Content Include="Images\Laxmi Rave Maa Intiki.jpg" />
+    <Content Include="Images\Leader.jpg" />
+    <Content Include="Images\legend.jpg" />
+    <Content Include="Images\Lekar Hum Deewana Dil.jpg" />
+    <Content Include="Images\life is beautiful.jpg" />
+    <Content Include="Images\Lingaa-movie-01.jpg" />
+    <Content Include="Images\lingaa-movie-new-poster.jpg" />
+    <Content Include="Images\Lion-Movie.jpg" />
+    <Content Include="Images\Little-Soldiers.jpg" />
+    <Content Include="Images\Lootera.jpg" />
+    <Content Include="Images\loukyam.jpg" />
+    <Content Include="Images\Love-Failure.jpg" />
+    <Content Include="Images\LoveCycle.jpg" />
+    <Content Include="Images\Lovely.jpg" />
+    <Content Include="Images\lovesongs-130-190.jpg" />
+    <Content Include="Images\Lucky-Ali.jpg" />
+    <Content Include="Images\Ma Alludu Very Good.jpg" />
+    <Content Include="Images\Maari.jpg" />
+    <Content Include="Images\Maaveeran.jpg" />
+    <Content Include="Images\Madatha-kaja.jpg" />
+    <Content Include="Images\Madras.jpg" />
+    <Content Include="Images\Madrasapattinam.jpg" />
+    <Content Include="Images\maga maha raju.jpg" />
+    <Content Include="Images\Magadheera.jpg" />
+    <Content Include="Images\Main krishna hoon.jpg" />
+    <Content Include="Images\Main Tera Hero.jpg" />
+    <Content Include="Images\Maina pyar kiya.jpg" />
+    <Content Include="Images\mainhoona.jpg" />
+    <Content Include="Images\Major Chandrakanth.jpg" />
+    <Content Include="Images\Mallanna.jpg" />
+    <Content Include="Images\Malli Malli Idi Rani Roju.jpg" />
+    <Content Include="Images\malliswari.jpg" />
+    <Content Include="Images\Manam.jpg" />
+    <Content Include="Images\Manasantha-Nuvve.jpg" />
+    <Content Include="Images\manasulo mata.jpg" />
+    <Content Include="Images\manasunu.jpg" />
+    <Content Include="Images\Mangalya balam.jpg" />
+    <Content Include="Images\Mangammagari Manavadu.jpg" />
+    <Content Include="Images\mangapai.jpg" />
+    <Content Include="Images\Manjapai.jpg" />
+    <Content Include="Images\Mankatha.jpg" />
+    <Content Include="Images\manmadhan.jpg" />
+    <Content Include="Images\Manmadhudu.jpg" />
+    <Content Include="Images\Marina_film.jpg" />
+    <Content Include="Images\Mary Kom.jpg" />
+    <Content Include="Images\MaryadaRamanna.jpg" />
+    <Content Include="Images\Maryan.jpg" />
+    <Content Include="Images\Mary_Kom_Poster.jpg" />
+    <Content Include="Images\masala.jpg" />
+    <Content Include="Images\mask.jpg" />
+    <Content Include="Images\Maska.jpg" />
+    <Content Include="Images\Masss_Film_Poster.jpg" />
+    <Content Include="Images\Mathrudevobhava.jpg" />
+    <Content Include="Images\Matru-Ki-Bijlee-Ka-Mandola.jpg" />
+    <Content Include="Images\maxresdefault.jpg" />
+    <Content Include="Images\Maya.jpg" />
+    <Content Include="Images\Mayabazar.jpg" />
+    <Content Include="Images\Mayakkam Enna.jpg" />
+    <Content Include="Images\Mayalodu.jpg" />
+    <Content Include="Images\Meagamann.jpg" />
+    <Content Include="Images\meaghamann.jpg" />
+    <Content Include="Images\Mee Sreyobhilashi.jpg" />
+    <Content Include="Images\mera naam joker.jpg" />
+    <Content Include="Images\Mere Dad Ki Maruti.jpg" />
+    <Content Include="Images\Michael-Jackson.jpg" />
+    <Content Include="Images\MichaelMadana.jpg" />
+    <Content Include="Images\microphone1.png" />
+    <Content Include="Images\microphone2.png" />
+    <Content Include="Images\Miley-Naa-Miley-Hum.jpg" />
+    <Content Include="Images\Minnale.jpg" />
+    <Content Include="Images\Mirapakai.jpg" />
+    <Content Include="Images\Mirchi.jpg" />
+    <Content Include="Images\Missamma.jpg" />
+    <Content Include="Images\Missammaold.jpg" />
+    <Content Include="Images\Mithunam.jpg" />
+    <Content Include="Images\Mitrudu.jpg" />
+    <Content Include="Images\Mohammed Rafi.jpg" />
+    <Content Include="Images\mondodu.jpg" />
+    <Content Include="Images\Mother-India.jpg" />
+    <Content Include="Images\MounaRagam.jpg" />
+    <Content Include="Images\Mr Manmadha.jpg" />
+    <Content Include="Images\Mr-Medhavi.jpg" />
+    <Content Include="Images\MTV Unplugged.jpg" />
+    <Content Include="Images\mugguru.jpg" />
+    <Content Include="Images\Mujhse-Shaadi-Karogi.jpg" />
+    <Content Include="Images\Mukunda-Telugu-2014-500x500.jpg" />
+    <Content Include="Images\Mukunda.jpg" />
+    <Content Include="Images\Mumbai_Express_2005_DVD_cover.jpg" />
+    <Content Include="Images\Muni_3_kanchana_2.jpg" />
+    <Content Include="Images\munna-bhai-mbbs.jpg" />
+    <Content Include="Images\munna.jpg" />
+    <Content Include="Images\Muppozhudhum Un Karpanaigal.jpg" />
+    <Content Include="Images\Muqaddar Ka Sikander.jpg" />
+    <Content Include="Images\Murari.jpg" />
+    <Content Include="Images\Murder2.jpg" />
+    <Content Include="Images\Murder3.jpg" />
+    <Content Include="Images\Mutha Mestri.jpg" />
+    <Content Include="Images\Muthu.jpg" />
+    <Content Include="Images\My_Name_Is_Khan.jpg" />
+    <Content Include="Images\Naa Autograph.jpg" />
+    <Content Include="Images\Naan Sigappu Manithan.jpg" />
+    <Content Include="Images\Naan-Mahaan-Alla.jpg" />
+    <Content Include="Images\Naan.jpg" />
+    <Content Include="Images\NaanEe.jpg" />
+    <Content Include="Images\Naayak.jpg" />
+    <Content Include="Images\Nagavalli.jpg" />
+    <Content Include="Images\Nanban.jpg" />
+    <Content Include="Images\Nanbenda.jpg" />
+    <Content Include="Images\Nannbenda.jpg" />
+    <Content Include="Images\Narasimha Naidu.jpg" />
+    <Content Include="Images\Nari Nari Naduma Murari.jpg" />
+    <Content Include="Images\Nautanki-Saala.jpg" />
+    <Content Include="Images\NavaVasantham.jpg" />
+    <Content Include="Images\Naveena Saraswathi Sabatham.jpg" />
+    <Content Include="Images\neninthe.jpg" />
+    <Content Include="Images\NenuNaaRakshasi.jpg" />
+    <Content Include="Images\Nenunnanu.jpg" />
+    <Content Include="Images\New-York.jpg" />
+    <Content Include="Images\nh4.jpg" />
+    <Content Include="Images\nimirnthu-nil.jpg" />
+    <Content Include="Images\Ninne Premistha.jpg" />
+    <Content Include="Images\NinnePelladata.jpg" />
+    <Content Include="Images\Nippu.jpg" />
+    <Content Include="Images\Nuvve-Nuvve.jpg" />
+    <Content Include="Images\NuvveKavali.jpg" />
+    <Content Include="Images\Nuvvostanante-Nenoddantana.jpg" />
+    <Content Include="Images\Nuvvu Leka Nenu Lenu.jpg" />
+    <Content Include="Images\Nuvvu Nenu Prema.jpg" />
+    <Content Include="Images\Nuvvu Nenu.jpg" />
+    <Content Include="Images\nuvvu vasthanu ante nenu vaddantana.jpg" />
+    <Content Include="Images\nuvvu.jpg" />
+    <Content Include="Images\NuvvuNaakuNachav.jpg" />
+    <Content Include="Images\Oh My Friend.jpg" />
+    <Content Include="Images\oka-laila-kosam.jpg" />
+    <Content Include="Images\Okay_Kanmani.jpg" />
+    <Content Include="Images\oke-okkadu.jpg" />
+    <Content Include="Images\Okkadu.jpg" />
+    <Content Include="Images\Old is Gold Songs.jpg" />
+    <Content Include="Images\om3d.jpg" />
+    <Content Include="Images\OMG Oh My God.jpg" />
+    <Content Include="Images\Omshantiom.jpg" />
+    <Content Include="Images\Once Upon A Time In Mumbaai Again.jpg" />
+    <Content Include="Images\Once-Upon-a-Time-in-Mumbaai.jpg" />
+    <Content Include="Images\Ongole Gitta.jpg" />
+    <Content Include="Images\online.jpg" />
+    <Content Include="Images\online.png" />
+    <Content Include="Images\oohalu gusagus0alade.jpg" />
+    <Content Include="Images\Oohalu Gusagusalade.jpg" />
+    <Content Include="Images\Ornage.jpg" />
+    <Content Include="Images\Oye.jpg" />
+    <Content Include="Images\paisa.jpg" />
+    <Content Include="Images\Paiya.jpg" />
+    <Content Include="Images\Pandaga_Chesko_poster.jpg" />
+    <Content Include="Images\pandem.jpg" />
+    <Content Include="Images\Pandiya Naadu.jpg" />
+    <Content Include="Images\panjaa.jpg" />
+    <Content Include="Images\pappu.jpg" />
+    <Content Include="Images\pardas.jpg" />
+    <Content Include="Images\Partner.jpg" />
+    <Content Include="Images\pataas1.jpg" />
+    <Content Include="Images\Pathala_Bhairavi.jpg" />
+    <Content Include="Images\PatialaHouse.jpg" />
+    <Content Include="Images\Patta Pagalu.jpg" />
+    <Content Include="Images\Payanam.jpg" />
+    <Content Include="Images\PayingGuest.jpg" />
+    <Content Include="Images\Peekay.jpg" />
+    <Content Include="Images\pelli chasukundam.jpg" />
+    <Content Include="Images\pelli pustakam.jpg" />
+    <Content Include="Images\Pelli Sandadi.jpg" />
+    <Content Include="Images\Pelli-Kani-Prasad.jpg" />
+    <Content Include="Images\peoplefromlocal.png" />
+    <Content Include="Images\peoplefromonline.png" />
+    <Content Include="Images\PersonImages\back.jpg" />
+    <Content Include="Images\PersonImages\back.png" />
+    <Content Include="Images\PersonImages\Cup.png" />
+    <Content Include="Images\PersonImages\NoImage.jpg" />
+    <Content Include="Images\Phantom.jpg" />
+    <Content Include="Images\Phata Poster Nikla Hero.jpg" />
+    <Content Include="Images\Phir-bhi-dil-hai-hindustani.jpg" />
+    <Content Include="Images\Pilla Nuvvu Leni Jeevitham.jpg" />
+    <Content Include="Images\pillazamindar.jpg" />
+    <Content Include="Images\Pisachi.jpg" />
+    <Content Include="Images\Pistha.jpg" />
+    <Content Include="Images\Pithamagan.jpg" />
+    <Content Include="Images\Pivot\Background.jpg" />
+    <Content Include="Images\Pivot\Title.png" />
+    <Content Include="Images\Pizza.jpg" />
+    <Content Include="Images\Pk.jpg" />
+    <Content Include="Images\PlayerImages\cancel.png" />
+    <Content Include="Images\PlayerImages\edit.png" />
+    <Content Include="Images\PlayerImages\editringtone.png" />
+    <Content Include="Images\PlayerImages\fastforward.png" />
+    <Content Include="Images\PlayerImages\pause.png" />
+    <Content Include="Images\PlayerImages\play.png" />
+    <Content Include="Images\PlayerImages\playAll.png" />
+    <Content Include="Images\PlayerImages\rewind.png" />
+    <Content Include="Images\PlayerImages\save.png" />
+    <Content Include="Images\PlayerImages\settings.png" />
+    <Content Include="Images\players.jpg" />
+    <Content Include="Images\Poda Podi.jpg" />
+    <Content Include="Images\Pokiri.jpg" />
+    <Content Include="Images\Pokkiri.jpg" />
+    <Content Include="Images\poojai.jpg" />
+    <Content Include="Images\PopSongs.jpg" />
+    <Content Include="Images\poster.jpg" />
+    <Content Include="Images\Potugadu.jpg" />
+    <Content Include="Images\pournami.jpg" />
+    <Content Include="Images\Power.jpg" />
+    <Content Include="Images\Prasthanam.jpg" />
+    <Content Include="Images\Prathinidhi.jpg" />
+    <Content Include="Images\prayanam.jpg" />
+    <Content Include="Images\Prem Ratan Dhan Payo.jpg" />
+    <Content Include="Images\Prema Oka Maikam.jpg" />
+    <Content Include="Images\Prema Prayanam.jpg" />
+    <Content Include="Images\prema-lekha-.jpg" />
+    <Content Include="Images\PremaKathaChitram.jpg" />
+    <Content Include="Images\prematho raa.jpg" />
+    <Content Include="Images\Prema_Kavali.jpg" />
+    <Content Include="Images\Premikula Roju.jpg" />
+    <Content Include="Images\Premisthe.jpg" />
+    <Content Include="Images\pulakesi1.jpg" />
+    <Content Include="Images\Puli.jpg" />
+    <Content Include="Images\Punchnama.jpg" />
+    <Content Include="Images\Punnami Naagu.jpg" />
+    <Content Include="Images\Purampokku.jpg" />
+    <Content Include="Images\pyaar impossible.jpg" />
+    <Content Include="Images\Pyaar Mein Padipoyane.jpg" />
+    <Content Include="Images\Pyar Mein Padipoya.jpg" />
+    <Content Include="Images\Pyar.jpg" />
+    <Content Include="Images\Qayamat Se Qayamat Tak.jpg" />
+    <Content Include="Images\Ra.one.jpg" />
+    <Content Include="Images\Raanjhanaa.jpg" />
+    <Content Include="Images\Raavanan.jpg" />
+    <Content Include="Images\Raavanposter.jpg" />
+    <Content Include="Images\Raaz3.jpg" />
+    <Content Include="Images\Rab-Ne-Bana-Di-Jodi.jpg" />
+    <Content Include="Images\Rabhasa.jpg" />
+    <Content Include="Images\race gurram.jpg" />
+    <Content Include="Images\race.jpg" />
+    <Content Include="Images\Race2.jpg" />
+    <Content Include="Images\raees.jpg" />
+    <Content Include="Images\Raghuvaran Btech.jpg" />
+    <Content Include="Images\Raitu bidda.jpg" />
+    <Content Include="Images\Raja Natwarla.jpg" />
+    <Content Include="Images\Raja rani.jpg" />
+    <Content Include="Images\Rajanna.jpg" />
+    <Content Include="Images\Rajapattai.jpg" />
+    <Content Include="Images\Raja_Natwarlal.jpg" />
+    <Content Include="Images\Rajdhani-Express.jpg" />
+    <Content Include="Images\Rajendrudu Gajendrudu.jpg" />
+    <Content Include="Images\Rajini Murugan.jpg" />
+    <Content Include="Images\Rajneeti.jpg" />
+    <Content Include="Images\Rakshasudu.jpg" />
+    <Content Include="Images\Ram Leela.jpg" />
+    <Content Include="Images\Ram Teri Ganga Maili.jpg" />
+    <Content Include="Images\Rama Rama Krishna Krishna.jpg" />
+    <Content Include="Images\Ramaiya Vasta Vaiya.jpg" />
+    <Content Include="Images\Ramayya Vasthavayya.jpg" />
+    <Content Include="Images\rangam.jpg" />
+    <Content Include="Images\rangdebasanti.jpg" />
+    <Content Include="Images\Rangrezz.jpg" />
+    <Content Include="Images\Rann.jpg" />
+    <Content Include="Images\Rascals.jpg" />
+    <Content Include="Images\Ready.jpg" />
+    <Content Include="Images\Ready_telugu.jpg" />
+    <Content Include="Images\Rechipo.jpg" />
+    <Content Include="Images\Rehman.jpg" />
+    <Content Include="Images\Rendu.jpg" />
+    <Content Include="Images\Robo.jpg" />
+    <Content Include="Images\Robot.jpg" />
+    <Content Include="Images\Rockstar.jpg" />
+    <Content Include="Images\RojaPoster.jpg" />
+    <Content Include="Images\Romance.jpg" />
+    <Content Include="Images\Romeo_Juliet_2015_.jpg" />
+    <Content Include="Images\rough_telugu_movie_wallpapers_01.jpg" />
+    <Content Include="Images\Routine Love Story.jpg" />
+    <Content Include="Images\Rowdy Alludu.jpg" />
+    <Content Include="Images\Rowdy Fellow.jpg" />
+    <Content Include="Images\Rowdy inspector.jpg" />
+    <Content Include="Images\Rowdy-Rathore.jpg" />
+    <Content Include="Images\rowdy.jpg" />
+    <Content Include="Images\Roy.jpg" />
+    <Content Include="Images\rrajkumar.jpg" />
+    <Content Include="Images\Rudramadevi.jpg" />
+    <Content Include="Images\Run Raja Run.jpg" />
+    <Content Include="Images\Rush.jpg" />
+    <Content Include="Images\saagar.jpg" />
+    <Content Include="Images\Sagara Sangamam.jpg" />
+    <Content Include="Images\SahadevanMahadevan.jpg" />
+    <Content Include="Images\sahasam.jpg" />
+    <Content Include="Images\Saheb Biwi Aur Gangster Returns.jpg" />
+    <Content Include="Images\Salaam-Namaste.jpg" />
+    <Content Include="Images\Samarasimha Reddy.jpg" />
+    <Content Include="Images\sangam.jpg" />
+    <Content Include="Images\sangarshana.jpg" />
+    <Content Include="Images\Sankarabharanam.jpg" />
+    <Content Include="Images\SanthoshSubramaniam.jpg" />
+    <Content Include="Images\Santosham.jpg" />
+    <Content Include="Images\Saradaga Ammayitho.jpg" />
+    <Content Include="Images\SaradagaAmmaitho.jpg" />
+    <Content Include="Images\saradagakasepu.jpg" />
+    <Content Include="Images\Saraswathi Sabatham.jpg" />
+    <Content Include="Images\Sarfarosh.jpg" />
+    <Content Include="Images\Saroja.jpg" />
+    <Content Include="Images\Sasirekha Parinayam.jpg" />
+    <Content Include="Images\satya 2.jpg" />
+    <Content Include="Images\Satyagraha.jpg" />
+    <Content Include="Images\Seethamma Vakitlo Sirimalle Chettu.jpg" />
+    <Content Include="Images\Sega.jpg" />
+    <Content Include="Images\Shaadi Ke Side Effects.jpg" />
+    <Content Include="Images\Shaadi-Se-Pehle.jpg" />
+    <Content Include="Images\shaan.jpg" />
+    <Content Include="Images\shaandar.jpg" />
+    <Content Include="Images\Shadow.jpg" />
+    <Content Include="Images\shahrukh khan.jpg" />
+    <Content Include="Images\Shamitabh.jpg" />
+    <Content Include="Images\Shanghai.jpg" />
+    <Content Include="Images\Shankar-Dada-Mbbs.jpg" />
+    <Content Include="Images\Sharabi.jpg" />
+    <Content Include="Images\Shatruvu.jpg" />
+    <Content Include="Images\Sher.jpg" />
+    <Content Include="Images\Shing-is-King.jpg" />
+    <Content Include="Images\Shirdi Sai.jpg" />
+    <Content Include="Images\Shirin Farhad Ki Toh Nikal Padi.jpg" />
+    <Content Include="Images\SHIVAM.jpg" />
+    <Content Include="Images\Shootout at Wadala.jpg" />
+    <Content Include="Images\Shree-420.jpg" />
+    <Content Include="Images\Shreya Ghoshal.jpg" />
+    <Content Include="Images\Shubhalagnam.jpg" />
+    <Content Include="Images\Shuddh-Desi-Romance.jpg" />
+    <Content Include="Images\Siddu_From_Srikakulam.jpg" />
+    <Content Include="Images\Sikandar-3.jpg" />
+    <Content Include="Images\Sikandar.jpg" />
+    <Content Include="Images\sillunu oru kadhal.jpg" />
+    <Content Include="Images\Simha.jpg" />
+    <Content Include="Images\Simhadri.jpg" />
+    <Content Include="Images\singam%28yamudu 2%29.jpg" />
+    <Content Include="Images\singam.jpg" />
+    <Content Include="Images\singam123.jpg" />
+    <Content Include="Images\Singham Returns.jpg" />
+    <Content Include="Images\Sivaji.jpg" />
+    <Content Include="Images\Size Zero.JPG" />
+    <Content Include="Images\sms.jpg" />
+    <Content Include="Images\SnehamKosam.jpg" />
+    <Content Include="Images\Solo.jpg" />
+    <Content Include="Images\Son Of Sardaar.jpg" />
+    <Content Include="Images\son-of-Satyamurthi.jpg" />
+    <Content Include="Images\Sontha Ooru.jpg" />
+    <Content Include="Images\sonu nigam.jpg" />
+    <Content Include="Images\special26.jpg" />
+    <Content Include="Images\Sri Ramadasu.jpg" />
+    <Content Include="Images\sri.jpg" />
+    <Content Include="Images\StartSpeech.png" />
+    <Content Include="Images\stopspeech.png" />
+    <Content Include="Images\student.jpg" />
+    <Content Include="Images\style.jpg" />
+    <Content Include="Images\Subramaniapuram.jpg" />
+    <Content Include="Images\Subramanyam For Sale.jpg" />
+    <Content Include="Images\Sundarakanda.JPG" />
+    <Content Include="Images\Surya son of Krishnan.jpg" />
+    <Content Include="Images\Suryavamsam.jpg" />
+    <Content Include="Images\Suswagatam.jpg" />
+    <Content Include="Images\swades.jpg" />
+    <Content Include="Images\Swamy Ra Ra.jpg" />
+    <Content Include="Images\Taal.jpg" />
+    <Content Include="Images\table21.jpg" />
+    <Content Include="Images\Tadakha.jpg" />
+    <Content Include="Images\Tagore.jpg" />
+    <Content Include="Images\Tahaan.jpg" />
+    <Content Include="Images\takita takita.jpg" />
+    <Content Include="Images\talash.jpg" />
+    <Content Include="Images\Tamasha.jpg" />
+    <Content Include="Images\Tanu Weds Manu Returns.jpg" />
+    <Content Include="Images\Tanu-Weds-Manu.jpg" />
+    <Content Include="Images\teenmar.jpg" />
+    <Content Include="Images\tees-maar-khan.jpg" />
+    <Content Include="Images\TeluguDil.jpg" />
+    <Content Include="Images\Temper.jpg" />
+    <Content Include="Images\Tenali_Ramakrishna.jpg" />
+    <Content Include="Images\Tere Naam.jpg" />
+    <Content Include="Images\Tere-Bin-Laden.jpg" />
+    <Content Include="Images\Teri-Meri-Kahaani.jpg" />
+    <Content Include="Images\Tevar.jpg" />
+    <Content Include="Images\Tezaab.jpg" />
+    <Content Include="Images\Tezz.jpg" />
+    <Content Include="Images\ThadaiyaraThaakka.jpg" />
+    <Content Include="Images\thala.jpg" />
+    <Content Include="Images\Thalaiva.jpg" />
+    <Content Include="Images\Thalapathi.jpg" />
+    <Content Include="Images\Thammudu.jpg" />
+    <Content Include="Images\Thangamagan.jpg" />
+    <Content Include="Images\The Shaukeens.jpg" />
+    <Content Include="Images\The-Attacks-Of-26-11.jpg" />
+    <Content Include="Images\The-dirty-picture.jpg" />
+    <Content Include="Images\The-End-Telugu-Movie-Review.jpg" />
+    <Content Include="Images\The-Xpose.jpg" />
+    <Content Include="Images\Theeya_Velai_Seiyyanum_Kumaru.jpg" />
+    <Content Include="Images\ThevarMagan.jpg" />
+    <Content Include="Images\Thilalangadi.jpg" />
+    <Content Include="Images\Thirumanam Ennum Nikkah.jpg" />
+    <Content Include="Images\Tholiprema.jpg" />
+    <Content Include="Images\Thoofan.JPG" />
+    <Content Include="Images\Thoogaa Vanam.jpg" />
+    <Content Include="Images\three.jpg" />
+    <Content Include="Images\Thuppakki.jpg" />
+    <Content Include="Images\tmbiriyani.jpg" />
+    <Content Include="Images\Top Hero.jpg" />
+    <Content Include="Images\total siyappa.jpg" />
+    <Content Include="Images\tripura.jpg" />
+    <Content Include="Images\Un Samayal Arayil.jpg" />
+    <Content Include="Images\Ungli.jpg" />
+    <Content Include="Images\UnnaipolOruvan.jpg" />
+    <Content Include="Images\Uthama_Villain.jpg" />
+    <Content Include="Images\uyyala jampala.jpg" />
+    <Content Include="Images\Vaah.jpg" />
+    <Content Include="Images\vaalu.jpg" />
+    <Content Include="Images\Vaaranam Aayiram.jpg" />
+    <Content Include="Images\vaareva.jpg" />
+    <Content Include="Images\vadacurry.jpg" />
+    <Content Include="Images\vadacurry_139747682630.jpg" />
+    <Content Include="Images\vai raja vai.jpg" />
+    <Content Include="Images\valiyavan-movie-2015.jpg" />
+    <Content Include="Images\Vallinam.jpg" />
+    <Content Include="Images\Vanakkam Chennai.jpg" />
+    <Content Include="Images\vandemataram.jpg" />
+    <Content Include="Images\varalaru.jpg" />
+    <Content Include="Images\varma.jpg" />
+    <Content Include="Images\Varsham.jpg" />
+    <Content Include="Images\Vaseegara.jpg" />
+    <Content Include="Images\Vedalam.jpg" />
+    <Content Include="Images\Vedam.jpg" />
+    <Content Include="Images\Veer-zara.jpg" />
+    <Content Include="Images\Veeram.jpg" />
+    <Content Include="Images\Velai Illa Pattadhaari.jpg" />
+    <Content Include="Images\venkatari express.jpg" />
+    <Content Include="Images\Venky.jpg" />
+    <Content Include="Images\vennela.jpg" />
+    <Content Include="Images\Vetagadu.jpg" />
+    <Content Include="Images\VetrikkodiKattu.jpg" />
+    <Content Include="Images\Vettai-Movie-Posters06.jpg" />
+    <Content Include="Images\Vicky Donor.jpg" />
+    <Content Include="Images\Vikramarkudu.jpg" />
+    <Content Include="Images\VinnaithandiVaruvaya.jpg" />
+    <Content Include="Images\virodhi.jpg" />
+    <Content Include="Images\Viswaroopam.jpg" />
+    <Content Include="Images\Wake Up Sid.jpg" />
+    <Content Include="Images\wanted.jpg" />
+    <Content Include="Images\War Chhod Na Yaar.jpg" />
+    <Content Include="Images\We-Are-Family.jpg" />
+    <Content Include="Images\what the fish.jpg" />
+    <Content Include="Images\wp-19salute800.jpg" />
+    <Content Include="Images\wp7premanteinthe800.jpg" />
+    <Content Include="Images\YAADEIN.jpg" />
+    <Content Include="Images\Yaariyan.jpg" />
+    <Content Include="Images\Yaaruda Mahesh.jpg" />
+    <Content Include="Images\YaarudaMahesh.jpg" />
+    <Content Include="Images\Yamadonga.jpg" />
+    <Content Include="Images\Yamagola-Malli-Modalaindi.jpg" />
+    <Content Include="Images\Yamaleela.jpg" />
+    <Content Include="Images\Yamla Pagla Deewana 2.jpg" />
+    <Content Include="Images\Yamla-Pagla-Deewana.jpg" />
+    <Content Include="Images\Yamudu.jpg" />
+    <Content Include="Images\YavarumNalamm.jpg" />
+    <Content Include="Images\Yeh Jawaani Hai Deewani.jpg" />
+    <Content Include="Images\YemaindiEeVela.jpg" />
+    <Content Include="Images\Yes-Boss.jpg" />
+    <Content Include="Images\yevadu.jpg" />
+    <Content Include="Images\yuvaraju.jpg" />
+    <Content Include="Images\yuvatha.jpg" />
+    <Content Include="Images\Zanjeer.jpg" />
+    <Content Include="Images\Zilla Ghaziabad.jpg" />
+    <Content Include="Images\Zindagi Ka Safar%28Rajesh Khanna%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\AboutUs.xaml">
+      <Link>About Us\AboutUs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\ContactUs.xaml">
+      <Link>About Us\ContactUs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\Feedback.xaml">
+      <Link>About Us\Feedback.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\Upgrade.xaml">
+      <Link>About Us\Upgrade.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\AudioFavorite.xaml">
+      <Link>UserControls\AudioFavorite.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\AudioHistory.xaml">
+      <Link>UserControls\AudioHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ComedyHistory.xaml">
+      <Link>UserControls\ComedyHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\FavoriteShows.xaml">
+      <Link>UserControls\FavoriteShows.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\FavoriteVideos.xaml">
+      <Link>UserControls\FavoriteVideos.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\FavouriteComedy.xaml">
+      <Link>UserControls\FavouriteComedy.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\GameVehicleDisplay.xaml">
+      <Link>UserControls\GameVehicleDisplay.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\GameWeaponsDisplay.xaml">
+      <Link>UserControls\GameWeaponsDisplay.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\LoginPopup.xaml">
+      <Link>UserControls\LoginPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\Lyrics.xaml">
+      <Link>UserControls\Lyrics.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\MemoryGame_1.xaml">
+      <Link>UserControls\MemoryGame_1.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonDetail.xaml">
+      <Link>UserControls\PersonDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonGallery.xaml">
+      <Link>UserControls\PersonGallery.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonGalleryPopup.xaml">
+      <Link>UserControls\PersonGalleryPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonProfileShows.xaml">
+      <Link>UserControls\PersonProfileShows.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\RatingControl.xaml">
+      <Link>UserControls\RatingControl.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowAudio.xaml">
+      <Link>UserControls\ShowAudio.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowCast.xaml">
+      <Link>UserControls\ShowCast.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowChapters.xaml">
+      <Link>UserControls\ShowChapters.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowCheatCode.xaml">
+      <Link>UserControls\ShowCheatCode.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowComedy.xaml">
+      <Link>UserControls\ShowComedy.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowDescription.xaml">
+      <Link>UserControls\ShowDescription.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowHistory.xaml">
+      <Link>UserControls\ShowHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowLyrics.xaml">
+      <Link>UserControls\ShowLyrics.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowVideos.xaml">
+      <Link>UserControls\ShowVideos.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\VideosHistory.xaml">
+      <Link>UserControls\VideosHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\AboutMemory.xaml">
+      <Link>Views\AboutMemory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\AddCast_New.xaml">
+      <Link>Views\AddCast_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Advertisement.xaml">
+      <Link>Views\Advertisement.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\BackAgentError.xaml">
+      <Link>Views\BackAgentError.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Browser.xaml">
+      <Link>Views\Browser.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\CastHub.xaml">
+      <Link>Views\CastHub.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\CategoryDetails.xaml">
+      <Link>Views\CategoryDetails.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\CharacterDetail.xaml">
+      <Link>Views\CharacterDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\CricketDetail.xaml">
+      <Link>Views\CricketDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\DanceDetailPage.xaml">
+      <Link>Views\DanceDetailPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Description.xaml">
+      <Link>Views\Description.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Details.xaml">
+      <Link>Views\Details.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Help.xaml">
+      <Link>Views\Help.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\LinksFromOnline.xaml">
+      <Link>Views\LinksFromOnline.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\MoviesFavorites.xaml">
+      <Link>Views\MoviesFavorites.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\MoviesHistory.xaml">
+      <Link>Views\MoviesHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\MoviesList.xaml">
+      <Link>Views\MoviesList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\MusicDetail.xaml">
+      <Link>Views\MusicDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\OfflineVideoPlayer.xaml">
+      <Link>Views\OfflineVideoPlayer.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\OnlineImages_New.xaml">
+      <Link>Views\OnlineImages_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\OnlineLinks.xaml">
+      <Link>Views\OnlineLinks.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\PersonGalleryPopup.xaml">
+      <Link>Views\PersonGalleryPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\PhotoChooser_New.xaml">
+      <Link>Views\PhotoChooser_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Search.xaml">
+      <Link>Views\Search.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Settings.xaml">
+      <Link>Views\Settings.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\ShowDetails.xaml">
+      <Link>Views\ShowDetails.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\ShowLiricsDetail.xaml">
+      <Link>Views\ShowLiricsDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\ShowList.xaml">
+      <Link>Views\ShowList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Story.xaml">
+      <Link>Views\Story.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\UserBrowserPage.xaml">
+      <Link>Views\UserBrowserPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\UserUpload.xaml">
+      <Link>Views\UserUpload.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\VideoGamesDetail.xaml">
+      <Link>Views\VideoGamesDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Youtube.xaml">
+      <Link>Views\Youtube.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Information console.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RatingPopup_New.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HelpMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\Roskell.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\Hub\Thumbs.db" />
+    <None Include="Images\Pivot\Thumbs.db" />
+    <None Include="Images\PlayerImages\Thumbs.db" />
+    <None Include="Images\Thumbs.db" />
+    <None Include="packages.config" />
+    <None Include="Service References\Application Insights\ConnectedService.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.Utilities\Common.Utilities.csproj">
+      <Project>{1fa69077-30cf-404e-b773-a99a62e36a78}</Project>
+      <Name>Common.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BackgroundPlayer\BackgroundPlayer.csproj">
+      <Project>{efa2b544-93d4-4c7a-b6ff-a87cfe6b99bb}</Project>
+      <Name>BackgroundPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common.Library\Common.Library.csproj">
+      <Project>{e5caa85f-49e8-4eed-a860-dc862780b5c2}</Project>
+      <Name>Common.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InsertIntoDataBase\InsertIntoDataBase.csproj">
+      <Project>{73b3e453-cc69-4f28-a96f-1ba45e49bde1}</Project>
+      <Name>InsertIntoDataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Common\OnlineVideos.Common.csproj">
+      <Project>{d554e2f9-2e62-45e0-b8b7-b253d2942e33}</Project>
+      <Name>OnlineVideos.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Data\OnlineVideos.Data.csproj">
+      <Project>{e884a056-f6d7-4221-a11d-388e1debb890}</Project>
+      <Name>OnlineVideos.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Library\OnlineVideos.Library.csproj">
+      <Project>{877f12ea-a160-4ef6-9a77-7a4f1d3aa100}</Project>
+      <Name>OnlineVideos.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.UI\OnlineVideos.UI.csproj">
+      <Project>{55de4c03-a52f-46d6-af07-06ca93dc7c6d}</Project>
+      <Name>OnlineVideos.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideosCardGame\OnlineVideosCardGame.csproj">
+      <Project>{2d6848f0-1fb1-485e-8bd3-669208384b00}</Project>
+      <Name>OnlineVideosCardGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PicasaMobileInterface\PicasaMobileInterface.csproj">
+      <Project>{c427ee44-2534-49f2-a8e9-4fd39131970e}</Project>
+      <Name>PicasaMobileInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SyncStories\SyncStories.csproj">
+      <Project>{8a0159ce-0592-4ce8-a125-17021b92820e}</Project>
+      <Name>SyncStories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="LiveSDKXAML, Version=5.6">
+      <Name>Live SDK</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.Advertising.Mobile.Display, Version=8.1">
+      <Name>Microsoft.Advertising.Mobile.Display</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.WP81, Version=3.0.0.1">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WP81, Version=3.9.2">
+      <Name>SQLite for Windows Phone 8.1</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="JRatingControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JISoft.Rating.1.0.3\lib\portable-wpa81+win81\JRatingControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.0.5639, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.1.2.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Windows, Version=1.1.0.1906, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsApps.1.1.0\lib\wpa81\Microsoft.ApplicationInsights.Extensibility.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.PersistenceChannel, Version=1.1.0.1903, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.PersistenceChannel.1.1.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.PersistenceChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MyToolkit">
+      <HintPath>..\..\..\Lib\MyToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit.Extended">
+      <HintPath>..\..\..\Lib\MyToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="..\Indian Cinema.Shared\Indian Cinema.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.ApplicationInsights.WindowsPhone.0.9.0-build06428\build\wpa81\Microsoft.ApplicationInsights.WindowsPhone.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.ApplicationInsights.WindowsPhone.0.9.0-build06428\build\wpa81\Microsoft.ApplicationInsights.WindowsPhone.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.ApplicationInsights.WindowsPhone.0.9.0-build06428\build\wpa81\Microsoft.ApplicationInsights.WindowsPhone.targets" Condition="Exists('..\..\packages\Microsoft.ApplicationInsights.WindowsPhone.0.9.0-build06428\build\wpa81\Microsoft.ApplicationInsights.WindowsPhone.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

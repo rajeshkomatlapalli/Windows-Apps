@@ -1,0 +1,128 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.StoryDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid 
+            x:Name="LayoutRoot" 
+            Grid.Row="0" 
+            Background="Transparent">
+            <Pivot 
+                x:Name="pvtMainDetails" 
+                SelectionChanged="pvtMainDetails_SelectionChanged">
+                <Pivot.Title>
+                    <StackPanel 
+                        Orientation="Horizontal" 
+                        Margin="0,-15,0,0">
+                        <Image 
+                            Style="{StaticResource DetailPagePivotTitleImage}" 
+                            x:Name="imgTitle"/>
+                        <TextBlock 
+                            x:Name="tblkVideosTitle" 
+                            TextWrapping="NoWrap" 
+                            Style="{StaticResource DetailPagePivotTitle}"/>                        
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>white</Pivot.Foreground>
+                <!--Pivot Item One-->
+                <PivotItem 
+                    x:Name="pvtitmSongs" 
+                    Header="videos">
+                    <Grid 
+                        x:Name="showVideogrid">
+                        <LART:ShowVideos 
+                            x:Name="showVideoList"/>
+                    </Grid>
+                </PivotItem>
+                <!--Pivot Item Two-->
+                <PivotItem 
+                    Margin="0,10,0,0" 
+                    x:Name="storypivot" 
+                    Header="read">
+                    <Grid 
+                        x:Name="storyGrid">
+                        <TextBlock
+                            x:Name="tbstoryintro"
+                            TextWrapping="Wrap"
+                            Margin="15,0,0,25"/>
+                        <TextBlock
+                            x:Name="txterror"
+                            FontSize="22"
+                            Height="70"
+                            Visibility="Collapsed"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                        <Button
+                            BorderBrush="White"
+                            Margin="0,120,0,15"
+                            Foreground="White"
+                            x:Name="btnreadmore"
+                            FontSize="18"
+                            Click="btnreadmore_Click"
+                            Height="50"
+                            Visibility="Visible"
+                            Width="250"
+                            Background="Transparent"
+                            HorizontalAlignment="Center"/>
+                        <Button 
+                            BorderBrush="White" 
+                            Foreground="White" 
+                            x:Name="Record" 
+                            Margin="0,230,0,15" 
+                            FontSize="18" 
+                            Click="btnrecard_Click" 
+                            Height="50" 
+                            Visibility="Visible" 
+                            Width="250" 
+                            Background="Transparent" 
+                            HorizontalAlignment="Center"/>
+                        <Button
+                            BorderBrush="White"
+                            Foreground="White"
+                            x:Name="btnlisten"
+                            FontSize="18"
+                            Margin="0,320,0,0"
+                            Click="btnlisten_Click"
+                            Height="50"
+                            Width="250"
+                            Background="Transparent"
+                            HorizontalAlignment="Center"/>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+        <UI:AdControl x:Name="adstackpl" Grid.Row="1"                       
+                      Height="80" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton 
+                    x:Name="btnshare" 
+                    Label="Share this" 
+                    Click="btnshare_Click"/>
+                <AppBarButton 
+                    x:Name="btnadd" 
+                    Label="Add" 
+                    Click="btnadd_Click"/>
+                <AppBarButton 
+                    x:Name="btnedit" 
+                    Label="Edit story" 
+                    Click="btnedit_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

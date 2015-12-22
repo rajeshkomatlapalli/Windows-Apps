@@ -1,0 +1,51 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="OnlineVideos.UserControls.ShowAudio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                               
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView x:ConnectionId='2' x:Name="lbxAudioList"  Grid.Row="0" Margin="0,-30,0,8"                                                  Foreground="White" VerticalAlignment="Top">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel x:ConnectionId='3' Orientation="Horizontal"                             >
+                            <FlyoutBase.AttachedFlyout>
+                                <MenuFlyout x:ConnectionId='4'                            x:Name="ShowVideoContaxt">
+                                    <MenuFlyoutItem x:ConnectionId='5' x:Name="Pin"                  />
+                                    <MenuFlyoutItem x:ConnectionId='6' Text="add to favorites" x:Name="favorites"                        />
+                                    <MenuFlyoutItem x:ConnectionId='7' Text="report broken link"                             />
+                                    <MenuFlyoutItem x:ConnectionId='8' Text="share with friends"                               />
+                                    <MenuFlyoutItem x:ConnectionId='9' x:Name="Rating" Text="{Binding Ratetitle}"                     />
+                                    <MenuFlyoutItem x:ConnectionId='10' Text="delete link" x:Name="del"                  />
+                                </MenuFlyout>
+                            </FlyoutBase.AttachedFlyout>
+                            <Image Source="{Binding Songplay}" Height="35" Width="35" VerticalAlignment="Center" Margin="0,23,20,0"  Tag="{Binding Songplay}" x:Name="audioimg"/>
+                            <TextBlock Text="{Binding Title}" Name="tblkchno" Margin="0,20,0,0" Width="250" FontSize="25" TextAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Tag="{Binding LinkUrl}"/>
+                            <Image x:ConnectionId='11' x:Name="ringtone" Tag="{Binding RingToneDetails}" Source="/Images/PlayerImages/editringtone.png" Margin="10,23,0,0" Stretch="Fill" Height="40" Width="40"                                         ></Image>
+                        </StackPanel>                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ProgressBar x:Name="MyProgressBar1" Visibility="Collapsed" VerticalAlignment="Top" IsIndeterminate="False" Foreground="Red" Width="300" Tag="{Binding LinkUrl}" Background="Black" HorizontalAlignment="Left">
+        </ProgressBar>
+        <Canvas>
+            <TextBlock Canvas.Top="-20" Canvas.Left="85" HorizontalAlignment="Center" FontSize="20" Foreground="Red" x:Name="tblkAudioError" Visibility="Collapsed"/>
+        </Canvas>
+        <Canvas>
+            <TextBlock Canvas.Top="200" Canvas.Left="60" FontSize="25" Margin="-15,0,0,0" x:Name="tblkFavNoAudio" Visibility="Collapsed" Tag="{Binding LinkUrl}"/>
+        </Canvas>
+        <ProgressBar VerticalAlignment="Top" Visibility="Collapsed" Height="10" Width="300" x:Name="performanceProgressBar" Foreground="Red"/>
+    </Grid>
+</UserControl>
+

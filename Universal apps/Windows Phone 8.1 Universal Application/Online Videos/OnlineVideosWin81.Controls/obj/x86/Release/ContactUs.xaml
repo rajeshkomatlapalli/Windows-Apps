@@ -1,0 +1,70 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.ContactUs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:LART="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style x:Key="Textstyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid   Background="{StaticResource bi}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.10*"/>
+            <RowDefinition Height="0.90*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Stretch="Uniform" Grid.Row="0" HorizontalAlignment="Left">
+            <StackPanel x:Name="TitlePanel" Height="Auto"  Grid.Row="0"  Style="{StaticResource TitlePanelStyle}">
+                <Button x:ConnectionId='2' x:Name="BackButton"                          Margin="26,20,0,10" Style="{StaticResource BackButtonStyle}"   />
+                <TextBlock x:Name="tblkTitle" Text="Contact US" Style="{StaticResource DetailPageHeaderText}" Margin="20,10,0,0"/>
+            </StackPanel>
+        </Viewbox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0" VerticalAlignment="Top" Margin="20,10,0,0">
+                <ListView x:ConnectionId='1' x:Name="ContactList"  Grid.Column="0"                                                  Style="{StaticResource ContactUsListView}" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Stretch="Uniform" Source="{Binding Image}" Height="30" Width="30" Tag="{Binding Link}"></Image>
+                                <TextBlock Text="{Binding Name}" Style="{StaticResource ContactUs}"  Tag="{Binding Link}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Viewbox>
+            <Viewbox Grid.Column="1" Margin="0,20,0,0">
+                <Grid Grid.Column="1" x:Name="grdborder" Height="Auto" Width="Auto">
+                    <Border x:Name="controlframe" Style="{StaticResource ContactUsBorderStyle}" >
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="0">
+                                <WebView x:Name="wb"  Style="{StaticResource ContactUsWebView}"   Visibility="Visible">
+                                </WebView>
+                            </ScrollViewer>
+                            <LART:Feedback x:Name="FeedBackControl" Grid.Row="0"  Visibility="Collapsed"></LART:Feedback>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>
+

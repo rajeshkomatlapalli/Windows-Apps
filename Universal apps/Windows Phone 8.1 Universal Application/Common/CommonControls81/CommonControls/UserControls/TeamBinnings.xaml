@@ -1,0 +1,98 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.TeamBinnings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <!--<Viewbox>-->
+    <Grid>
+        <Grid x:Name="LayoutRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,-30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Margin="5,-20,20,0" 
+                                    Height="40" Background="#50FFFFFF">
+                            <TextBlock x:Name="tblkTeamA" Margin="30,5,495,5" Width="Auto" FontSize="30"/>
+                            <TextBlock x:Name="tblkbalrun" Text=" R   B" FontSize="30" Margin="0,5,0,5"  Visibility="Visible"/>
+                        </StackPanel>
+                        <ListView x:Name="lbxteamBBatting" Background="Transparent" Foreground="White"  Grid.Column="0" Margin="0,15,0,0" IsHitTestVisible="False">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="40" Background="#19FFFFFF">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="160"/>
+                                            <ColumnDefinition Width="300"/>
+                                            <ColumnDefinition Width="115"/>
+                                            <ColumnDefinition Width="54"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" x:Name="txtblk" Text="{Binding PlayerName}" FontSize="24" TextWrapping="Wrap" Margin="10,5,0,0"/>
+                                        <TextBlock Grid.Column="1" x:Name="txtblk1" Text="{Binding Out}" FontSize="24" TextWrapping="Wrap" Margin="60,5,0,0"/>
+                                        <TextBlock Grid.Column="2" x:Name="txtblk2" Text="{Binding Runs}" FontSize="24" Margin="70,5,0,0"/>
+                                        <TextBlock Grid.Column="3" x:Name="txtblk3" Text="{Binding Balls}" FontSize="24" Margin="0,5,0,0"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                    <Grid Grid.Column="1"  Margin="70,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="65"/>
+                                <RowDefinition Height="365"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Horizontal" Background="#50FFFFFF" Height="40" Width="Auto" Grid.Row="0" Margin="40,-65,20,0">
+                                <TextBlock x:Name="tblktitlebowler" Text="Bowler" Margin="10,5,140,5" FontSize="30" Foreground="AntiqueWhite" Visibility="Collapsed"/>
+                                <TextBlock x:Name="tblkbowlertitle" Text=" O    M    R   W" FontSize="30" Margin="0,5,0,5" Foreground="AntiqueWhite" Visibility="Collapsed"/>
+                            </StackPanel>
+                            <ListView x:Name="lbxteamABbowling" Grid.Row="1" Width="Auto" Margin="40,-30,0,0" IsHitTestVisible="False">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Height="40" Background="#19FFFFFF">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="220"/>
+                                                <ColumnDefinition Width="60"/>
+                                                <ColumnDefinition Width="55"/>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="40"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding PlayerName}" FontSize="24" Margin="10,0,0,0"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Overs}" FontSize="24"  Margin="30,0,0,0"/>
+                                            <TextBlock Grid.Column="2" Text="{Binding Maidens}" FontSize="24" Margin="28,0,0,0"/>
+                                            <TextBlock Grid.Column="3" Text="{Binding Runs}" FontSize="24" Margin="25,0,0,0"/>
+                                            <TextBlock Grid.Column="4" Text="{Binding Wickets}" FontSize="24" Margin="25,0,0,0"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+                        <Grid Margin="50,30,0,30" Grid.Row="1">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="tblkTeamBExtra" FontSize="24"/>
+                                <TextBlock x:Name="tblkTeamBTotal" FontSize="24" Margin="0,6,0,10"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+    <!--</Viewbox>-->
+</UserControl>

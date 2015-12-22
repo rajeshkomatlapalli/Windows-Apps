@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.RingTone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid x:Name="LayoutRoot" Grid.Row="0" Background="{StaticResource bipivot}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="12,17,0,10">
+                    <Image Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgTitle" Tapped="imgTitle_Tapped"/>
+                    <TextBlock x:Name="tblkVideosTitle" Text="CREATE RINGTONE" TextWrapping="NoWrap" Style="{StaticResource DetailPagePivotTitle}"/>
+                </StackPanel>
+
+                <Grid x:Name="ContentPanel" Grid.Row="1">
+                    <Grid x:Name="Playergrid" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Vertical" Grid.Row="0">
+                            <Canvas Height="100">
+                                <TextBlock x:Name="txtTitle" FontSize="20" HorizontalAlignment="Left" Margin="30,0,0,0"></TextBlock>
+                                <TextBlock  x:Name="txtduration" FontSize="15" Height="62" Width="250" Text="00:00/00:00" HorizontalAlignment="Left" Margin="10,25,0,0"  ></TextBlock>
+                                <Slider x:Name="ringtoneslider" ManipulationStarted="ringtoneslider_ManipulationStarted" ManipulationCompleted="ringtoneslider_ManipulationCompleted" Margin="10,25,0,0" Width="370"></Slider>                                
+                            </Canvas>
+                        </StackPanel>
+                        <MediaElement x:Name="mymedia" MediaEnded="mymedia_MediaEnded" Volume="1" AutoPlay="True" Visibility="Collapsed" Width="0" Height="0" MediaOpened="mymedia_MediaOpened">
+                        </MediaElement>
+
+                        <StackPanel Grid.Row="1" Margin="0,-25,0,0" Orientation="Horizontal">
+                            <Image Source="/Images/PlayerImages/rewind.png" x:Name="Rewindimage" Height="55" Margin="30,0,0,0" Width="55" PointerPressed="Rewindimage_PointerPressed" PointerReleased="Rewindimage_PointerReleased"/>
+                            <Image x:Name="playimage" Height="55" Margin="80,0,0,0" Width="55" PointerPressed="playimage_PointerPressed"/>
+                            <Image Source="/Images/PlayerImages/fastforward.png" x:Name="forwardimage" Height="55" Margin="70,0,0,0" Width="55" PointerPressed="forwardimage_PointerPressed" PointerReleased="forwardimage_PointerReleased"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,0,0,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
+                                <Canvas x:Name="Begincanvas" Margin="10,15,10,10" Width="180" Height="72">
+                                    <Rectangle x:Name="Rctbegin" Fill="#43C6" Stroke="Black" StrokeThickness="5" Width="170" Height="60" RadiusX="20" RadiusY="20">
+                                    </Rectangle>
+                                    <Button x:Name="btnbegin" BorderBrush="Transparent" Content="Begin Time" Height="60" FontSize="20" Width="170" Canvas.Left="0" Canvas.Top="-1" Click="btnbegin_Click"/>
+                                </Canvas>
+                                <TextBox x:Name="tbbegin" VerticalAlignment="Center" BorderBrush="Transparent" Height="40" Width="88" LostFocus="tbbegin_LostFocus"></TextBox>
+                                <TextBlock x:Name="txtbegin" Margin="0,5,0,0" Height="22" Width="100" Text="Secs" VerticalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Canvas Margin="10,10,10,10" Width="180" Height="72">
+                                    <Rectangle x:Name="Rctend" Fill="#43C6" Stroke="Black" StrokeThickness="5" Width="170" Height="60" RadiusX="20" RadiusY="20">
+                                    </Rectangle>
+                                    <Button x:Name="btnend" BorderBrush="Transparent" Content="End Time" Height="60" FontSize="20" Width="170" Canvas.Left="0" Canvas.Top="-1" Click="btnend_Click"/>
+                                </Canvas>
+                                <TextBox  VerticalAlignment="Center" x:Name="tbend" BorderBrush="Transparent" Height="40" Width="88" LostFocus="tbend_LostFocus"></TextBox>
+                                <TextBlock x:Name="txtend"  Height="22" Width="100" Text="Secs" Margin="0,5,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                <TextBlock x:Name="txtdurationlabel"  Height="62" Width="87" VerticalAlignment="Center" Text="Duration:" FontSize="20" Margin="20,0,0,0"></TextBlock>
+                                <TextBlock  VerticalAlignment="Center" x:Name="txttimerange" Height="62" Width="111"  FontSize="20" Margin="0,0,0,0"></TextBlock>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="txtfile"  Height="62" Width="88" Text="File Size :" FontSize="20"  VerticalAlignment="Center" Margin="0,0,0,0"></TextBlock>
+                                    <TextBlock   VerticalAlignment="Center" x:Name="txtfilesize" Height="62" Width="90"  FontSize="20" ></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                            <TextBlock x:Name="txterror" TextWrapping="Wrap" Height="69" Width="454" Margin="0,0,0,0" Foreground="Red"   FontSize="25" ></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Loading Song" FontSize="25" x:Name="ringtoneloadingmessage" HorizontalAlignment="Center"/>
+                <ProgressBar VerticalAlignment="Center" Width="400" x:Name="performanceProgressBar"/>
+            </StackPanel>
+        </Grid>        
+        <UI:AdControl x:Name="adstaRing" Grid.Row="1"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Play" x:Name="prev" Visibility="Collapsed" Label="Preview" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="Save" Label="Save" x:Name="save" Visibility="Collapsed" Click="AppBarButton_Click_1"/>
+                <AppBarButton Icon="Cancel" Label="Cancel" x:Name="cancel" Visibility="Collapsed" Click="AppBarButton_Click_2"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

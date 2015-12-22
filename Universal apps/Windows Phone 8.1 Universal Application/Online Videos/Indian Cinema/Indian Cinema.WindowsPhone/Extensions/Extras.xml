@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExtrasInfo>
+
+  <!-- Application title -->
+  <AppTitle>
+    <default>Bollywood World</default>
+  </AppTitle>
+
+  <!-- Search-related captions -->
+  <Consumer ConsumerID="{5B04B775-356B-4AA0-AAF8-6491FFEA5661}">
+
+    <!-- Products caption for video games -->
+    <ExtensionInfo>
+      <Extensions>
+        <ExtensionName>Bing_Movies</ExtensionName>
+      </Extensions>
+      <CaptionString>
+        <default>Watch bollywood movies and cast bios and galleries</default>
+      </CaptionString>
+    </ExtensionInfo>
+
+  </Consumer>
+</ExtrasInfo>

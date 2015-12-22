@@ -1,0 +1,328 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OnlineVideos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        
+    xmlns:LART="using:CommonControls"
+    >
+
+    <Page.Resources>
+        <ItemsPanelTemplate x:Name="ItemsPanelTemplate1">
+            <ItemsWrapGrid/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Hub x:Name="mainhub" IsZoomedInView="True">
+            <Hub.Background>
+                <ImageBrush ImageSource="/Images/Hub/Background.jpg"/>
+            </Hub.Background>
+            <Hub.Header>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,30,0,0">
+                    <Image x:Name="logo"
+                           Width="101"
+                           Height="132"
+                           Margin="10,0,0,0"
+                           Source="/Images/Hub/Logo.png"/>
+                    <Image x:Name="imgtitle"
+                           Width="915"
+                           Height="151"
+                           Margin="10,10,0,0"
+                           Source="/Images/Hub/Title.png"/>
+                </StackPanel>
+            </Hub.Header>
+            
+            <HubSection x:Name="hubsection_toprated">
+                <HubSection.Header>
+                    <StackPanel Margin="0,-30,0,0">
+                        <TextBlock x:Name="tblkToprated"
+                                   Text="top rated"
+                                   Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,15,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='12' x:Name="lbxTopRated"
+                                          SelectionMode="Single"
+                                                                                         
+                                          Height="420" Width="380"
+                                          ItemsPanel="{StaticResource ItemsPanelTemplate1}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5,10,5,5">
+                                                <Image Height="160" Width="100" Source="{Binding Image}" Stretch="UniformToFill"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_recent">
+                <HubSection.Header>
+                    <StackPanel Margin="0,-30,0,0">
+                        <TextBlock x:Name="tblkrecent"
+                               Text="recent"
+                               Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,15,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='11'
+                                x:Name="lbxRecentlyAdded" 
+                                Foreground="White" 
+                                Height="420" Width="380"
+                                                                                    
+                                ItemsPanel="{StaticResource ItemsPanelTemplate1}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5,10,5,5">
+                                                <Image Height="160" Width="100" Source="{Binding Image}" Stretch="UniformToFill"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_tamil" Visibility="Collapsed">
+                <HubSection.Header>
+                    <StackPanel Margin="0,-30,0,0">
+                        <TextBlock
+                            Text="tamil"
+                            Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,15,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='10' 
+                                x:Name="lbxtamil" 
+                                Foreground="White"
+                                Height="420" Width="380"
+                                                                            
+                                ItemsPanel="{StaticResource ItemsPanelTemplate1}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5,10,5,5">
+                                                <Image Height="160" Width="100" Source="{Binding Image}" Stretch="UniformToFill"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_upcomming" Visibility="Collapsed">
+                <HubSection.Header>
+                    <StackPanel                         
+                        Margin="0,-30,0,0">
+                        <TextBlock 
+                            x:Name="tblkupcmng" 
+                            Text="upcoming movies"
+                            Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,15,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='9' 
+                                x:Name="lbxupcoming" 
+                                Foreground="White"
+                                Height="420" Width="380"
+                                                                               
+                                ItemsPanel="{StaticResource ItemsPanelTemplate1}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5,10,5,5">
+                                                <Image Height="160" Width="100" Source="{Binding Image}" Stretch="UniformToFill"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_Topsongs">
+                <HubSection.Header>
+                    <StackPanel Margin="0,-30,0,0">
+                        <TextBlock 
+                            Name="tblkHeader" 
+                            Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,20,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='8' 
+                                x:Name="lbxSongsList" 
+                                Foreground="White" 
+                                VerticalAlignment="Top" 
+                                                                                 
+                                Height="350">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock 
+                                                Text="{Binding Title}" 
+                                                Style="{StaticResource SongsPivottyle_New}" 
+                                                Margin="0,32,0,0"
+                                                Width="350" 
+                                                VerticalAlignment="Center" 
+                                                TextWrapping="Wrap"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_TopAudio">
+                <HubSection.Header>
+                    <StackPanel
+                        Margin="0,-30,0,0">
+                        <TextBlock 
+                            x:Name="tblkMusicHeader" 
+                            Style="{StaticResource MainHubTitleStyle}"/>
+                        <StackPanel Margin="0,20,0,0">
+                            <Grid>
+                                <ListView x:ConnectionId='7'
+                                x:Name="lbxAudioList" 
+                                Foreground="White" 
+                                VerticalAlignment="Top"
+                                                                                
+                                Height="350">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock 
+                                                Text="{Binding Title}"
+                                                Style="{StaticResource SongsPivottyle_New}" 
+                                                Margin="0,32,0,0" 
+                                                Width="350"
+                                                VerticalAlignment="Center" 
+                                                TextWrapping="Wrap"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_about">
+                <HubSection.Header>
+                    <StackPanel Margin="0,-30,0,0">
+                        <TextBlock 
+                            x:Name="tblkabout" 
+                            Text="about" 
+                            Style="{StaticResource MainHubTitleStyle}"/>
+                        <Grid 
+                            x:Name="AboutGrid">
+                            <LART:AboutUs/>
+                        </Grid>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+
+            <HubSection x:Name="hubsection_menu">
+                <HubSection.Header>
+                    <StackPanel 
+                        Orientation="Horizontal" 
+                        Margin="0,8,0,0" 
+                        Visibility="Visible" 
+                        x:Name="SearchPanel">
+                        <TextBox 
+                            x:Name="tbxSearch" 
+                            Margin="5" 
+                            Background="White" 
+                            HorizontalAlignment="Center" 
+                            Width="260" 
+                            BorderThickness="0" 
+                            PlaceholderText="search" 
+                            Height="44"/>
+                        <AppBarButton x:ConnectionId='2' 
+                            x:Name="findbtn" 
+                            Icon="Find" 
+                            Margin="-70,-4,160,0" 
+                            Width="60" Height="50" 
+                            IsTapEnabled="True" 
+                                                   />
+                        <AppBarButton x:ConnectionId='3' 
+                            Icon="Microphone" 
+                            Margin="-150,-4,0,0" 
+                            x:Name="microphone" 
+                            Width="60" 
+                            Height="50" 
+                            IsTapEnabled="True" 
+                                                      />
+                        <Grid Margin="-460,60,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ListView x:ConnectionId='4'
+                            x:Name="lbxMenu" 
+                            Grid.Column="0" 
+                                                                        
+                            ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                            Foreground="White">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel                                          
+                                        Margin="45,15,0,0">
+                                            <Image 
+                                            Source="{Binding ImageUri}" 
+                                            HorizontalAlignment="Left" 
+                                            Height="40" 
+                                            Width="40" 
+                                            Margin="0,10,10,0" 
+                                            VerticalAlignment="Center"/>
+                                            <TextBlock 
+                                            Margin="50,-40,0,0"
+                                            Text="{Binding Name}" 
+                                            Style="{StaticResource MainMenuItemTextStyle}" 
+                                            VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <AppBarButton x:ConnectionId='5' 
+                            Icon="Add" 
+                            Margin="0,20,20,0" 
+                            Width="40" 
+                            Height="40" 
+                            x:Name="downloadimg" 
+                            HorizontalAlignment="Left" 
+                            Grid.Column="1" 
+                            Visibility="Collapsed" 
+                            IsTapEnabled="True" 
+                                                       />
+                            <AppBarButton x:ConnectionId='6' 
+                            Icon="Play" 
+                            x:Name="playfav" 
+                            Label="Play All" 
+                            HorizontalAlignment="Left" 
+                            Margin="-18,80,-35,0" 
+                            VerticalAlignment="Top" 
+                            Grid.Column="1" 
+                            IsTapEnabled="True" 
+                                                   />
+                        </Grid>
+                    </StackPanel>
+                </HubSection.Header>
+            </HubSection>
+        </Hub>
+    </Grid>
+</Page>
+

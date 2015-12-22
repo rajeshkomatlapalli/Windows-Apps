@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.ShowDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="LayoutRoot" Grid.Row="0">
+            <Pivot x:Name="pvtMainDetails" SelectionChanged="pvtMainDetails_SelectionChanged" >
+                <Pivot.Title>
+                    <StackPanel Orientation="Horizontal" Margin="0,-10,0,0">
+                        <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+                        <TextBlock x:Name="tblkVideosTitle" Style="{StaticResource DetailPagePivotTitle}"/>
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>
+                    white
+                </Pivot.Foreground>
+                <PivotItem x:Name="pvtitmSongs" Header="videos" Foreground="White">
+                    <Grid x:Name="showvideogrid">
+                        <LART:ShowVideos x:Name="VideosList"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:Name="pvtitmCast" Header="characters" Foreground="White">
+                    <Grid x:Name="castgrid">
+                        <LART:ShowCast/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem Margin="0,-30,0,0" x:Name="gamepivot" Header="game" Foreground="White">
+                    <Grid x:Name="GameGrid">
+                        <StackPanel Name="gamestk">
+                            <LART:MemoryGame_1 x:Name="mgame"/>
+                        </StackPanel>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+            <ProgressBar x:Name="progressbar" Foreground="Red" VerticalAlignment="Top"/>
+        </Grid>
+        <UI:AdControl  Name="adstasongs" Grid.Row="1" IsAutoRefreshEnabled="True" Height="70" Width="400"/>        
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>            
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="share" Label="Share this" Click="share_Click"/>
+                <AppBarButton x:Name="btnadd" Label="add" Click="btnadd_Click"/>                
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

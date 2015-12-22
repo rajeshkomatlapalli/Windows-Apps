@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NewDataSet>
+  <ContactUs>
+    <ID>1</ID>
+    <Name>Send Feedback</Name>
+    <Image>/Images/ContactUS/email.png</Image>
+    <Link></Link>
+  </ContactUs>
+  <ContactUs>
+    <ID>2</ID>
+   <Name>Facebook</Name>
+  <Image>/Images/ContactUS/facebook.png</Image>
+  <Link>http://www.facebook.com/lartsoftsolutions</Link>
+</ContactUs>
+  <ContactUs>
+    <ID>3</ID>
+    <Name>Twitter</Name>
+    <Image>/Images/ContactUS/twitter.png</Image>
+    <Link>http://twitter.com/lartsoft</Link>
+  </ContactUs>
+  <ContactUs>
+    <ID>4</ID>
+    <Name>Blog</Name>
+    <Image>/Images/ContactUS/blog.png</Image>
+    <Link>http://lartsofttechsolutions.blogspot.com/</Link>
+  </ContactUs>
+  <ContactUs>
+    <ID>5</ID>
+    <Name>Youtube</Name>
+    <Image>/Images/ContactUS/youtube.png</Image>
+    <Link>http://www.youtube.com/playlist?list=PLY2b_4r5jlaqBNNfOEOeQqkg5zEV3ALXA</Link>
+  </ContactUs>
+  <ContactUs>
+    <ID>6</ID>
+    <Name>Related Apps</Name>
+    <Image>/Images/MainMenu/relatedappbaricon.png</Image>
+    <Link></Link>
+  </ContactUs>
+  <ContactUs>
+    <ID>7</ID>
+    <Name>Upgrade App</Name>
+    <Image>/Images/ContactUS/upgrade.png</Image>
+    <Link></Link>
+  </ContactUs>
+</NewDataSet>

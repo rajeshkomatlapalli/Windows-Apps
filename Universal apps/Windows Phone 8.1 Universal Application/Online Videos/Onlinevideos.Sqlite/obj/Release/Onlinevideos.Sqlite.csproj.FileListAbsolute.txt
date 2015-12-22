@@ -1,0 +1,16 @@
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\bin\Release\Onlinevideos.Sqlite.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\bin\Release\Onlinevideos.Sqlite.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\bin\Release\Onlinevideos.Sqlite.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\Onlinevideos.Sqlite.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\Onlinevideos.Sqlite.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\priconfig.xml
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\priconfig.xml.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\layout.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\layout.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\resources.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\resources.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\pri.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\pri.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\qualifiers.txt
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\qualifiers.txt.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\Onlinevideos.Sqlite\obj\Release\MultipleQualifiersPerDimensionFound.txt

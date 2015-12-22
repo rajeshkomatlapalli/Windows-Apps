@@ -1,0 +1,197 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.Detail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:LART="using:OnlineVideosWin81.Controls"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    mc:Ignorable="d">
+
+   <Page.TopAppBar>
+        <AppBar x:Name="TopAppBar1" IsOpen="False" IsSticky="True" VerticalAlignment="Top">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <AppBarButton Icon="Home" Label="Home" x:Name="btnhome" Click="btnhome_Click"/>
+                    <AppBarButton Label="Share" x:Name="sharebtn" Click="sharebtn_Click">
+                        <Image Source="/Images/MainMenu/share.png"></Image>
+                    </AppBarButton>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <AppBarButton x:Name="reportbrkn" Label="Report Broken" Click="reportbrkn_Click">
+                        <Image Source="/Images/MainMenu/feedback.png"></Image>
+                    </AppBarButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
+    
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar" IsEnabled="True" IsSticky="True" Closed="BottomAppBar_Closed" Opened="BottomAppBar_Opened" VerticalAlignment="Bottom">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">                    
+                    <AppBarButton Icon="Pin" x:Name="pinbtn" Label="Pin" Click="pinbtn_Click"/>
+                    <AppBarButton Icon="Favorite" x:Name="Fav_btn" Label="Add to Favorie" Click="Fav_btn_Click"/>
+                    <AppBarButton Icon="Delete" x:Name="deletelink" Label="Delete Link" Click="deletelink_Click"/>
+                    <AppBarButton Icon="Edit" x:Name="edit" Label="Edit Description" Click="edit_Click"/>
+                    <AppBarButton Icon="AddFriend" x:Name="addcast" Label="Add Cast" Click="addcast_Click"/>
+                    <AppBarButton x:Name="add_video" Label="Add Video" Click="add_video_Click">
+                        <Image Source="/Images/MainMenu/add video.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="btnsongs" Label="Add Songs" Click="btnsongs_Click">
+                        <Image Source="/Images/MainMenu/add song.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="Add_Audio" Label="Add Audio" Click="Add_Audio_Click">
+                        <Image Source="/Images/MainMenu/add audio.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton Icon="Delete" x:Name="deletecast" Label="Delete Cast" Click="deletecast_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <LART:AudioControl x:Name="audiocontrol"></LART:AudioControl>
+                    <AppBarButton x:Name="movie_share" Label="Share Movie" Click="movie_share_Click">
+                        <Image Source="/Images/MainMenu/share movie.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="ringtone" Label="Trim Song" Click="ringtone_Click">
+                        <Image Source="/Images/MainMenu/editringtone.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="ratethe_Video" Label="Rate Video" Click="rate_Click" Visibility="Collapsed">
+                        <Image Source="/Images/MainMenu/Ratetheshow.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="ratethe_Show" Label="Rate Shows" Click="rate_Click" Visibility="Collapsed">
+                        <Image Source="/Images/MainMenu/Ratetheshow.png"></Image>
+                    </AppBarButton>
+                    <AppBarButton x:Name="ratethe_Audio" Label="Rate Audio" Click="rate_Click" Visibility="Collapsed">
+                        <Image Source="/Images/MainMenu/Ratetheshow.png"></Image>
+                    </AppBarButton>
+                    <Button x:Name="DownLoad" Visibility="Collapsed" Style="{StaticResource DownloadAppBarButtonStyle}"  Click="Button_Click_2" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="PageBackgroundBrush" Color="#FF1A1A1A"/>
+        <SolidColorBrush x:Key="PageForegroundBrush" Color="White"/>
+        <SolidColorBrush x:Key="HighlightBrush" Color="#FF26A0DA"/>
+        <Style x:Key="AppBarStyle" TargetType="AppBar">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Padding" Value="40,0,40,0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="ContentPanel" Background="{StaticResource bi}" RightTapped="ContentPanel_RightTapped">
+        <Grid x:Name="LayoutRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.10*"/>
+                <RowDefinition Height="0.90*"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" Grid.Row="0">
+                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,10,0,0">
+                    <!--<Button x:Name="BackButton" Click="BackButton_Click_1" Style="{StaticResource BackButtonStyle}"   />-->
+                    <AppBarButton Icon="Back" x:Name="back" Click="back_Click"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="tblkTitle"  Style="{StaticResource DetailPageHeaderText}" ></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Viewbox>
+            <ScrollViewer x:Name="FullScreenLandscape" LayoutUpdated="FullScreenLandscape_LayoutUpdated_1" ZoomMode="Disabled" ViewChanged="FullScreenLandscape_ViewChanged_1"   HorizontalScrollBarVisibility="Auto" Grid.Row="1"  VerticalScrollBarVisibility="Disabled" Margin="0,0,0,10">
+                <Viewbox Stretch="UniformToFill">
+                    <Grid x:Name="detailgrid" Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Grid.Column="0" Margin="-30,-10,0,0">
+                            <StackPanel Orientation="Vertical" x:Name="stackdetail">
+                                <TextBlock x:Name="tblkDetails"    Text="detail" Style="{StaticResource DetailPageMenuStyle}"  Margin="150,0,0,0"/>
+                                <Grid x:Name="grdDetail" VerticalAlignment="Stretch" Background="Transparent">
+                                    <LART:ShowDescription x:Name="showdes"></LART:ShowDescription>                                   
+                                </Grid>
+                            </StackPanel>
+                        </Viewbox>
+                        <Viewbox Grid.Column="2"  Margin="0,-125,0,0">
+                            <StackPanel Orientation="Vertical"  x:Name="stacksongs">
+                                <TextBlock x:Name="tblksongs" Text="songs"   Style="{StaticResource DetailPageMenuStyle}"   Margin="10,0,0,0"></TextBlock>
+                                <Grid x:Name="grdVideos" Background="Transparent" VerticalAlignment="Stretch">
+                                    <LART:ShowVideos x:Name="showvideos" ></LART:ShowVideos>
+                                </Grid>
+                            </StackPanel>
+                        </Viewbox>
+                        <Viewbox Grid.Column="1"  Margin="0,-100,0,0">
+                            <StackPanel Orientation="Vertical" x:Name="stackchapters">
+                                <TextBlock x:Name="tblkchapters" Text="chapters"   Style="{StaticResource DetailPageMenuStyle}"   Margin="44,0,0,0"></TextBlock>
+                                <Grid x:Name="grdchapters" VerticalAlignment="Stretch" Background="Transparent" Margin="30,50,20,0">
+                                    <LART:ShowChapters x:Name="showchapters" ></LART:ShowChapters>
+                                </Grid>
+                            </StackPanel>
+                        </Viewbox>
+                        <Viewbox Grid.Column="4" Margin="0,-25,0,0" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical"  Margin="0,0,0,0" x:Name="stackcast">
+                                <TextBlock x:Name="tblkCast"    Text="cast" Style="{StaticResource DetailPageMenuStyle}"  Margin="10,20,0,0"/>
+                                <Grid x:Name="grdCast"  VerticalAlignment="Stretch"   Margin="-90,30,0,0" Background="Transparent">
+                                    <LART:ShowCast x:Name="showcast"></LART:ShowCast>
+                                </Grid>
+                            </StackPanel>
+                        </Viewbox>
+                        <StackPanel x:Name="GameGrid" Margin="0,0,0,0" Orientation="Vertical" Grid.Column="5" Width="600">
+                            <TextBlock x:Name="tblkgame"    Text="game" Style="{StaticResource DetailPageMenuStyle}" Margin="30,0,0,0"/>
+                            <Grid x:Name="grdgame"  VerticalAlignment="Stretch"   Margin="10,-10,30,0" Background="Transparent">
+                                <LART:MemoryGame_1 x:Name="gamecontrol"></LART:MemoryGame_1>                                
+                            </Grid>
+                        </StackPanel>
+                        <Viewbox Grid.Column="3" Margin="0,-105,0,0" Stretch="Uniform">
+                            <StackPanel Orientation="Vertical" x:Name="stackaudio">
+                                <TextBlock x:Name="tblkAudio"    Text="audio"  Style="{StaticResource DetailPageMenuStyle}"  Margin="30,0,0,0"/>
+                                <Grid x:Name="grdAudio"  VerticalAlignment="Stretch"   Margin="10,20,0,0" Background="Transparent">
+                                    <LART:ShowAudio x:Name="showaudio"></LART:ShowAudio>                                    
+                                </Grid>
+                            </StackPanel>
+                        </Viewbox>
+                        <Grid  Margin="20,0,20,30"  Grid.Column="6" x:Name="AddControlvisable1">
+                            <!--<AdRotator:AdRotatorControl x:Name="AdRotatorWin8" AdHeight="600" AdWidth="160" VerticalAlignment="Bottom" HorizontalAlignment="Center" DefaultSettingsFileUri="IndianCinemaverticaldefaultAdSettings.xml" SettingsUrl="http://lartsoft.org/win8AdRotator/IndianCinemaHorizontalefaultAdSettings.xml"/>-->
+                            <UI:AdControl x:Name="adcontrol" ApplicationId="dba0f2f6-6fad-4321-8b08-80b99ea778d1" AdUnitId="68360" Height="600" Width="160" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Viewbox>
+            </ScrollViewer>
+
+            <ScrollViewer x:Name="snapscrollview" Margin="10,20,0,0"  Visibility="Collapsed" ZoomMode="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Visible" Grid.Row="1">
+                <Grid  Margin="0,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Vertical" x:Name="stackchapters1">
+                        <TextBlock x:Name="tblkchapters1" Text="chapters"   Style="{StaticResource DetailPageMenuStyle}"   Margin="10,0,0,0"></TextBlock>
+                        <Grid x:Name="grdchapters1" VerticalAlignment="Stretch" Background="Transparent" Margin="0,50,20,0">
+                            <LART:ShowChapters x:Name="showchapters1" ></LART:ShowChapters>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Vertical" x:Name="stacksongs1">
+                        <TextBlock x:Name="tblksongs1" Text="songs"   Style="{StaticResource DetailPageMenuStyle}"   Margin="10,0,0,0"></TextBlock>
+                        <Grid x:Name="grdVideos1" Background="Transparent" VerticalAlignment="Stretch" Margin="0,50,20,0">
+                            <LART:ShowVideos x:Name="showvideos1" ></LART:ShowVideos>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" x:Name="stackaudio1" Grid.Row="2">
+                        <TextBlock x:Name="tblkAudio1"    Text="audio"  Style="{StaticResource DetailPageMenuStyle}"  Margin="10,0,0,0"/>
+                        <Grid x:Name="grdAudio1"  VerticalAlignment="Stretch"   Margin="0,30,0,0" Background="Transparent">
+                            <LART:ShowAudio x:Name="showaudio1"></LART:ShowAudio>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+            <Grid Margin="0,0,0,0" Grid.Row="2"    x:Name="AddControlvisablesnap">
+                <UI:AdControl x:Name="adctrl" ApplicationId="dba0f2f6-6fad-4321-8b08-80b99ea778d1" Height="80" Width="760" AdUnitId="68360" AdRefreshed="adctrl_AdRefreshed"/>
+                <!--<AdRotator:AdRotatorControl x:Name="SnapViewAdRotatorWin8" AdHeight="125" AdWidth="250" VerticalAlignment="Bottom" HorizontalAlignment="Center" DefaultSettingsFileUri="IndianCinemaSnapviewdefaultAdSettings.xml" SettingsUrl="http://lartsoft.org/win8AdRotator/IndianCinemaSnapviewdefaultAdSettings.xml"/>-->
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

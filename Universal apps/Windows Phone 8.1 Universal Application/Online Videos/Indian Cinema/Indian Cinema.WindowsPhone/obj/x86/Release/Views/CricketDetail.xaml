@@ -1,0 +1,200 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OnlineMovies.Views.CricketDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:Convert="using:OnlineVideos.View_Models"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        >
+
+    <Page.Resources>
+        <!--<Convert:VisibilityConverter x:Key="visb"></Convert:VisibilityConverter>-->
+
+        <Style x:Key="ListBoxItemStyle1" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="LayoutRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                <DiscreteObjectKeyFrame KeyTime="0"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0" To=".5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentContainer"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="SelectionStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="Selected" GeneratedDuration="0" To="Unselected">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="Unselected" GeneratedDuration="0" To="Selected">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneAccentBrush}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="Selected" GeneratedDuration="0" To="SelectedUnfocused">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneAccentBrush}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="Unselected" GeneratedDuration="0" To="SelectedUnfocused">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneAccentBrush}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="SelectedUnfocused" GeneratedDuration="0" To="Unselected">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition From="SelectedUnfocused" GeneratedDuration="0" To="Selected">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneAccentBrush}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Unselected"/>
+                                    <VisualState x:Name="Selected"/>
+                                    <VisualState x:Name="SelectedUnfocused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="Focused" GeneratedDuration="0" To="Unfocused"/>
+                                        <VisualTransition From="Unfocused" GeneratedDuration="0" To="Focused"/>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentControl x:Name="ContentContainer" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Background="{StaticResource PhoneAccentBrush}" 
+										/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
+    <Grid x:Name="maingrid" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="{Binding Path=SelectedIndex,ElementName=pvtMainDetails}"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="LayoutRoot"
+              Grid.Row="0">
+            <Pivot x:ConnectionId='2' x:Name="pvtMainDetails"
+                                                                     >
+                <Pivot.Title>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0,0,0,0">
+                        <Image x:ConnectionId='3'
+                            Style="{StaticResource DetailPagePivotTitleImage}"
+                            x:Name="imgTitle"
+                                                                    />
+                        <TextBlock 
+                            x:Name="tblkVideosTitle"
+                            TextWrapping="NoWrap"
+                            Style="{StaticResource DetailPagePivotTitle}"/>
+                    </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>white</Pivot.Foreground>
+                
+                <PivotItem 
+                    x:Name="pvtitmCricketSummary"
+                    Header="summary">
+                    <Grid
+                        x:Name="SummaryGrid">
+                        <!--<LART:CricketSummary 
+                            x:Name="summary"/>-->
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmvideos"
+                    Header="videos">
+                    <Grid
+                        x:Name="VideosGrid">
+                        <LART:ShowVideos
+                               x:Name="videos"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmcast1">
+                    <Grid
+                        x:Name="castGrid">
+                        <LART:ShowCast
+                            x:Name="Cast"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    x:Name="pvtitmcast2">
+                    <Grid
+                        x:Name="CastGrid1">
+                        <LART:ShowCast
+                            x:Name="Cast1"/>
+                    </Grid>
+                </PivotItem>
+                
+                <PivotItem
+                    Margin="0,-30,0,0"
+                    x:Name="gamepivot"
+                    Header="game"
+                    Foreground="White">
+                    <Grid
+                        x:Name="GameGrid">
+                        <StackPanel
+                            x:Name="gamestk">
+                            <LART:MemoryGame_1
+                                x:Name="game"/>
+                        </StackPanel>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+            
+            <ProgressBar
+                VerticalAlignment="Top"
+                x:Name="performanceProgressBar"/>
+        </Grid>
+        <StackPanel
+            Name="adstaCast"
+            Grid.Row="1"
+            Orientation="Vertical">            
+        </StackPanel>
+    </Grid>
+</Page>
+

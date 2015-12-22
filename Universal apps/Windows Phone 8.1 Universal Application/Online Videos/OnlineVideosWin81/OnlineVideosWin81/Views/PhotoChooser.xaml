@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.PhotoChooser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar1" IsOpen="False" IsSticky="True" VerticalAlignment="Bottom" Opened="BottomAppBar1_Opened" Closed="BottomAppBar1_Closed">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!--<Button x:Name="crop" Style="{StaticResource CropAppbarStyle}"  Click="crop_Click_1"></Button>-->
+                    <AppBarButton Icon="Crop" x:Name="crop" Label="Crop" Click="crop_Click_1"/>
+                </StackPanel>
+            </Grid>            
+        </AppBar>
+     </Page.BottomAppBar>
+    <Grid Background="{StaticResource bi}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".10*"></RowDefinition>
+                <RowDefinition Height=".90*"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Viewbox  Grid.Row="0" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal"  Margin="12,17,0,15">
+                    <!--<Button x:Name="BackButton" Click="BackButton_Click_1" Style="{StaticResource BackButtonStyle}"></Button>-->
+                    <!--<AppBarButton Icon="Back" x:Name="BackButton" Click="BackButton_Click_1"/>-->
+                    <Button x:Name="BackButton" Click="BackButton_Click_1" Margin="26,13,0,10" Style="{StaticResource BackButtonStyle}"/>
+                    <TextBlock x:Name="ApplicationTitle" Text="Resize and Crop" Style="{StaticResource DetailPageHeaderText}"/>
+                </StackPanel>
+            </Viewbox>
+            <Viewbox>
+                <Grid x:Name="grid1" Height="250" Width="250" Margin="0,-500,0,0">
+                    <Rectangle x:Name="rect"  Height="250" Width="250" Fill="LightGray"></Rectangle>
+                    <TextBlock x:Name="sitetext" Foreground="Red" FontSize="19"   Width="200" Height="25"  TextTrimming="WordEllipsis" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,10"></TextBlock>
+                    <Image x:Name="img"   Height="200" Width="250"  Stretch="Fill"></Image>
+                    <Image x:Name="favicon"   Height="20" Width="20"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,20,0"></Image>
+                    <TextBlock x:Name="selectedtext"  FontSize="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,3" Height="25"  Foreground="Red" TextTrimming="WordEllipsis"  Width="200"></TextBlock>
+                </Grid>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" x:Name="grdview" Visibility="Visible" Margin="0,250,70,250">
+                <Grid x:Name="grd" Background="White" Height="250" Width="250">
+                    <Image Stretch="Fill" x:Name="img1" ManipulationMode="None">
+                    </Image>
+                    <Rectangle  Stroke="Red" x:Name="rectangle" Height="250" Width="250"  StrokeThickness="5">
+                    </Rectangle>
+                </Grid>
+            </Viewbox>
+            <Viewbox Margin="0,250,190,250" Grid.Row="1"  Visibility="Collapsed" x:Name="previewview">
+                <Grid Background="White" Height="250" Width="250">
+                    <Image x:Name="previewImage" Stretch="Fill"  Height="250" Width="250" 
+                ManipulationMode="None">
+                    </Image>
+                </Grid>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

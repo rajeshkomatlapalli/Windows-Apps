@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.ShowChapters"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <ListView x:Name="lbxChapterLinks" Grid.Row="0" SelectionChanged="lbxChapterLinks_SelectionChanged" Foreground="White" Margin="0,0,0,15">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Height="80" Holding="StackPanel_Holding">
+                        <FlyoutBase.AttachedFlyout>
+                            <MenuFlyout Opened="MenuFlyout_Opened">
+                                <MenuFlyoutItem Text="report broken link" Click="MenuFlyoutItem_Click"/>
+                                <MenuFlyoutItem x:Name="del" Text="delete link" Click="del_Click"/>
+                            </MenuFlyout>
+                        </FlyoutBase.AttachedFlyout>
+                        <Image Source="/Images/ArrowImg.png" Height="35" Width="35" PointerPressed="Image_PointerPressed" VerticalAlignment="Center" Margin="10,0,20,0" Tag="{Binding SongID}"/>
+                        <TextBlock Text="{Binding Title}" Width="320" Margin="-2,-5,0,0" FontSize="25" VerticalAlignment="Center" Tag="{Binding Link}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Canvas>
+            <TextBlock Canvas.Top="200" Canvas.Left="60" FontSize="25" TextWrapping="Wrap" Width="360" Margin="0,0,0,0" x:Name="tblkFavNoMovies" Text="No chapters available, just songs." Visibility="Collapsed" Foreground="White"/>
+        </Canvas>
+    </Grid>    
+</UserControl>

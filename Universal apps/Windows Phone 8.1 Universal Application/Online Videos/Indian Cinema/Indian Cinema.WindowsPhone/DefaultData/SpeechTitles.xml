@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar version="1.0" xml:lang="en-US" root="Main" tag-format="semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar">
+
+  <rule id="Main">
+    <ruleref uri="#Cities" />
+  </rule>
+  <rule id="Cities" scope="public">
+    <one-of>
+      <item>Naan Mahaan Alla</item>
+      <item>Imsai Arasan 23m Pulikesi</item>
+      <item>Shankar Dada Mbbs</item>
+      <item>Pryanam</item>
+      <item>Mr Medhavi</item>
+      <item>Santosham</item>
+      <item>Murari</item>
+      <item>Aadi</item>
+      <item>Yamadonga</item>
+      <item>Panja</item>
+      <item>Anniyan</item>
+      <item>Mankatha</item>
+      <item>Paiyaa</item>
+      <item>Pistha</item>
+      <item>Vinnaithandi Varuvaya</item>
+      <item>Santhosh Subramaniam</item>
+      <item>Ghajini</item>
+      <item>Engeyum Eppothum</item>
+      <item>Kaaka Kaaka - The Police</item>
+      <item>Vetri kodi kattu </item>
+      <item>Deiva Thirumagal</item>
+      <item>Indiran Chandiran</item>
+      <item>Basha</item>
+      <item>Muthu</item>
+      <item>Vaseegara</item>
+      <item>Kandukondein Kandukondein</item>
+      <item>Dhee</item>
+      <item>Badri</item>
+      <item>Ashta Chemma</item>
+      <item>malliswari</item>
+      <item>Bangaram</item>
+      <item>Krishna</item>
+      <item>Missamma</item>
+      <item>Chandamama</item>
+      <item>YamaDonga</item>
+      <item>Bavagaru Bagunnara</item>
+      <item>Khaleja</item>
+      <item>Gharshana</item>
+      <item>Ahana Pellanta</item>
+      <item>Venky</item>
+      <item>Dubai Seenu</item>
+      <item>Aarya 2</item>
+      <item>Gitanjali</item>
+      <item>Sahadevan Mahadevan</item>
+      <item>Angaar</item>
+      <item>Maryada Ramanna</item>
+      <item>Ko</item>
+      <item>Subramanipuram</item>
+      <item>Kaavalan</item>
+      <item>Bombay</item>
+      <item>Engheyum Kaadhal</item>
+      <item>ala modalaindi</item>
+      <item>Orange</item>
+      <item>Pithamagan</item>
+      <item>Varalaru</item>
+      <item>Teenmar</item>
+      <item>Chintakayala Ravi</item>
+      <item>Solo</item>
+      <item>Madata Kaaja</item>
+      <item>Nuvve Nuvve</item>
+      <item>Godavari</item>
+      <item>Oye</item>
+      <item>Magadheera</item>
+      <item>Pappu</item>
+      <item>Little soldiers (Tamil Movie)</item>
+      <item>Gangleader</item>
+      <item>Nuvvostanante Nenoddantana </item>
+      <item>Manasantha Nuvve</item>
+      <item>Love Failure</item>
+      <item>Ee Rojullo</item>
+      <item>PREMALO PADITHE</item>
+      <item>Endukante Premanta</item>
+      <item>Oka Romantic Crime Katha</item>
+      <item>Dil Se</item>
+      <item>Daruvu</item>
+      <item>Gabbar Singh</item>
+      <item>Eega</item>
+      <item>Operation IPS</item>
+      <item>Ishq</item>
+      <item>Marina</item>
+      <item>Dhammu</item>
+      <item>Sega</item>
+      <item>Aata</item>
+      <item>Komaram Puli </item>
+      <item>Businessman </item>
+      <item>Journey</item>
+      <item>Yamagola Malli Modalaindi </item>
+      <item>Mugguru</item>
+      <item>Sivaji </item>
+      <item>Naan </item>
+      <item>Dhoni</item>
+      <item>Nanban</item>
+      <item>Payanam</item>
+      <item>Billa</item>
+      <item>Konchem Ishtam Konchem Kashtam </item>
+      <item>Nippu</item>
+      <item>indra</item>
+      <item>Mirapakai</item>
+      <item>julayi</item>
+      <item>Dookudu</item>
+      <item>Pokkiri</item>
+      <item>7aum Arivu</item>
+      <item>Emaindhi Ee Vela</item>
+      <item>Manmadhan</item>
+      <item>Avan Ivan</item>
+      <item>Endhiran</item>
+      <item>Naan Ee</item>
+      <item>Thuppakki</item>
+      <item>Thadaiyara Thaakka</item>
+      <item>Sasirekha Parinayam</item>
+      <item>Kaadhal kottai</item>
+      <item>Yamudu</item>
+      <item>Kalyanram Katthi</item>
+      <item>Thalapathi</item>
+      <item>Aarya 2</item>
+      <item>Adhurs </item>
+      <item>Ayan</item>
+      <item>Boys</item>
+      <item>Nuvvu Naaku Nachav</item>
+      <item>Arundhati</item>
+      <item>Raavanan</item>
+      <item>Happy Days</item>
+      <item>Adavari Matalaku Ardhale Verule</item>
+      <item>Suswagatam</item>
+      <item>Simha</item>
+      <item>Fitting Master</item>
+      <item>143</item>
+      <item>Bunny</item>
+      <item>Allari</item>
+      <item>Andhari Bandhuvaya</item>
+      <item>Nenu Naa Rakshasi</item>
+      <item>Rendu</item>
+      <item>Dhada</item>
+      <item>Pelli Kani Prasad </item>
+      <item>Athadu</item>
+      <item>Tagore</item>
+      <item>Rama Rama Krishna Krishna</item>
+      <item>Premisthe</item>
+      <item>Vedam</item>
+      <item>Arya</item>
+      <item>Varsham</item>
+      <item>Naa Autograph</item>
+      <item>Sontha Ooru</item>
+      <item>Premikula Roju</item>
+      <item>Gamyam</item>
+      <item>Nuvvu Nenu</item>
+      <item>Jamba Lakidi Pamba </item>
+      <item>Okkadu</item>
+      <item>Lovely</item>
+      <item>Robo</item>
+      <item>Bindaas</item>
+      <item>Pokiri</item>
+      <item>Leader</item>
+      <item>Desamuduru</item>
+      <item>Aa Naluguru</item>
+      <item>Allari Priyudu</item>
+      <item>Routine Love Story</item>
+      <item>Idiot</item>
+      <item>Tholiprema</item>
+      <item>Thammudu</item>
+      <item>Ashok</item>
+      <item>Mee Sreyobhilashi</item>
+      <item>Mirchi</item>
+      <item>Naayak</item>
+      <item>Mithunam</item>
+      <item>Ongole Gitta</item>
+      <item>ABCD</item>
+      <item>Seethamma Vakitlo Sirimalle Chettu</item>
+      <item>Bad Boy</item>
+      <item>Devaraya</item>
+      <item>Kadali</item>
+      <item>Kalisundham Raa</item>
+      <item>Jabardasth</item>
+      <item>Pilla zamindar</item>
+      <item>Yuvatha</item>
+      <item>Saradaga Kasepu</item>
+      <item>pournami</item>
+      <item>Vaaranam Aayiram</item>
+      <item>Simhadri</item>
+      <item>Hitler</item>
+      <item>Jalsa</item>
+      <item>Anandam</item>
+      <item>Life Is Beautiful</item>
+      <item>Avunanna Kadanna</item>
+      <item>Jayam</item>
+      <item>Nenunnanu</item>
+      <item>Don</item>
+      <item>Mathrudevobhava</item>
+      <item>Bhairava Dweepam</item>
+      <item>Rangam</item>
+      <item>Nagavalli</item>
+      <item>Samarasimha Reddy</item>
+      <item>Anand</item>
+      <item>Narasimha Naidu</item>
+      <item>Nuvvu Nenu Prema</item>
+      <item>Ma Alludu Very Good</item>
+      <item>Thilalangadi</item>
+      <item>Madrasapattinam</item>
+      <item>Rajapattai</item>
+      <item>Minnale</item>
+      <item>Mayakkam Enna</item>
+      <item>Maaveeran</item>
+      <item>Akkada Ammayi Ikkada Abbayi</item>
+      <item>Angadi Theru</item>
+      <item>Vettai</item>
+      <item>Pizza</item>
+      <item>BaadShah</item>
+      <item>Denikaina Ready</item>
+      <item>prasthanam</item>
+      <item>gunde jaari gallanthayyinde</item>
+      <item>Gundello Godari</item>
+      <item>Pavitra</item>
+      <item>Nh4 </item>
+      <item>Tadakha</item>
+      <item>Greeku Veerudu</item>
+      <item>Baadshah</item>
+      <item>Toofan</item>
+      <item>Iddarammayilatho</item>
+      <item>Yaaruda Mahesh</item>
+      <item>Vishwaroopam</item>
+      <item>Saradaga Ammaitho</item>
+      <item>Maryan</item>
+      <item>Vallinam</item>
+      <item>Gouravam</item>
+      <item>Theeya Velai Seiyyanum Kumaru</item>
+      <item>Shatruvu</item>
+      <item>Prema Katha Chitram</item>
+      <item>Surya son of Krishnan</item>
+      <item>Vikramarkudu</item>
+      <item>Kotha Bangaru Lokam</item>
+      <item>Dil</item>
+      <item>Yevadu</item>
+      <item>Singam (Yamudu 2)</item>
+      <item>Aadukalam</item>
+      <item>Sahasam</item>
+      <item>Attarintiki daredi</item>
+      <item>Balupu</item>
+      <item>Adda</item>
+      <item>Bangaru Kodipetta</item>
+      <item>kevvu keka</item>
+      <item>Ramayya Vasthavayya</item>
+      <item>1 nenokkadine</item>
+      <item>satya 2</item>
+      <item>Paisa</item>
+      <item>Alias janaki</item>
+      <item>1000 Abaddalu</item>
+      <item>Balu</item>
+      <item>Vennela</item>
+      <item>Biriyani </item>
+      <item>Thalaivaa</item>
+      <item>Dheerudu</item>
+      <item>Anthaku Mundu Aa Taruvatha </item>
+      <item>Khatarnak</item>
+      <item>Om 3D</item>
+      <item>Janda Pai Kapiraju</item>
+      <item>Romance</item>
+      <item>Pelli pustakam</item>
+      <item>Prema Oka Maikam</item>
+      <item>Mr manmadha</item>
+      <item>Shadow</item>
+      <item>Chammak Challo</item>
+      <item>SMS</item>
+      <item>Sangarshana</item>
+      <item>Action 3D</item>
+      <item>Kiss</item>
+      <item>Prema Prayanam</item>
+      <item>varna</item>
+      <item>Intinta Annamayya</item>
+      <item>Dalam</item>
+      <item>Potugadu</item>
+      <item>Bhai</item>
+      <item>Band baaja </item>
+      <item>abbai class ammai mass</item>
+      <item>Kalicharan</item>
+      <item>Mondodu</item>
+      <item>Manasunu maaya seyake</item>
+      <item>555 Aidhu Aidhu Aidhu</item>
+      <item>555 Aidhu Aidhu Aidhu</item>
+      <item>Kedi billa killadi ranga</item>
+      <item>Desingu raja</item>
+      <item>3 </item>
+      <item>Banaras</item>
+      <item>Vaah! life ho toh aisi!</item>
+      <item>Dil</item>
+      <item>Taal</item>
+      <item>Chor machaaye shor</item>
+      <item>Cash</item>
+      <item>Kisna</item>
+      <item>Baabul</item>
+      <item>36 China town</item>
+      <item>Hum aapke hain koun</item>
+      <item>Hulchul</item>
+      <item>Pyar to hona hi tha</item>
+      <item>Deewana</item>
+      <item>Maina pyar kiya</item>
+      <item>Tees Maar Khan</item>
+      <item>Race</item>
+      <item>Shaadi se pehle</item>
+      <item>Apna sapna money money</item>
+      <item>Rang De Basanti</item>
+      <item>Dhoom 2</item>
+      <item>Hum Dil De Chuke Sanam</item>
+      <item>Kuch Kuch Hota Hai</item>
+      <item>Ramaa</item>
+      <item>Action replay</item>
+      <item>Pardes</item>
+      <item>Dostana</item>
+      <item>Yaadein</item>
+      <item>Kites</item>
+      <item>I Hate love stories</item>
+      <item>Golmaal</item>
+      <item>We are family</item>
+      <item>Jhootha hi sahi</item>
+      <item>Tere bin laden</item>
+      <item>Karthik calling karthik</item>
+      <item>Yes Boss</item>
+      <item>Shaapit</item>
+      <item>Dil tho pagal hi</item>
+      <item>Dil chahta hai</item>
+      <item>1942 love story</item>
+      <item>Kahona pyar hi</item>
+      <item>Dilse</item>
+      <item>Sarfarosh</item>
+      <item>Lagaan</item>
+      <item>Partner</item>
+      <item>Main Hoon Na</item>
+      <item>Jaane Tu... Ya Jaane Na</item>
+      <item>Khuda Gawah</item>
+      <item>Kuch na Kaho</item>
+      <item>Bachna Ae Haseeno</item>
+      <item>Ajab Prem Ki Ghazab Kahani</item>
+      <item>Chalte Chalte</item>
+      <item>Chance Pe Dance</item>
+      <item>13B</item>
+      <item>Aisha</item>
+      <item>Patiala House</item>
+      <item>Ready</item>
+      <item>Dabangg</item>
+      <item>Dulha Mil Gaya</item>
+      <item>Knock Out</item>
+      <item>Break Ke Baad</item>
+      <item>Dum Maaro Dum</item>
+      <item>Tanu Weds Manu</item>
+      <item>Bhoothnath</item>
+      <item>Ghajini</item>
+      <item>Do dooni chaar</item>
+      <item>Yamla Pagla Deewana</item>
+      <item>Do Dilon Ke Khel Mein</item>
+      <item>Hungama</item>
+      <item>Murder 2</item>
+      <item>Hostel</item>
+      <item>Robot</item>
+      <item>Aakrosh</item>
+      <item>3 Idiots</item>
+      <item>Singham</item>
+      <item>Bodyguard</item>
+      <item>Bbuddah Hoga Terra Baap</item>
+      <item>Paying Guest</item>
+      <item>Rann</item>
+      <item>Click</item>
+      <item>Force</item>
+      <item>Bol</item>
+      <item>The dirty picture</item>
+      <item>Dam 999</item>
+      <item>Anjaana Anjaani</item>
+      <item>Wake Up Sid</item>
+      <item>pyaar impossible</item>
+      <item>Rab Ne Bana Di Jodi </item>
+      <item>Salaam Namaste</item>
+      <item>That Girl In Yellow Boots</item>
+      <item>Ra.one</item>
+      <item>Ek Aur Ek Gyarah </item>
+      <item>Don 2</item>
+      <item>Delhi belly</item>
+      <item>Munna Bhai MBBS</item>
+      <item>Wanted </item>
+      <item>Shing is King</item>
+      <item>Jab We Met</item>
+      <item>Guzaarish</item>
+      <item>Players</item>
+      <item>Jannat</item>
+      <item>Chillar Party</item>
+      <item>Pyaar ka Punchnama</item>
+      <item>Thanks Maa</item>
+      <item>Michael Jackson</item>
+      <item>Agneepath</item>
+      <item>Rascals</item>
+      <item>Dil Maange More</item>
+      <item>Garam Masala</item>
+      <item>Mujhse Shaadi Karogi</item>
+      <item>Style</item>
+      <item>Teen Thay Bhai</item>
+      <item>Khap</item>
+      <item>Double Dhamaal </item>
+      <item>Bhagam Bhag</item>
+      <item>Bheja fry 2</item>
+      <item>swades</item>
+      <item>Veer zara</item>
+      <item>All The Best</item>
+      <item>Chal Chala Chal</item>
+      <item>Phir bhi dil hai hindustani</item>
+      <item>Kaminey</item>
+      <item>Miley Naa Miley Hum</item>
+      <item>Band Baaja Baaraat</item>
+      <item>Tahaan</item>
+      <item>CHAR din KI chandani</item>
+      <item>Agent Vinod</item>
+      <item>Dangerous-Ishhq</item>
+      <item>Department</item>
+      <item>Ekk Deewana Tha</item>
+      <item>Gali Gali Chor Hai</item>
+      <item>Housefull-2</item>
+      <item>Jannat-2</item>
+      <item>Jodi-Breakers</item>
+      <item>Kahaani</item>
+      <item>Rockstar</item>
+      <item>Shanghai</item>
+      <item>Ferrari-Ki-Sawaari</item>
+      <item>Rowdy Rathore</item>
+      <item>tezz</item>
+      <item>Ek-Main-Aur-Ekk-Tu</item>
+      <item>Desi-Boyz</item>
+      <item>Ishaqzaade</item>
+      <item>Ladies-Vs-Ricky-Bahl</item>
+      <item>Teri Meri Kahaani</item>
+      <item>Cocktail</item>
+      <item>JaanEMann</item>
+      <item>Golmaal 3</item>
+      <item>Raajneeti</item>
+      <item>My Name Is Khan</item>
+      <item>Once Upon a Time in Mumbaai</item>
+      <item>New York</item>
+      <item>Jodhaa Akbar</item>
+      <item>Kismat Konnection</item>
+      <item>Om Shanti Om</item>
+      <item>Lage Raho Munna Bhai</item>
+      <item>Kabhi Alvida Naa Kehna</item>
+      <item>Kal Ho Naa Ho </item>
+      <item>Bol Bachchan</item>
+      <item>Gangster</item>
+      <item>Tere Naam</item>
+      <item>Jism 2</item>
+      <item>Joker</item>
+      <item>Ek Tha Tiger</item>
+      <item>Kya Super Kool Hain Hum</item>
+      <item>Raaz 3</item>
+      <item>Shirin Farhad Ki Toh Nikal Padi</item>
+      <item>Heroine</item>
+      <item>Barfi</item>
+      <item>OMG Oh My God</item>
+      <item>Zindagi Ka Safar(Rajesh Khanna)</item>
+      <item>English Vinglish</item>
+      <item>Student Of The Year</item>
+      <item>Ishkq In Paris </item>
+      <item>Kismet Love Paisa Dilli</item>
+      <item>Ajab Gazabb Love </item>
+      <item>Aiyya </item>
+      <item>Jab Tak Hai Jaan </item>
+      <item>Rush </item>
+      <item>Son Of Sardaar</item>
+      <item>Makkhi</item>
+      <item>Talaash</item>
+      <item>1920 - Evil Returns</item>
+      <item>Khiladi 786</item>
+      <item>Fanaa</item>
+      <item>Hum Tum</item>
+      <item>DIL TO PAGAL HAI</item>
+      <item>HUMRAAZ</item>
+      <item>Dabangg 2</item>
+      <item>Best of Shaan</item>
+      <item>Greatest Hits of Lucky Ali</item>
+      <item>Hits of A R Rehman</item>
+      <item>Rajdhani Express </item>
+      <item>Table No. 21 </item>
+      <item>Matru Ki Bijlee Ka Mandola</item>
+      <item>India Republic Day Songs</item>
+      <item>Race 2</item>
+      <item>David </item>
+      <item>ABCD - AnyBody Can Dance </item>
+      <item>Special 26</item>
+      <item>Murder 3</item>
+      <item>Zila Ghaziabad</item>
+      <item>Love Songs For Valentine </item>
+      <item>Himmatwala</item>
+      <item>I Me Aur Main</item>
+      <item>Bhaag Milkha Bhaag</item>
+      <item>The Attacks Of 26/11 </item>
+      <item>Jolly LLB </item>
+      <item>Jayantabhai Ki Luv Story </item>
+      <item>Ab Tak Chappan 2</item>
+      <item>3G </item>
+      <item>Nautanki Saala</item>
+      <item>Main Krishna Hoon</item>
+      <item>Ek Thi Daayan</item>
+      <item>Aatma</item>
+      <item>Bloody Isshq</item>
+      <item>Chashme Baddoor</item>
+      <item>Rangrezz</item>
+      <item>I Love New Year</item>
+      <item>Aaja Nachle</item>
+      <item>Mere Dad Ki Maruti</item>
+      <item>Saheb Biwi Aur Gangster Returns </item>
+      <item>Hits of Shahrukh Khan</item>
+      <item>Satya 2</item>
+      <item>Vicky Donor </item>
+      <item>Best of Shreya Ghoshal</item>
+      <item>Best Songs Of Emraan Hashmi</item>
+      <item>Sonu Nigam hits</item>
+      <item>Yeh Jawaani Hai Deewani</item>
+      <item>Aashiqui 2</item>
+      <item>Go Goa Gone</item>
+      <item>Bombay Talkies</item>
+      <item>Ghanchakkar</item>
+      <item>Shootout at Wadala</item>
+      <item>Lootera</item>
+      <item>Aurangzeb </item>
+      <item>Raanjhanaa</item>
+      <item>Ramaiya Vasta Vaiya</item>
+      <item>D-Day</item>
+      <item>Yamla Pagla Deewana 2 </item>
+      <item>Chennai Express</item>
+      <item>Once Upon A Time In Mumbaai Again</item>
+      <item>Satyagraha</item>
+      <item>Issaq</item>
+      <item>Phata Poster Nikla Hero </item>
+      <item>Besharam</item>
+      <item>Shuddh Desi Romance</item>
+      <item>Krrish 3</item>
+      <item>Zanjeer</item>
+      <item>Boss </item>
+      <item>DHOOM 3</item>
+      <item>Favorites</item>
+      <item>Movie list</item>
+      <item>Grand Masti</item>
+      <item>History</item>
+      <item>Help</item>
+    </one-of>
+  </rule>
+
+</grammar>

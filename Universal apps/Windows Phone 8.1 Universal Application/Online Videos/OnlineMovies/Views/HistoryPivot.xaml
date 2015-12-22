@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.HistoryPivot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Pivot x:Name="pvtMainHistory" Background="{StaticResource bipivot}">
+            <Pivot.Title>
+                <StackPanel Orientation="Horizontal" Margin="-10,0,0,10">
+                    <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+                    <TextBlock x:Name="tblkVideosTitle"  Text="HISTORY" Style="{StaticResource DetailPagePivotTitle}"/>
+                </StackPanel>
+            </Pivot.Title>
+            
+            <Pivot.Foreground>white</Pivot.Foreground>
+            <PivotItem x:Name="pvtitmVideos">
+                <Grid x:Name="videosGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <ListView x:Name="lbxVidoes" Width="470" SelectionChanged="lbxVidoes_SelectionChanged" Foreground="White" Grid.Row="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Height="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="115"/>
+                                        <ColumnDefinition Width="350"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Column="0" Grid.Row="0" x:Name="imgMovie" Source="{Binding ImgSource}" VerticalAlignment="Top" Width="100" Height="170"/>
+                                    <StackPanel Grid.Column="1" Grid.Row="0" Margin="15,0,0,0" Height="210">
+                                        <TextBlock Text="{Binding Title}" FontSize="24" FontWeight="Bold" TextWrapping="Wrap" Margin="10,0,0,0" Foreground="white"/>
+                                        <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                                            <Image Width="139" Height="18" Source="{Binding ImgRating}"/>
+                                            <TextBlock Text="{Binding Release}" FontSize="22" Margin="70,0,0,0" Foreground="white"></TextBlock>
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Genre}" FontSize="22" Margin="10,10,0,0" Foreground="white"></TextBlock>
+                                        <TextBlock Text="{Binding ChapterNo}" Margin="10,10,0,0" Foreground="white"></TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackPanel Name="adstackplHistoryVideos" Grid.Row="1" Orientation="Vertical"  Margin="-4,3,0,0">
+                    </StackPanel>
+                    <Canvas>
+                        <TextBlock Margin="100,200,0,0" FontSize="28" x:Name="tblk" Visibility="Collapsed"/>
+                    </Canvas>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem x:Name="pvtitemSongs">
+                <Grid x:Name="SongsGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <ListView x:Name="lbxSongHistory" Margin="0,-20,0,10" Grid.Row="0" SelectionChanged="lbxSongHistory_SelectionChanged" Foreground="White">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Height="100">
+                                    <Image Source="/Images/ArrowImg.png" Height="43" Width="43" VerticalAlignment="Center" Margin="10,10,20,0"/>
+                                    <TextBlock Text="{Binding Title}" Margin="-2,4,0,0" FontSize="26" VerticalAlignment="Center" Width="410" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackPanel Name="adstackpl" Grid.Row="1" Orientation="Vertical"  Margin="-4,3,0,0">
+                    </StackPanel>
+
+                    <Canvas>
+                        <TextBlock Canvas.Top="200" Canvas.Left="80" FontSize="28" x:Name="tblkFavNoSongs" Visibility="Collapsed"/>
+                    </Canvas>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Name="pvtitemAudio">
+                
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

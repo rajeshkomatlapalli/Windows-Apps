@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.LinksFromOnline"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="1" Visibility="Collapsed" Name="txtmessage" Text="Enter url"  Height="40" VerticalAlignment="Top" Margin="0,20,76,0"/>
+
+        <WebView  VerticalAlignment="Top"                  
+                  Loaded="WBrowser_Loaded"
+                 HorizontalAlignment="Left"
+                  NavigationCompleted="webBrowser1_NavigationCompleted"
+                  NavigationStarting="webBrowser1_NavigationStarting"
+                 NavigationFailed="WBrowser_NavigationFailed" 
+                 Margin="0,0,0,0" Name="WBrowser"
+                 ScrollViewer.ZoomMode="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                 Height="600" 
+                 Grid.Row="0"  Width="400"></WebView>
+
+        <StackPanel x:Name="buttonList" Grid.Row="1" Margin="0,0,0,0"  HorizontalAlignment="Left" Orientation="Horizontal">
+
+            <AutoSuggestBox x:Name="txtlink" Width="280" Height="50" Margin="0,20,0,-10">
+
+                <AutoSuggestBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </AutoSuggestBox.ItemTemplate>
+
+            </AutoSuggestBox>
+            <Image x:Name="go" Height="50" Width="60" Margin="0,7,0,0" Source="/Images/Rating/gobutton.png" PointerPressed="go_PointerPressed"/>
+            <Image x:Name="imgfldr" HorizontalAlignment="Right" Margin="-7,-6,0,5" 
+                   Source="/Images/appbar.folder.rest (2).png" Width="83" 
+                   PointerPressed="imgfldr_PointerPressed"  Height="110" />
+        </StackPanel>
+        <ProgressBar VerticalAlignment="Bottom" x:Name="progressbar"/>
+    </Grid>
+</Page>

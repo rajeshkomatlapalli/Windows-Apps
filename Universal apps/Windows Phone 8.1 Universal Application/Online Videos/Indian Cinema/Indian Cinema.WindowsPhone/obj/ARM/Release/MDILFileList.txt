@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <file>\Common.Library.dll</file>
+  <file>\Common.Utilities.dll</file>
+  <file>\HtmlAgilityPack.dll</file>
+  <file>\Indian Cinema.WindowsPhone.exe</file>
+  <file>\InsertIntoDataBase.dll</file>
+  <file>\JRatingControl.dll</file>
+  <file>\Microsoft.Advertising.Mobile.Common.winmd</file>
+  <file>\Microsoft.Advertising.Mobile.Display.winmd</file>
+  <file>\Microsoft.Advertising.Mobile.UI.winmd</file>
+  <file>\Microsoft.ApplicationInsights.dll</file>
+  <file>\Microsoft.ApplicationInsights.Extensibility.Windows.dll</file>
+  <file>\Microsoft.ApplicationInsights.PersistenceChannel.dll</file>
+  <file>\Microsoft.Live.dll</file>
+  <file>\Microsoft.PlayerFramework.dll</file>
+  <file>\MyToolkit.dll</file>
+  <file>\MyToolkit.Extended.dll</file>
+  <file>\OnlineVideos.Common.dll</file>
+  <file>\OnlineVideos.Data.dll</file>
+  <file>\OnlineVideos.Entities.dll</file>
+  <file>\OnlineVideos.Library.dll</file>
+  <file>\Onlinevideos.Sqlite.dll</file>
+  <file>\OnlineVideos.UI.dll</file>
+  <file>\OnlineVideosCardGame.dll</file>
+  <file>\PicasaMobileInterface.dll</file>
+  <file>\SyncStories.dll</file>
+  <file>\TileNotificationsPack.dll</file>
+  <file>\BackgroundPlayer.winmd</file>
+</Files>

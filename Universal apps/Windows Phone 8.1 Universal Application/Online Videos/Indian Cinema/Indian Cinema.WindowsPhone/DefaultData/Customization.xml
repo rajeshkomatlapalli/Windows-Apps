@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<themes>
+  <ads misuid="31104" misappid="4a5d4de9-a4e2-4b73-8d01-1e2309659b46" admobuid="a14d843798cffc6"/>
+   <mailids from ="OnlineVideos@lartsoft.com" to="feedback.at@lartsoft.com"/>
+   <downloadtheme visible="false"/>
+   <canvasmargin value="120, 40, 0, 0"/>....
+  <textblockmargin value="-110,-55, 0, 0"/>
+  <textblockmargin1 value="-100,-55,0,0"/>
+  <imagemargin value="50, 0, 0, 0"/>
+  <textcolor value="false"/>
+  <AdVisible visible="True"/>
+  <People Exists="true"/>
+   <AboutUsUpgrade visible="true"/>
+  <Upgrade Exists="true" upgrademessage="Upgrade app to bollywood world and watch telugu,tamil movies along with hindi" upgradelink="zune://navigate/?appID=f5960a5a-f3a2-e011-986b-78e7d1fa76f8"/>
+</themes>

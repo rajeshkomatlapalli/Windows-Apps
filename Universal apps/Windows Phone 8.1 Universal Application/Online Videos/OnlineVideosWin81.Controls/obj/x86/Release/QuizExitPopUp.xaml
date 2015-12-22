@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.QuizExitPopUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource QuizExitMainGrid}">
+
+
+        <Canvas Style="{StaticResource QuizExitCanvas}">
+            <TextBlock    Grid.Row="0" 
+                   Text="Do you want to exit from test"  Style="{StaticResource QuizExitText}" />
+            <Grid x:Name="gridpopup"  Style="{StaticResource QuizExitPopupGrid}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" >
+                    <Image x:ConnectionId='1' Source="/Images/ok.png"   x:Name="imgok"  Style="{StaticResource QuizExitPopupOkImage}"                        ></Image>
+                    <Image x:ConnectionId='2' Source="/Images/QuizCancel.png" Style="{StaticResource QuizExitPopupCancelImage}"  x:Name="imgcancel"                             ></Image>
+
+                    <!--<Button x:Name="btnok" ClickMode="Press" Content="OK" Click="btnok_Click" Height="80" Width="150" Foreground="White"/>
+                        <Button x:Name="btnCancel" ClickMode="Press" Content="CANCEL" Click="btnCancel_Click" Height="80" Width="150" Foreground="White"/>-->
+                </StackPanel>
+            </Grid>
+
+        </Canvas>
+    </Grid>
+</UserControl>
+

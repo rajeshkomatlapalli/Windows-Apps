@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="JRatingControl" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="JRatingControl">
+				<NamedResource name="JRatingControl.xr.xml" uri="ms-resource://JRatingControl/Files/JRatingControl/JRatingControl.xr.xml">
+					<Candidate type="Path">
+						<Value>JRatingControl\JRatingControl.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://JRatingControl/Files/JRatingControl/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>JRatingControl\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

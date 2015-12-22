@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<description>
+  <de id="1">
+    <c title="SEARCH">
+      <des>1. Go to Main Menu section in the panorama page.</des>
+      <des>2. Type a keyword in the search box and click on find icon or click on Enter key on keyboard.</des>
+      <des>3. All the Fitness Programs that match the search keyword are displayed in the list. You can launch a show directly from this list.</des>
+    </c>
+  </de>
+  <de id="2">
+    <c title="TOP/RECENT">
+      <des>1. The Fitness Program which have better rating are displayed first on top rated section of the start page. This list will changes as we add more Fitness Programs to the collection .</des>
+      <des>2. The Fitness Programs which are added recently by us are displayed first in recent section of the start page. The list will change as we add more Fitness videos to the collection.</des>
+    </c>
+  </de>
+  <de id="3">
+    <c title="FAVORITES">
+      <des>1. Go to Fitness Program list page by clicking on Fitness Program List option in Main Menu and then select your favorite show.</des>
+      <des>2. In Fitness Program detail page tap and hold on a show title to activate the context menu. Tap on Add to favorites menu option.</des>
+      <des>3. To view your favorites tap on favorites menu option from the Main Menu.</des>
+      <des>4. To remove a Fitness Program from favorites then go to favorites page and use the Remove from favorites menu option in the context menu.</des>
+    </c>
+  </de>
+  <de id="4">
+    <c title="HISTORY">
+      <des>1. Every time a Fitness Program is played from a program list it is stored in the history page..</des>
+      <des>2. History list remembers the last thirty shows watched.</des>
+      <des>3. History list can be viewed from the Main Menu in Start page.</des>
+    </c>
+  </de>
+  <de id="5">
+    <c title="BROKEN LINKS">
+      <des>1. If you are having any problems in opening any of the Fitness Programs you can report those videos as broken links.</des>
+      <des>2. Tap and hold on the Fitness Program title to activate the context menu.</des>
+      <des>3. Tapping on the Report broken link menu option takes you to the feedback page populated with Fitness Program name and link.</des>
+      <des>4. Click on the send mail icon at the bottom to submit. Information like time zone and device Info are sent along with the link.</des>
+    </c>
+  </de>
+
+  <de id="6">
+    <c title="LIVE TILE">
+      <des>1. To add a Fitness Program in your start screen as live tile, select a Fitness Program and go to the Fitness Program list.Click and hold on the Fitness Program and select 'pin to start' option from the context menu.</des>
+      <des>2. Click on the newly created live tile,it takes you to Fitness Program list page.</des>
+      <des>3. To remove the live tile tap and hold on the live tile and click on the unpin icon on top right corner.</des>
+    </c>
+  </de>
+
+  <de id="7">
+    <c title="ADD SHOW">
+      <des>1. Go to fitness shows page by tapping on fitness shows option in Main Menu.</des>
+      <des>2. Click on '+' appbar button.</des>
+      <des>3. Enter the Show Name.</des>
+      <des>4. Enter the description manually or by choosing web icon on the top of description box which navigates to the browser.Navigate to the appropriate web page and copy the text</des>
+      <des>5. Description can also be edited using the edit icon on the top of description box</des>
+      <des>6. Choose Image for show from local folder or online</des>
+      <des>7. Click on save appbar icon</des>
+      <des>8. To delete the newly added show press and hold the show in fitness shows page.</des>
+      <des>9. Select delete from context menu.</des>
+    </c>
+  </de>
+  <de id="8">
+    <c title="ADD VIDEO">
+      <des>1. Tap on the newly added show in the main page. </des>
+      <des>2. Choose 'add video' from appbar menu which navigates to youtube.</des>
+      <des>3. Search for the appropriate video in youtube.</des>
+      <des>4. Click on the folder icon at the bottom.</des>
+      <des>5. Choose the videos by selecting the checkbox in the Online Links Page</des>
+      <des>6. Click on the save icon at the bottom.</des>
+      <des>7. To delete the video press and hold the video.</des>
+      <des>8. select delete link from context menu.</des>
+    </c>
+  </de>
+  <de id="9">
+    <c title="SHARE THIS SHOW">
+      <des>1. Tap on the newly added show in the main page. </des>
+      <des>2. Choose 'share this show' from appbar menu in details page.</des>
+    </c>
+  </de>
+
+</description>

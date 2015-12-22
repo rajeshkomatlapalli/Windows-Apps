@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26ECF585-52ED-4B7E-B2BC-DF51148683E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideosWin81.Controls</RootNamespace>
+    <AssemblyName>OnlineVideosWin81.Controls</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioControl.xaml">
+      <Link>AudioControl.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioFavorite.xaml">
+      <Link>AudioFavorite.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioHistory.xaml">
+      <Link>AudioHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioSearch.xaml">
+      <Link>AudioSearch.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\CastSerachList.xaml">
+      <Link>CastSerachList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ContactUs.xaml">
+      <Link>ContactUs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\DownloadVideoHelpPopup.xaml">
+      <Link>DownloadVideoHelpPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\Feedback.xaml">
+      <Link>Feedback.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\HelpMenu.xaml">
+      <Link>HelpMenu.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\LoginPopup.xaml">
+      <Link>LoginPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\LyricsPopUp.xaml">
+      <Link>LyricsPopUp.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\MemoryGame_1.xaml">
+      <Link>MemoryGame_1.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\MovieFavorite.xaml">
+      <Link>MovieFavorite.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\MovieHistory.xaml">
+      <Link>MovieHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\MoviesSearch.xaml">
+      <Link>MoviesSearch.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ParentalControl.xaml">
+      <Link>ParentalControl.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonDetail.xaml">
+      <Link>PersonDetail.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonGallery.xaml">
+      <Link>PersonGallery.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonProfileShows.xaml">
+      <Link>PersonProfileShows.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizExitPopUp.xaml">
+      <Link>QuizExitPopUp.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizFavorite.xaml">
+      <Link>QuizFavorite.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizHistory.xaml">
+      <Link>QuizHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizSerach.xaml">
+      <Link>QuizSerach.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\RatingpopUp.xaml">
+      <Link>RatingpopUp.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\RingtoneEditor.xaml">
+      <Link>RingtoneEditor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\Settings.xaml">
+      <Link>Settings.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowAudio.xaml">
+      <Link>ShowAudio.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowCast.xaml">
+      <Link>ShowCast.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowChapters.xaml">
+      <Link>ShowChapters.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowDescription.xaml">
+      <Link>ShowDescription.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowQuiz.xaml">
+      <Link>ShowQuiz.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\Shows.xaml">
+      <Link>Shows.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowVideoList.xaml">
+      <Link>ShowVideoList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowVideos.xaml">
+      <Link>ShowVideos.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideoFavorite_New.xaml">
+      <Link>VideoFavorite_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideoHistory.xaml">
+      <Link>VideoHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideosSearchList.xaml">
+      <Link>VideosSearchList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Common\CommonControls81\CommonControls\UserControls\ViewAllList.xaml">
+      <Link>ViewAllList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\AppInsights.cs">
+      <Link>AppInsights.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioControl.xaml.cs">
+      <Link>AudioControl.xaml.cs</Link>
+      <DependentUpon>AudioControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioFavorite.xaml.cs">
+      <Link>AudioFavorite.xaml.cs</Link>
+      <DependentUpon>AudioFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioHistory.xaml.cs">
+      <Link>AudioHistory.xaml.cs</Link>
+      <DependentUpon>AudioHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\AudioSearch.xaml.cs">
+      <Link>AudioSearch.xaml.cs</Link>
+      <DependentUpon>AudioSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\CastSerachList.xaml.cs">
+      <Link>CastSerachList.xaml.cs</Link>
+      <DependentUpon>CastSerachList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ContactUs.xaml.cs">
+      <Link>ContactUs.xaml.cs</Link>
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\DownloadVideoHelpPopup.xaml.cs">
+      <Link>DownloadVideoHelpPopup.xaml.cs</Link>
+      <DependentUpon>DownloadVideoHelpPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\Feedback.xaml.cs">
+      <Link>Feedback.xaml.cs</Link>
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\HelpMenu.xaml.cs">
+      <Link>HelpMenu.xaml.cs</Link>
+      <DependentUpon>HelpMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\LoginPopup.xaml.cs">
+      <Link>LoginPopup.xaml.cs</Link>
+      <DependentUpon>LoginPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\LyricsPopUp.xaml.cs">
+      <Link>LyricsPopUp.xaml.cs</Link>
+      <DependentUpon>LyricsPopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\MemoryGame_1.xaml.cs">
+      <Link>MemoryGame_1.xaml.cs</Link>
+      <DependentUpon>MemoryGame_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\MovieFavorite.xaml.cs">
+      <Link>MovieFavorite.xaml.cs</Link>
+      <DependentUpon>MovieFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\MovieHistory.xaml.cs">
+      <Link>MovieHistory.xaml.cs</Link>
+      <DependentUpon>MovieHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\MoviesSearch.xaml.cs">
+      <Link>MoviesSearch.xaml.cs</Link>
+      <DependentUpon>MoviesSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ParentalControl.xaml.cs">
+      <Link>ParentalControl.xaml.cs</Link>
+      <DependentUpon>ParentalControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonDetail.xaml.cs">
+      <Link>PersonDetail.xaml.cs</Link>
+      <DependentUpon>PersonDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonGallery.xaml.cs">
+      <Link>PersonGallery.xaml.cs</Link>
+      <DependentUpon>PersonGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\PersonProfileShows.xaml.cs">
+      <Link>PersonProfileShows.xaml.cs</Link>
+      <DependentUpon>PersonProfileShows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizExitPopUp.xaml.cs">
+      <Link>QuizExitPopUp.xaml.cs</Link>
+      <DependentUpon>QuizExitPopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizFavorite.xaml.cs">
+      <Link>QuizFavorite.xaml.cs</Link>
+      <DependentUpon>QuizFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizHistory.xaml.cs">
+      <Link>QuizHistory.xaml.cs</Link>
+      <DependentUpon>QuizHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\QuizSerach.xaml.cs">
+      <Link>QuizSerach.xaml.cs</Link>
+      <DependentUpon>QuizSerach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\RatingpopUp.xaml.cs">
+      <Link>RatingpopUp.xaml.cs</Link>
+      <DependentUpon>RatingpopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\RingtoneEditor.xaml.cs">
+      <Link>RingtoneEditor.xaml.cs</Link>
+      <DependentUpon>RingtoneEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\Settings.xaml.cs">
+      <Link>Settings.xaml.cs</Link>
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowAudio.xaml.cs">
+      <Link>ShowAudio.xaml.cs</Link>
+      <DependentUpon>ShowAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowCast.xaml.cs">
+      <Link>ShowCast.xaml.cs</Link>
+      <DependentUpon>ShowCast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowChapters.xaml.cs">
+      <Link>ShowChapters.xaml.cs</Link>
+      <DependentUpon>ShowChapters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowDescription.xaml.cs">
+      <Link>ShowDescription.xaml.cs</Link>
+      <DependentUpon>ShowDescription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowQuiz.xaml.cs">
+      <Link>ShowQuiz.xaml.cs</Link>
+      <DependentUpon>ShowQuiz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\Shows.xaml.cs">
+      <Link>Shows.xaml.cs</Link>
+      <DependentUpon>Shows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowVideoList.xaml.cs">
+      <Link>ShowVideoList.xaml.cs</Link>
+      <DependentUpon>ShowVideoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ShowVideos.xaml.cs">
+      <Link>ShowVideos.xaml.cs</Link>
+      <DependentUpon>ShowVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideoFavorite_New.xaml.cs">
+      <Link>VideoFavorite_New.xaml.cs</Link>
+      <DependentUpon>VideoFavorite_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideoHistory.xaml.cs">
+      <Link>VideoHistory.xaml.cs</Link>
+      <DependentUpon>VideoHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\VideosSearchList.xaml.cs">
+      <Link>VideosSearchList.xaml.cs</Link>
+      <DependentUpon>VideosSearchList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Common\CommonControls81\CommonControls\UserControls\ViewAllList.xaml.cs">
+      <Link>ViewAllList.xaml.cs</Link>
+      <DependentUpon>ViewAllList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.Win81, Version=3.0.0.1">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+    <SDKReference Include="MSAdvertisingXaml, Version=8.1">
+      <Name>Microsoft Advertising SDK for Windows 8.1 %28Xaml%29</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT81, Version=3.9.2">
+      <Name>SQLite for Windows Runtime %28Windows 8.1%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.1.0.1899, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.1.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Windows, Version=1.1.0.1906, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsApps.1.1.0\lib\win81\Microsoft.ApplicationInsights.Extensibility.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.PersistenceChannel, Version=1.1.0.1903, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PersistenceChannel.1.1.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.PersistenceChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonWin81.Library\CommonWin81.Library.csproj">
+      <Project>{135a2cb4-a6c0-4f9f-9fce-754860ac3bf7}</Project>
+      <Name>CommonWin81.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Html2Xaml\Html2Xaml.csproj">
+      <Project>{f15decbd-8406-4e60-99ba-d3c149dd601e}</Project>
+      <Name>Html2Xaml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideos.Common\OnlineVideos.Common.csproj">
+      <Project>{d554e2f9-2e62-45e0-b8b7-b253d2942e33}</Project>
+      <Name>OnlineVideos.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideosCardGame\OnlineVideosCardGame.csproj">
+      <Project>{2d6848f0-1fb1-485e-8bd3-669208384b00}</Project>
+      <Name>OnlineVideosCardGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideosWin81.Data\OnlineVideosWin81.Data.csproj">
+      <Project>{2c00a4a2-ef4b-41ef-828f-a72d8f4815b4}</Project>
+      <Name>OnlineVideosWin81.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideosWin81.Services\OnlineVideosWin81.Services.csproj">
+      <Project>{563aa655-f9af-4b91-a1aa-2394a1791e1e}</Project>
+      <Name>OnlineVideosWin81.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideosWin81.UI\OnlineVideosWin81.UI.csproj">
+      <Project>{8bd11af7-c57e-4fda-bd36-144fe92f7e6a}</Project>
+      <Name>OnlineVideosWin81.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

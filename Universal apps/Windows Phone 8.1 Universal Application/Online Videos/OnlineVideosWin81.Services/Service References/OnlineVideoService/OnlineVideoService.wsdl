@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OnlineVideoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IOnlineVideoService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OnlineVideosService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOnlineVideoService_GetUsernameandPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsernameandPassword" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetUsernameandPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsernameandPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_InsertUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserData" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_InsertUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrieveuserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveuserData" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrieveuserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveuserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_InsertParentalControlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertParentalControlData" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_InsertParentalControlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertParentalControlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrieveParentalControlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveParentalControlData" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrieveParentalControlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveParentalControlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRating" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetSearchHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetSearchHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrievevideosratingControlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievevideosratingControlData" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_RetrievevideosratingControlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievevideosratingControlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetRatingvideos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingvideos" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_GetRatingvideos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingvideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_getRatingnextupdateddate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRatingnextupdateddate" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_getRatingnextupdateddate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRatingnextupdateddateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_getRatingVideosnextupdateddate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRatingVideosnextupdateddate" />
+  </wsdl:message>
+  <wsdl:message name="IOnlineVideoService_getRatingVideosnextupdateddate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRatingVideosnextupdateddateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOnlineVideoService">
+    <wsdl:operation name="GetUsernameandPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/GetUsernameandPassword" message="tns:IOnlineVideoService_GetUsernameandPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/GetUsernameandPasswordResponse" message="tns:IOnlineVideoService_GetUsernameandPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/SendMail" message="tns:IOnlineVideoService_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/SendMailResponse" message="tns:IOnlineVideoService_SendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/InsertUserData" message="tns:IOnlineVideoService_InsertUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/InsertUserDataResponse" message="tns:IOnlineVideoService_InsertUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveuserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrieveuserData" message="tns:IOnlineVideoService_RetrieveuserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrieveuserDataResponse" message="tns:IOnlineVideoService_RetrieveuserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertParentalControlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/InsertParentalControlData" message="tns:IOnlineVideoService_InsertParentalControlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/InsertParentalControlDataResponse" message="tns:IOnlineVideoService_InsertParentalControlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveParentalControlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrieveParentalControlData" message="tns:IOnlineVideoService_RetrieveParentalControlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrieveParentalControlDataResponse" message="tns:IOnlineVideoService_RetrieveParentalControlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/GetRating" message="tns:IOnlineVideoService_GetRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/GetRatingResponse" message="tns:IOnlineVideoService_GetRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/GetSearchHistory" message="tns:IOnlineVideoService_GetSearchHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/GetSearchHistoryResponse" message="tns:IOnlineVideoService_GetSearchHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievevideosratingControlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrievevideosratingControlData" message="tns:IOnlineVideoService_RetrievevideosratingControlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/RetrievevideosratingControlDataResponse" message="tns:IOnlineVideoService_RetrievevideosratingControlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingvideos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/GetRatingvideos" message="tns:IOnlineVideoService_GetRatingvideos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/GetRatingvideosResponse" message="tns:IOnlineVideoService_GetRatingvideos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRatingnextupdateddate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/getRatingnextupdateddate" message="tns:IOnlineVideoService_getRatingnextupdateddate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/getRatingnextupdateddateResponse" message="tns:IOnlineVideoService_getRatingnextupdateddate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRatingVideosnextupdateddate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOnlineVideoService/getRatingVideosnextupdateddate" message="tns:IOnlineVideoService_getRatingVideosnextupdateddate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOnlineVideoService/getRatingVideosnextupdateddateResponse" message="tns:IOnlineVideoService_getRatingVideosnextupdateddate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IOnlineVideoService" type="tns:IOnlineVideoService">
+    <wsp:PolicyReference URI="#CustomBinding_IOnlineVideoService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsernameandPassword">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/GetUsernameandPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserData">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/InsertUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveuserData">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/RetrieveuserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertParentalControlData">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/InsertParentalControlData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveParentalControlData">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/RetrieveParentalControlData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRating">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/GetRating" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchHistory">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/GetSearchHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievevideosratingControlData">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/RetrievevideosratingControlData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingvideos">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/GetRatingvideos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRatingnextupdateddate">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/getRatingnextupdateddate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRatingVideosnextupdateddate">
+      <soap12:operation soapAction="http://tempuri.org/IOnlineVideoService/getRatingVideosnextupdateddate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OnlineVideoService">
+    <wsdl:port name="CustomBinding_IOnlineVideoService" binding="tns:CustomBinding_IOnlineVideoService">
+      <soap12:address location="http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://onlinevideoswin8service.lartsoft.com/OnlineVideoService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,84 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.HelpMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="160"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="LayoutRoot" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0"  Style="{StaticResource TitlePanelStyle}">
+                <!--<AppBarButton x:Name="BackButton" Click="BackButton_Click" Icon="Back" Margin="26,20,0,10"/>-->
+                <Button x:Name="BackButton" Click="BackButton_Click" Style="{StaticResource BackButtonStyle}" Margin="26,20,0,10" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="tblkTitle" Text="Get Started" Style="{StaticResource DetailPageHeaderText}" Visibility="Collapsed"/>
+                </StackPanel>
+            </StackPanel>
+            <!--ContentPanel - place additional content here-->
+
+            <ListView x:Name="lbxHelpMenu" Margin="0,40,0,0" Width="465"  Grid.Row="1"  SelectionChanged="lbxHelpMenu_SelectionChanged" Background="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <StackPanel  Margin="15,0,0,10" >
+                                <TextBlock Text="{Binding Name}" Style="{StaticResource HelpName}" ></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <Line x:Name="tt" Style="{StaticResource LineStroke}"></Line>
+        <Grid Grid.Column="1" Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal" VerticalAlignment="Top" Margin="10,95,0,0">
+                <TextBlock x:Name="tblkVideosTitle" FontSize="40" Margin="0,0,0,0" FontFamily="Calibri" FontWeight="Normal"   ></TextBlock>
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Margin="0,0,10,0">
+                <Grid>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"  Grid.Row="1" Height="650">
+                        <ListView x:Name="lbxhelp"   Width="600"  Grid.Row="1" Margin="0,10,0,10"   Background="Transparent" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel  Margin="10,0,0,10">
+                                        <TextBlock x:Name="tblkhelp" Style="{StaticResource HelpText}"  Text="{Binding HelpText}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView >
+                    </ScrollViewer>
+                </Grid>
+            </ScrollViewer>
+            <StackPanel x:Name="playergrid" Grid.Row="2" Orientation="Horizontal"  Margin="20,5,0,40" Visibility="Collapsed">
+                <Image Source="/Images/PlayerImages/play.png" Name="platimage" Tapped="platimage_Tapped"/>
+                <TextBlock Text="Play help video"  Tapped="platimage_Tapped" Style="{StaticResource TextColor}"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid  x:Name="advisible" Visibility="Collapsed">
+                <!--<UI:AdControl x:Name="AdControl" HorizontalAlignment="Center" Height="600" Margin="0,0,0,0" VerticalAlignment="Center" Width="160"/>-->
+                
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

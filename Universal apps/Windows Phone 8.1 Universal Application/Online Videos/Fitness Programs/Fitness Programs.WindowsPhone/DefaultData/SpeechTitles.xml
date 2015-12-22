@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar version="1.0" xml:lang="en-US" root="Main" tag-format="semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar">
+
+  <rule id="Main">
+    <ruleref uri="#Cities" />
+  </rule>
+  <rule id="Cities" scope="public">
+    <one-of>
+      <item>Fat Burning Cardio Workouts</item>
+      <item>Abs Workouts</item>
+      <item>Beginner Workouts</item>
+      <item>Exercises by Muscle Group</item>
+      <item>Mixed Martial Arts </item>
+      <item>Weight Loss Workouts</item>
+      <item>Body Building Workouts</item>
+      <item>Body Weight Workouts</item>
+      <item>Sports Performance Workouts</item>
+      <item>Warm Up and Flexibility Stretching</item>
+      <item>workouts for women</item>
+      <item>Rehab Workouts</item>
+      <item>Tiffany Rothe Workouts 1</item>
+      <item>Tiffany Rothe Workouts 2</item>
+      <item>Mike Changs Workouts 1</item>
+      <item>Mike Changs Workouts 2</item>
+      <item>Mike Changs Workouts 3</item>
+      <item>Jillian Michaels Workouts 1</item>
+      <item>Jillian Michaels Workouts 2</item>
+      <item>Scoobys Workouts</item>
+      <item>gym ball exercises for men</item>
+      <item>gym ball exercises for women</item>
+      <item>Jump rope exercises for men and women</item>
+      <item>Exercise using weights</item>
+      <item>workout using resistance band</item>
+      <item>aerobic exercise</item>
+      <item>Favorites</item>
+      <item>show list</item>
+      <item>History</item>
+      <item>Help</item>
+    </one-of>
+  </rule>
+
+</grammar>
+

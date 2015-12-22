@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menus>
+  <menu id="1">
+    <name>1. Search for movies or songs</name>
+    <url>_EeuhfAmmnI</url>
+  </menu>
+  <menu id="2">
+    <name>2. Top Rated vs Recent List</name>
+    <url>-bdTysdYVm8</url>
+  </menu>
+  <menu id="3">
+    <name>3. Track favorite movies</name>
+    <url>nF1GNZuKnN8</url>
+  </menu>
+  <menu id="4">
+    <name>4. History of watched videos</name>
+    <url>KvpYbH629A8</url>
+  </menu>
+  <menu id="5">
+    <name>5. Report broken videos</name>
+    <url>TKO7REkd5vI</url>
+  </menu>
+  <menu id="6">
+    <name>6. How to view actor profile</name>
+    <url>hFqmsAXqMy0</url>
+  </menu>
+  <menu id="7">
+    <name>7. Pin movie as  live tile</name>
+    <url>8DuFn3zRaRU</url>
+  </menu>
+  <menu id="8">
+    <name>8. Add Movie</name>
+    <url>cQLsdAkcUF4</url>
+  </menu>
+  <menu id="9">
+    <name>9. Add Cast</name>
+    <url>LdS-ZqeJcfg</url>
+  </menu>
+  <menu id="10">
+    <name>10. Add Chapters</name>
+    <url>Wco-xrDJgNQ</url>
+  </menu>
+  <menu id="11">
+    <name>11. Add Songs</name>
+    <url>oHSMXwvGAQA</url>
+  </menu>
+  <menu id="12">
+    <name>12. Add Audio</name>
+    <url>OWaMIxEtxhY</url>
+  </menu>
+  <menu id="13">
+    <name>13. Share This Movie</name>
+    <url>CPNOaAZu7z4</url>
+  </menu>
+</Menus>

@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.SongsList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,17,0,28" Orientation="Horizontal">
+                <Image Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+                <TextBlock x:Name="tblkVideosTitle" Style="{StaticResource DetailPagePivotTitle}"/>
+            </StackPanel>
+
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <ListView x:Name="lbxRemoveList" Grid.Row="1" Margin="0,0,0,10" Foreground="White">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Height="110">
+                                <FlyoutBase.AttachedFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="{Binding ContextRemoveShow}" Click="MenuFlyoutItem_Click"/>
+                                    </MenuFlyout>
+                                </FlyoutBase.AttachedFlyout>
+                                <TextBlock Text="{Binding Id}" FontSize="32" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding Title}" Margin="-2,4,0,0" Width="400" FontSize="32" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+                <Canvas>
+                    <TextBlock Canvas.Top="200" Canvas.Left="80" FontSize="28" x:Name="tblkNoSongs" Visibility="Collapsed" Foreground="White"/>
+                </Canvas>
+                
+            </Grid>
+            <UI:AdControl Name="adstackpl" Grid.Row="2"/>
+            
+        </Grid>
+        <ProgressBar VerticalAlignment="Center" x:Name="_performanceProgressBar"/>
+    </Grid>
+</Page>

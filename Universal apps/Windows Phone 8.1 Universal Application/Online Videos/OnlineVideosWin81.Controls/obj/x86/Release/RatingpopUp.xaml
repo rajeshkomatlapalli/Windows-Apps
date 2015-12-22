@@ -1,0 +1,32 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="OnlineVideosWin81.Controls.RatingpopUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                               
+    >
+
+    <Grid x:Name="gridpopup" Background="#424145"  Margin="500,200,0,0" Opacity="1" Height="335" Width="360"  VerticalAlignment="Center"  HorizontalAlignment="Center"  >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="tbktitle" Text="Rating" Margin="-10,20,0,0"  Grid.Row="0" Style="{StaticResource DetailPageHeaderText}" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
+        <Line x:Name="tt" X1="500" Y1="0" Grid.Row="1" StrokeStartLineCap="Round" Margin="20,8,20,0" StrokeEndLineCap="Round" StrokeThickness="2" Stroke="White"></Line>
+        <Image x:ConnectionId='2'  x:Name="ratingimg" Grid.Row="2" Width="260"  Margin="15,30,0,0"                            />
+
+        <!--<ListView x:Name="lstvwrating" Grid.Row="1" ItemTemplate="{StaticResource GroupedItemChapters}" Background="Transparent" SelectionChanged="lstvwrating_SelectionChanged_1"></ListView>-->
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Image x:ConnectionId='3' Name="save" Source="/Images/Rating/ok.png" Height="35" Width="103" Margin="50,50,0,0"                       ></Image>
+            <Image x:ConnectionId='4' Name="cancel" Source="/Images/Rating/cancel.png" Margin="60,50,0,0" Height="35" Width="103"                         ></Image>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

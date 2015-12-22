@@ -1,0 +1,63 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.ParentalControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Margin="60,0,0,20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="50,5,0,10" HorizontalAlignment="Left">
+            <!--<TextBlock Text="all genres" FontFamily="calibri" FontSize="40" Height="50" />-->
+            <!--<ComboBox x:Name="lstcombobox"  ItemsSource="{Binding}" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"  SelectionChanged="ComboBox_SelectionChanged" Width="Auto" Style="{StaticResource comboboxvisable}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+
+                            <TextBlock Grid.Row="0" FontSize="22" FontWeight="SemiLight"  FontFamily="Segoe UI"  Text="{Binding CategoryName}" />
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>-->
+        </StackPanel>
+        <ProgressRing x:Name="progressbar" Width="50" Height="70" Margin="650,0,250,0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" />
+
+
+        <ScrollViewer  HorizontalScrollBarVisibility="Auto" Grid.Row="1" ZoomMode="Disabled"  VerticalScrollBarVisibility="Disabled">
+            <Viewbox Margin="0,0,0,40">
+
+                <StackPanel Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <GridView x:Name="ImageTextCollectionGrid"   Tapped="ImageTextCollectionGrid_Tapped_1" SelectionChanged="ImageTextCollectionGrid_SelectionChanged_1" Style="{StaticResource VideosGridHeight}" >
+                        <GridView.ItemTemplate>
+                            <DataTemplate >
+                                <Grid Margin="0,10,0,0"  HorizontalAlignment="Center" >
+                                    <Grid  Width="300"  Height="400">
+                                        <TextBlock Grid.Row="0" x:Name="tblkChapter" TextWrapping="NoWrap" FontSize="20"  Text="{Binding Title}" Tag="{Binding Contextvalue}"   RightTapped="TextBlock_RightTapped_1"/>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid  VerticalChildrenAlignment="Top" Margin="0,0,0,10" ItemHeight="50" 
+           ItemWidth="350"  HorizontalChildrenAlignment="Center" />
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
+
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

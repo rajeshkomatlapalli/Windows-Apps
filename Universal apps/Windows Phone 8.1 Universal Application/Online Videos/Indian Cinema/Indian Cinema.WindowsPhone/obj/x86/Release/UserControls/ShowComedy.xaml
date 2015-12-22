@@ -1,0 +1,44 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.ShowComedy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView x:ConnectionId='1' x:Name="lbxcomedyList" Grid.Row="0" Margin="0,-30,0,8" Foreground="White" VerticalAlignment="Top"                                                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <FlyoutBase.AttachedFlyout>
+                            <MenuFlyout x:ConnectionId='2'                            x:Name="ShowVideoContaxt">
+                                <MenuFlyoutItem x:ConnectionId='3'                              x:Name="Pin"/>
+                                <MenuFlyoutItem x:ConnectionId='4' Text="add to favorites" x:Name="favorites"                        />
+                                <MenuFlyoutItem x:ConnectionId='5' Text="report broken link"                               />
+                                <MenuFlyoutItem x:ConnectionId='6' Text="share linK"                               />
+                                <MenuFlyoutItem x:ConnectionId='7' Text="{Binding Ratetitle}" x:Name="Rating"                     />
+                                <MenuFlyoutItem x:ConnectionId='8' Text="delete link" x:Name="del"                  />
+                            </MenuFlyout>
+                        </FlyoutBase.AttachedFlyout>
+                        <Image Source="/Images/ArrowImg.png"  Height="43" Width="43" VerticalAlignment="Center" Margin="10,0,20,0"  Tag="{Binding SongID}"/>
+                        <TextBlock Text="{Binding Title}" Name="tblkchno"  Width="400" FontSize="28" Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap" Tag="{Binding Link}" Height="80" Margin="0,30,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ProgressBar VerticalAlignment="Top" x:Name="MyProgressBar1" Tag="{Binding Link}" IsIndeterminate="False" Width="450" Background="Black" Foreground="Red" HorizontalAlignment="Left">            
+        </ProgressBar>
+        <Canvas>
+            <TextBlock Canvas.Top="200" TextWrapping="Wrap" Canvas.Left="30" Foreground="White" FontSize="28" x:Name="tblkFavNoSongs" Visibility="Collapsed"/>
+            <TextBlock Canvas.Top="260" TextWrapping="Wrap" Canvas.Left="30" Foreground="White" FontSize="28" x:Name="tblkFavNoSongsForVideoMix" Visibility="Collapsed"/>
+        </Canvas>
+    </Grid>
+</UserControl>
+

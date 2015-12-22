@@ -1,0 +1,113 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Indian_Cinema.Views.CastHub"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    mc:Ignorable="d"
+                        
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+            <WrapGrid/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        
+        <Hub x:Name="PersonHub">
+            <Hub.Foreground>white</Hub.Foreground>
+            <Hub.Header>
+                <StackPanel 
+                    Margin="0,10,0,0" 
+                    Orientation="Horizontal" 
+                    Height="150">
+                    <TextBlock 
+                        x:Name="CastHubTitle" 
+                        FontSize="60"
+                        FontFamily="Segoe WP"
+                        FontWeight="SemiBold"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Foreground="White"/>
+                </StackPanel>
+            </Hub.Header>
+            <HubSection x:Name="Hubbiograph"
+                        Margin="0,-30,0,0">
+                <HubSection.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock 
+                                x:Name="txtbioTitle" 
+                                Text="biography" FontSize="45"/>
+                            <Image x:ConnectionId='4' 
+                                x:Name="ToggleBackground" 
+                                Margin="30,10,0,0" 
+                                Source="/Images/appbar.sync.rest.png" 
+                                Width="48" 
+                                Height="48" 
+                                IsTapEnabled="True"
+                                                                />
+                            <Image x:ConnectionId='5' 
+                                x:Name="imageSpeech" 
+                                Visibility="Collapsed" 
+                                Margin="5,10,0,0" 
+                                Source="/Images/StartSpeech.png" 
+                                Width="60" 
+                                Height="60" 
+                                IsTapEnabled="True"
+                                                           />
+                        </StackPanel>
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid x:Name="PersonHubGrid">
+                        <!--Code to be added Here-->
+                        <LART:PersonDetail></LART:PersonDetail>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            
+            
+            <HubSection Margin="0,-30,0,0">
+                <HubSection.Header>
+                    <TextBlock x:ConnectionId='3' Text="gallery" FontSize="45"  x:Name="hub_gallery"                            ></TextBlock>
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid x:Name="GalleryGrid">
+                        <!--Code to be added Here-->
+                        <LART:PersonGallery x:Name="Persongal"></LART:PersonGallery>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection 
+                x:Name="HubSectionMovies" 
+                Margin="0,-30,0,0">
+                <HubSection.Header>
+                    <TextBlock x:ConnectionId='2' Text="movies" x:Name="hub_movies"                            FontSize="45"/>
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid x:Name="MovieGrid">
+                        <!--Code to be added Here-->
+                        <LART:PersonProfileShows></LART:PersonProfileShows>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <UI:AdControl x:Name="adstackPsnProfile" Grid.Row="1"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+        <ProgressBar 
+            VerticalAlignment="Top"
+            x:Name="_performanceProgressBar" 
+            Foreground="Red"/>
+    </Grid>
+</Page>
+

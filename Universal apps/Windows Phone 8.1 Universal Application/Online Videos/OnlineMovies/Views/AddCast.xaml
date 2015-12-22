@@ -1,0 +1,203 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.AddCast"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="tblkcat">
+            <TextBlock Foreground="White" FontSize="40" FontFamily="Calibri" FontWeight="Normal" LineHeight="60" Loaded="TextBlock_Loaded" Text="{Binding}"/>
+        </DataTemplate>
+        <!--<Style TargetType="ComboBox" x:Key="style">
+            <Setter Property="Background" Value="{StaticResource ComboBoxBackgroundThemeBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource ComboBoxForegroundThemeBrush}"/>
+            <Setter Property="FontSize" Value="{StaticResource TextStyleMediumFontSize}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="{StaticResource PhoneTouchTargetOverhang}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <StackPanel>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="PickerStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Expanded">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames 
+        										Storyboard.TargetName="Border" 
+        										Storyboard.TargetProperty="Background" 
+        										Duration="0">
+                                                <DiscreteObjectKeyFrame 
+        											Value="White" 
+        											KeyTime="0"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames 
+        										Storyboard.TargetName="Border" 
+        										Storyboard.TargetProperty="BorderBrush" 
+        										Duration="0">
+                                                <DiscreteObjectKeyFrame
+        											Value="{StaticResource TextBoxBorderThemeBrush}"
+        											KeyTime="0"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentControl 
+        						Content="{TemplateBinding Header}" 
+        						ContentTemplate="{TemplateBinding HeaderTemplate}" 
+        						Foreground="{StaticResource PhoneForegroundBrush}" 
+        						FontSize="{StaticResource TextStyleMediumFontSize}"                            
+        						HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+        						Margin="0 0 0 8"/>
+                            <Grid>
+                                <Border 
+        							x:Name="Border" 
+        							Background="{TemplateBinding Background}" 
+        							BorderBrush="{TemplateBinding Background}" 
+        							BorderThickness="2">
+                                    <Canvas x:Name="ItemsPresenterHost" MinHeight="46">
+                                        <ItemsPresenter x:Name="ItemsPresenter">
+                                            <ItemsPresenter.RenderTransform>
+                                                <TranslateTransform x:Name="ItemsPresenterTranslateTransform"/>
+                                            </ItemsPresenter.RenderTransform>
+                                        </ItemsPresenter>
+                                    </Canvas>
+                                </Border>
+                                <Popup x:Name="FullModePopup">
+                                    <Border Background="{StaticResource PhoneChromeBrush}">
+                                        -->
+        <!-- Popup.Child should always be a Border -->
+        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <ContentControl 
+        										Grid.Row="0" 
+        										Content="{TemplateBinding Header}" 
+        										Foreground="{StaticResource PhoneForegroundBrush}" 
+        										FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+        										FontSize="{StaticResource TextStyleMediumFontSize}" 
+        										HorizontalAlignment="Left" 
+        										Margin="24 12 0 0"/>
+                                            <ListBox 
+        										x:Name="FullModeSelector" 
+        										Grid.Row="1" 
+                                           
+        										FontSize="{TemplateBinding FontSize}" 
+        										Margin="{StaticResource ListViewItemMargin}">
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel/>
+                                                        -->
+        <!-- Ensures all containers will be available during the Loaded event -->
+        <!--
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                            </ListBox>
+                                        </Grid>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,-10,0,28" Orientation="Horizontal">
+            <Image Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgtitle" PointerPressed="imgtitle_PointerPressed"/>
+            <TextBlock x:Name="tblkVideosTitle" FontSize="20" Style="{StaticResource CastPageHeaderText}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-15,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource Personnametitle}"/>
+                    <TextBlock x:Name="valid" Text="Required" FontSize="16" Foreground="Red" Margin="10,4,0,0" Visibility="Collapsed"></TextBlock>
+                </StackPanel>
+
+                <AutoSuggestBox x:Name="tblkpersonname" Width="380" Margin="0,-10,0,0" ItemsSource="{Binding}" KeyUp="tblkpersonname_KeyUp" Height="30" SuggestionChosen="tblkpersonname_SuggestionChosen">
+                    <AutoSuggestBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"
+                                       Tag="{Binding PersonID}"/>
+                        </DataTemplate>
+                    </AutoSuggestBox.ItemTemplate>
+                </AutoSuggestBox>
+            </StackPanel>
+
+            <StackPanel x:Name="desstk" Orientation="Vertical" Grid.Row="1" Margin="0,-10,0,0">
+                <StackPanel x:Name="onl" Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Style="{StaticResource Persondecriptiontitle}"/>
+                    <Image Source="/Images/Online.png" Margin="20,0,0,0" Height="48" Width="48" x:Name="persondes" Tapped="persondes_Tapped"/>
+                    <Image Source="/Images/PlayerImages/edit.png" x:Name="edit" Margin="25,0,0,0" Stretch="Fill" Height="48" Width="48" Tapped="edit_Tapped"/>
+                    <TextBlock x:Name="txtlength" Visibility="Visible" Margin="20,30,0,0" HorizontalAlignment="Right" Foreground="White" FontSize="20"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                    <TextBox x:Name="tblkdes" Width="380" ScrollViewer.VerticalScrollBarVisibility="Auto"  TextWrapping="Wrap" HorizontalAlignment="Left" TextChanged="tblkdes_TextChanged_1" Height="100"/>
+                    <TextBlock x:Name="txtlimit" Visibility="Collapsed" Margin="-20,-5,0,0" Text="max text limit 150 characters" Foreground="Red" FontSize="20"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel x:Name="rolestk" Orientation="Vertical" Grid.Row="2">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource Personroletitle}"></TextBlock>
+                    <TextBlock x:Name="validrole" Text="Required" FontSize="16" Foreground="Red" Margin="30,4,0,0" Visibility="Collapsed"></TextBlock>
+                </StackPanel>
+
+                <!--Style="{StaticResource style}"-->
+
+                <ComboBox
+					x:Name="lpicrole" 
+					Margin="10,0,0,0" 
+					HorizontalAlignment="Left" 
+					Width="365" 
+					FontSize="15" 
+					ItemTemplate="{StaticResource tblkcat}"                    
+					/>
+                <!--Header="Choose Role"-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0,-5,0,0">
+                <StackPanel x:Name="persononlocalstk" Orientation="Vertical" Margin="0,-22,0,0">
+                    <TextBlock  Text="Image From Local" Foreground="White" Margin="15,25,0,15" FontSize="15"></TextBlock>
+                    <Image Source="/Images/peoplefromlocal.png"  x:Name="personlocalimg" Height="110" Margin="10,-15,0,0" Width="120" PointerPressed="personlocalimg_PointerPressed"/>
+                </StackPanel>
+                <StackPanel x:Name="persononlinestk" Orientation="Vertical" Margin="80,-22,0,0">
+                    <TextBlock  Text="Image From Online" Foreground="White" Margin="15,25,0,15" FontSize="15"></TextBlock>
+                    <Image Source="/Images/peoplefromonline.png" x:Name="persononlineimg" Margin="10,-15,0,0" Height="110" Width="120" IsTapEnabled="True" Tapped="persononlineimg_Tapped"/>
+                </StackPanel>
+                <!--<TextBox x:Name="tblkimg" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto"  TextWrapping="Wrap"  HorizontalAlignment="Left"></TextBox>-->
+            </StackPanel>
+        </Grid>
+        
+        <UI:AdControl x:Name="adstackpl" Grid.Row="2" AutoRefreshIntervalInSeconds="60"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Save" x:Name="save_btn" Click="save_btn_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

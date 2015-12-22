@@ -1,0 +1,16 @@
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\bin\Debug\OnlineVideosWin81.Services.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\bin\Debug\OnlineVideosWin81.Services.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\bin\Debug\OnlineVideosWin81.Services.pri
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\OnlineVideosWin81.Services.dll
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\OnlineVideosWin81.Services.pdb
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\priconfig.xml
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\priconfig.xml.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\layout.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\layout.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\resources.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\resources.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\pri.resfiles
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\pri.resfiles.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\qualifiers.txt
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\qualifiers.txt.intermediate
+E:\Present Code_Mohan Rajesh\Universal apps\Windows Phone 8.1 Universal Application\Online Videos\OnlineVideosWin81.Services\obj\Debug\MultipleQualifiersPerDimensionFound.txt

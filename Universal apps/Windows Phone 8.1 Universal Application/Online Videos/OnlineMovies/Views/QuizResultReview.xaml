@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="OnlineMovies.Views.QuizResultReview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineMovies.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}" Width="480">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Grid.Row="0">
+            <Image Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle" PointerPressed="imgTitle_PointerPressed"/>
+            <TextBlock x:Name="tblkVideosTitle" Style="{StaticResource DetailPagePivotTitle}"/>
+        </StackPanel>
+
+        <Grid x:Name="Reviewgrid" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="PageTitle" Text="Review Answers" Width="300" Foreground="White" HorizontalAlignment="Left" Height="35" Margin="15,0,0,2" Grid.Row="0"  FontSize="25" Style="{StaticResource TitleTextBlockStyle}"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" >
+                <StackPanel Orientation="Vertical" x:Name="spQuizresult" Width="400" Grid.Row="1" Margin="-40,5,0,0">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Width="440" Margin="0,0,0,15">
+                            <TextBlock TextWrapping="Wrap"  Text="{Binding QuestionID}" FontSize="26" x:Name="txtquestno" Foreground="White"></TextBlock>
+                            <TextBlock   Text="." FontSize="35" Foreground="White" Margin="0,-10,0,0"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" Width="340"  Text="{Binding Question}" FontSize="25" Margin="5,0,10,10" Foreground="White"></TextBlock>
+                        </StackPanel>
+                        <Image x:Name="imgquest" Source="{Binding ImgQuestion}" Visibility="{Binding ImgQuestion, TargetNullValue=Collapsed}" Height="150" Width="150"></Image>
+                    </StackPanel>
+                    <TextBlock x:Name="txtoption1" FontSize="23" Text="{Binding Option1}" Style="{StaticResource QuizReviewOptions}"></TextBlock>
+                    <TextBlock x:Name="txtoption2" FontSize="23" Text="{Binding Option2}" Style="{StaticResource QuizReviewOptions}"></TextBlock>
+                    <TextBlock x:Name="txtoption3" FontSize="23" Text="{Binding Option3}" Style="{StaticResource QuizReviewOptions}"></TextBlock>
+                    <TextBlock x:Name="txtoption4" FontSize="23" Text="{Binding Option4}" Style="{StaticResource QuizReviewOptions}"></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+
+            <StackPanel Grid.Row="2"  Orientation="Horizontal" Margin="15,0,0,0" Visibility="Visible" x:Name="stkcorrectans">
+                <Grid HorizontalAlignment="Right" Width="200" Margin="10,0,0,10" x:Name="correctansgrid">
+                    <TextBlock  TextWrapping="Wrap" Margin="10,0,0,0" x:Name="txtcorrectans" FontSize="25" ></TextBlock>
+                </Grid>
+                <Grid Margin="15,0,30,10" Width="200" HorizontalAlignment="Left" x:Name="useransgrid">
+                    <TextBlock  TextWrapping="Wrap"  x:Name="txtuserans" FontSize="25" Margin="10,0,30,0"></TextBlock>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="-80,-50,0,0" Height="85" Width="400">
+                <Image Source="/Images/Previous.png"  HorizontalAlignment="Left" Visibility="Collapsed" Margin="10,0,0,0" x:Name="imgprevious" Height="60" Width="125" PointerPressed="imgprevious_PointerPressed"></Image>
+                <Image Source="/Images/Exits.png"  HorizontalAlignment="Left"  Margin="80,0,0,0" x:Name="imgexit" Height="60" Width="125" PointerPressed="imgexit_PointerPressed"></Image>
+                <Image Source="/Images/Next.png"  HorizontalAlignment="Right" Margin="70,0,0,0" x:Name="imgnext" Height="60" Width="125" PointerPressed="imgnext_PointerPressed"></Image>
+            </StackPanel>
+            <UI:AdControl x:Name="adstackpl" Grid.Row="4" Margin="-80,0,0,0"                      
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+        </Grid>
+    </Grid>
+</Page>

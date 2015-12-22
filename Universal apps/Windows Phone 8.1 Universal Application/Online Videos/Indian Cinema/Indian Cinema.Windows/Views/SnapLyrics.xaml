@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="Indian_Cinema.Views.SnapLyrics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="snapgrd" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <!--<Button x:Name="BackButton" Click="BackButton_click_1" Margin="15,0,0,0" Style="{StaticResource BackButtonStyle}"/>-->
+            <AppBarButton x:Name="BackButton" Icon="Back" Click="BackButton_click_1" Margin="15,0,0,-6" Height="70"/>
+            <TextBlock Text="Lyrics" TextAlignment="Center" Margin="25,0,0,0" Style="{StaticResource DetailPageHeaderText}"/>
+        </StackPanel>
+        <Grid Margin="0,10,10,0" Grid.Row="1">
+            <ScrollViewer x:Name="lyricsscroll" VerticalScrollBarVisibility="Auto" Margin="0,0,-8,0" ZoomMode="Disabled" VerticalScrollMode="Enabled">
+                <TextBlock x:Name="lyrics" TextWrapping="Wrap" Margin="5,0,10,0"  FontSize="20" HorizontalAlignment="Center"/>
+            </ScrollViewer>
+        </Grid>
+        <StackPanel Orientation="Vertical" Height="150" Grid.Row="2" Background="Black">
+            <TextBlock x:Name="songtitle" TextWrapping="Wrap" FontSize="20" Margin="15,0,0,0">
+            </TextBlock>
+            <StackPanel x:Name="Musicstac" Orientation="Horizontal" Margin="0,-20,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Slider x:Name="Autoslider1" Height="20" Width="300" Margin="5,-10,0,0">
+                    </Slider>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <!--<Image x:Name="previous"  Source="/Images/PlayerImages/previous.png" Margin="25,15,60,0" Tapped="Previous_Click"></Image>
+                            <TextBlock x:Name="TextLabel3" Text="previous" TextAlignment="Center"  Margin="-20,0,2,0"  FontSize="20"    TextTrimming="WordEllipsis" Style="{StaticResource BasicTextStyle}"/>-->
+                            <AppBarButton x:Name="previous" Icon="Previous" Margin="25,15,60,0" Label="previous" IsTapEnabled="True" Tapped="Previous_Click"></AppBarButton>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <!--<Image x:Name="playpause" Source="/Images/PlayerImages/play.png" Margin="0,15,60,0" Tapped="Playpause_click"/>-->
+                            <!--<TextBlock x:Name="txtplaypause" Margin="-30,0,2,0" Text="play" FontSize="20" TextAlignment="Center" TextTrimming="WordEllipsis" Style="{StaticResource BasicTextStyle}"/>-->
+                            <AppBarButton x:Name="playpause" Icon="Play" Margin="0,15,60,0" Label="play" IsTapEnabled="True" Tapped="Playpause_click"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <!--<Image x:Name="next" Source="/Images/PlayerImages/next.png" Margin="0,15,15,0" Tapped="Next_click"></Image>
+                            <TextBlock x:Name="TextLabel2" Text="Next" Margin="-15,0,2,0" FontSize="20" TextAlignment="Center" TextTrimming="WordEllipsis" Style="{StaticResource BasicTextStyle}"/>-->
+                            <AppBarButton x:Name="next" Icon="Next" Margin="0,15,15,0" IsTapEnabled="True" Tapped="Next_click" Label="Next"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Grid  Margin="0,0,0,0" Grid.Row="3" x:Name="AddControlvisablesnap">
+        </Grid>
+    </Grid>
+</Page>

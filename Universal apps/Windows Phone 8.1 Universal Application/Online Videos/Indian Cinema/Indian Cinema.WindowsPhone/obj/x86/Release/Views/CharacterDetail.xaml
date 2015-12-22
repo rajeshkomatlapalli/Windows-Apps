@@ -1,0 +1,50 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OnlineVideos.Views.CharacterDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:LART="using:OnlineVideos.UserControls"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        >
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+            <Pivot x:Name="pvtMainDetails">
+                <Pivot.Title>
+                    <StackPanel Orientation="Horizontal" Margin="0,-10,0,10">
+                        <Image x:ConnectionId='2' Style="{StaticResource DetailPagePivotTitleImage}" x:Name="imgTitle"                                         />
+                        <TextBlock x:Name="tblkVideosTitle" TextWrapping="NoWrap" Style="{StaticResource DetailPagePivotTitle}"/>
+                        </StackPanel>
+                </Pivot.Title>
+                <Pivot.Foreground>
+                    white
+                </Pivot.Foreground>
+                <PivotItem x:Name="pvtitmgallery">
+                    <Grid x:Name="GalleryGrid">
+                        <LART:PersonGallery x:Name="persongal"/>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+        <UI:AdControl x:Name="adstaSongs" Grid.Row="1" IsAutoRefreshEnabled="True" Height="70" Width="400"/>
+    </Grid>
+    <!--<Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="save" Icon="Save" Label="save" Click="save_click"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="cancel" x:Name="cancle" Click="cancel_click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>-->
+</Page>
+

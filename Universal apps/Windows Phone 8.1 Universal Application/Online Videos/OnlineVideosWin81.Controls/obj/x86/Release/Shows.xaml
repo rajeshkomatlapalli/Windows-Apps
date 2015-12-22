@@ -1,0 +1,287 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="OnlineVideosWin81.Controls.Shows"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+                               >
+
+    <UserControl.Resources>
+        <CollectionViewSource x:Name="groupedItemsViewSource" ItemsPath="TopItems" IsSourceGrouped="True"></CollectionViewSource>
+        <CollectionViewSource x:Name="groupedItemsViewSourceForTamilAndUpcomming" ItemsPath="TopItems" IsSourceGrouped="True"></CollectionViewSource>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="snap">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid  x:Name="itemsgrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="125"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel  Grid.Row="0" Style="{StaticResource MainPageLogoAndTitleStackPanel}" >
+                <Image x:Name="imgLogo" Style="{StaticResource MainPageLogoMargin}" Source="/Images/Logo.png"   />
+                <Image x:Name="imgTitle" Style="{StaticResource MainPageTitleMargin}" Source="/Images/Title.png"/>
+            </StackPanel>
+            <ProgressRing x:Name="progressbar"  Grid.Row="1"  Style="{StaticResource MainPageProgressRing}" />
+            <TextBlock    Grid.Row="1"  x:Name="txtmsg1" Style="{StaticResource NoDataMessage}"  Visibility="Collapsed"/>
+            <ScrollViewer x:Name="scroll"  HorizontalScrollBarVisibility="Auto" Grid.Row="1" VerticalScrollBarVisibility="Disabled" ZoomMode="Disabled">
+                <Grid x:Name="MusicAndSongsGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <Viewbox Visibility="Collapsed" x:Name="topmusicsongs">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="30,0,0,0" x:Name="snapgrid2" Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <!--<MediaElement x:Name="MediaPlayer" AudioCategory="BackgroundCapableMedia"></MediaElement>-->
+                                            <TextBlock x:Name="topmusic" Text="top music"  FontSize="40" FontFamily="Segoe UI"/>
+                                            <ComboBox x:Name="musiccategory" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" FontSize="25" Foreground="White" Margin="120,5,0,0"  Height="40"  Width="Auto" >
+                                                <ComboBoxItem Content="Hindi" Tag="20"    FontSize="20"/>
+                                                <ComboBoxItem Content="Telugu" Tag="18"   FontSize="20"/>
+                                                <ComboBoxItem Content="Tamil" Tag="19"    FontSize="20"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+                                    <ProgressRing x:Name="progressbarForTopmusic" Grid.Row="1" IsActive="True" Width="50" Height="70" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ProgressRingColor}" />
+                                    <StackPanel Grid.Row="1">
+                                        <!--<ScrollViewer Height="600" VerticalScrollBarVisibility="Auto" ZoomMode="Disabled">-->                                        
+                                        <ListView x:ConnectionId='13' x:Name="itemlistview" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.ZoomMode="Disabled" Height="500"                                                          >
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock x:Name="num" Width="23" Text="{Binding SongNO}" FontSize="18" Margin="0,3,0,0"></TextBlock>
+                                                        <TextBlock x:ConnectionId='14' x:Name="tblkAudioSongs"  Text="{Binding Title}"                                              IsTapEnabled="True" Style="{StaticResource ShowAudioTextBlock}" />
+                                                        <Image x:Name="ratingimage" Height="15"  HorizontalAlignment="Left" Source="{Binding RatingBitmapImage}"  Margin="0,4,0,0"></Image>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                        <!--</ScrollViewer>-->
+                                        <TextBlock Width="400" Height="50" x:Name="txtmsg12" Text="No audio songs available"  FontSize="20"   Foreground="White" Margin="10,0,0,10" Visibility="Collapsed"/>
+                                    </StackPanel>
+                                    <Button x:ConnectionId='12' x:Name="tbgetmore" Visibility="Collapsed" Content="get more"                           FontSize="18" Margin="15,0,0,0" FontFamily="Segoe UI" Grid.Row="2"/>
+                                </Grid>
+                                <Grid Margin="60,0,0,0" Grid.Column="1" x:Name="snapgrid1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="topsongs" Text="top videos"   FontSize="40" FontFamily="Segoe UI" />
+                                            <ComboBox x:Name="categorys" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" FontSize="25" VerticalAlignment="Top" Margin="120,5,0,0"  Height="40"  Width="Auto" >
+                                                <ComboBoxItem Content="Hindi" Tag="20" Background="Transparent" FontSize="20"/>
+                                                <ComboBoxItem Content="Telugu" Tag="18" Background="Transparent" FontSize="20"/>
+                                                <ComboBoxItem Content="Tamil" Tag="19" Background="Transparent" FontSize="20"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+                                    <ProgressRing x:Name="progressbarFortopsongs" Grid.Row="1" IsActive="True" Width="50" Height="70" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ProgressRingColor}"/>
+                                    <StackPanel Grid.Column="1">
+                                        <!--<ScrollViewer Height="600" VerticalScrollBarVisibility="Auto" ZoomMode="Disabled">-->
+                                        <ListView x:ConnectionId='10' x:Name="itemlistview1" Margin="0,59,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.ZoomMode="Disabled" Height="500"                                                   >
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock x:Name="num" Grid.Column="0" Width="23" Text="{Binding SongNO}" FontSize="18" Margin="0,3,0,0">
+                                                        </TextBlock>
+                                                        <TextBlock x:ConnectionId='11' Grid.Column="1" x:Name="tblkChapter"  TextWrapping="Wrap"  Style="{StaticResource ShowAudioTextBlock}" Text="{Binding Title}" Tag="{Binding Contextvalue}"                                          />
+                                                        <Image x:Name="ratingimage" Height="15"  HorizontalAlignment="Left" Source="{Binding RatingBitmapImage}"  Margin="0,4,0,0"></Image>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                        <!--</ScrollViewer>-->
+                                        <TextBlock   Width="400" Height="50"   x:Name="txtmsg2"   FontSize="20"   Foreground="White" Margin="10,0,0,40" Visibility="Collapsed"/>
+                                    </StackPanel>
+                                    <Button x:ConnectionId='9' x:Name="tbgetmore1" Visibility="Collapsed"                            Content="get more" FontSize="18" Margin="15,-30,0,0" FontFamily="Segoe UI" Grid.Row="1"/>
+                                </Grid>
+                            </Grid>
+                        </Viewbox>
+                    </Grid>
+                    <Viewbox Margin="0,0,0,40" Grid.Column="0" x:Name="viewbx">
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <GridView x:ConnectionId='3' Margin="0,0,40,0" Grid.Column="0"
+			x:Name="itemGridView"
+			AutomationProperties.AutomationId="ItemGridView"
+			AutomationProperties.Name="Grouped Items"
+			Padding="116,0,40,46"
+			ItemsSource="{Binding Source={StaticResource groupedItemsViewSource}}"
+			ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+			SelectionMode="None"
+			IsItemClickEnabled="True"
+			                               >
+                                <GridView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                                <GridView.GroupStyle>
+                                    <GroupStyle>
+                                        <GroupStyle.HeaderTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal"  Margin="1,0,0,6">
+                                                    <TextBlock x:ConnectionId='7' x:Name="toprated" Style="{StaticResource MainPageMenu}" Text="{Binding Menu}" Tag="{Binding Menu}"  AutomationProperties.Name="Group Title"                                                                                                   />                                                   
+                                                    <StackPanel x:Name="viewgrd" Margin="{Binding margin}" Width="100">
+                                                        <TextBlock x:ConnectionId='8' x:Name="view" Text="view all" Tag="{Binding Menu}" Style="{StaticResource MainPageViewAll}"                                                                                                    />
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GroupStyle.HeaderTemplate>
+                                        <GroupStyle.Panel>
+                                            <ItemsPanelTemplate>
+                                                <VariableSizedWrapGrid Style="{StaticResource MainPageWrapGrid}"/>
+                                            </ItemsPanelTemplate>
+                                        </GroupStyle.Panel>
+                                    </GroupStyle>
+                                </GridView.GroupStyle>
+                            </GridView>
+                            <GridView x:ConnectionId='4' 
+                                Margin="-20,0,40,0" 
+                                Grid.Column="2"
+			                    x:Name="itemGridViewForTamilAndUpcomming"
+			                    AutomationProperties.AutomationId="itemGridViewForTamilAndUpcomming"
+			                    AutomationProperties.Name="Grouped Items"
+			                    Padding="90,0,40,46"
+			                    ItemsSource="{Binding Source={StaticResource groupedItemsViewSourceForTamilAndUpcomming}}"
+			                    ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+			                    SelectionMode="None"
+			                    IsItemClickEnabled="True"
+			                                                  >
+                                <GridView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                                <GridView.GroupStyle>
+                                    <GroupStyle>
+                                        <GroupStyle.HeaderTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal"  Margin="1,0,0,6">
+                                                    <TextBlock x:ConnectionId='5' x:Name="toprated" Style="{StaticResource MainPageMenu}" Text="{Binding Menu}" Tag="{Binding Menu}"  AutomationProperties.Name="Group Title"                                                                                                   />
+                                                    <Canvas x:Name="viewgrd" Margin="{Binding margin}" Width="100">
+                                                        <TextBlock x:ConnectionId='6' x:Name="view" Style="{StaticResource MainPageViewAll}" Text="view all" Tag="{Binding Menu}"                                                                                                     />
+                                                    </Canvas>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GroupStyle.HeaderTemplate>
+                                        <GroupStyle.Panel>
+                                            <ItemsPanelTemplate>
+                                                <VariableSizedWrapGrid Style="{StaticResource MainPageWrapGrid}"/>
+                                            </ItemsPanelTemplate>
+                                        </GroupStyle.Panel>
+                                    </GroupStyle>
+                                </GridView.GroupStyle>
+                            </GridView>
+                        
+                            <Grid x:Name="advisibleForTamil"  Grid.Column="3" Visibility="Collapsed">
+                                <StackPanel Orientation="Vertical">
+                                    <!--<UI:AdControl Margin="0,0,0,0" x:Name="AdControlupcomming"-->
+                                    <!--<UI:AdControl Margin="0,0,0,0"
+                                                    x:Name="AdControlupcomming"
+                                                    HorizontalAlignment="Center"
+                                                    ApplicationId="039db7f6-58eb-4f82-b132-ea4fb2c5031d"
+                                                    AdUnitId="124629"
+                                                    VerticalAlignment="Top"/>-->
+                                    
+                                    <!--<duplex:AdControl x:Name="AdRotatorupcommingduplex" AppId="" IsTest="True" Size="250x250"></duplex:AdControl>-->
+                                    <!--<AdRotator:AdRotatorControl AdHeight="250" AdWidth="250" x:Name="AdRotatorupcommingduplex" 
+                                    HorizontalAlignment="Center" VerticalAlignment="Top" DefaultSettingsFileUri="IndianCinemaMainPagedefaultAdSettings.xml" SettingsUrl="http://lartsoft.org/win8AdRotator/IndianCinemaMainPagedefaultAdSettings.xml"/>-->
+                                </StackPanel>
+                                <!--</StackPanel>-->
+                            </Grid>
+                            <Grid x:Name="advisible12"  Grid.Column="1" Visibility="Collapsed">
+                                <StackPanel Orientation="Vertical" >
+                                    <!--<UI:AdControl x:Name="AdControl12" Margin="0,0,0,0" HorizontalAlignment="Center" ApplicationId="039db7f6-58eb-4f82-b132-ea4fb2c5031d" AdUnitId="124629" VerticalAlignment="Top"/>-->
+                                    <!--<duplex:AdControl x:Name="AdRotator12duplex" AppId="" IsTest="True"  Size="250x250"></duplex:AdControl>-->
+                                    <!--<AdRotator:AdRotatorControl x:Name="AdRotator12duplex" AdHeight="250" AdWidth="250" HorizontalAlignment="Center" 
+                                    DefaultSettingsFileUri="IndianCinemaMainPagedefaultAdSettings.xml" SettingsUrl="http://lartsoft.org/win8AdRotator/IndianCinemaMainPagedefaultAdSettings.xml" VerticalAlignment="Top"/>-->
+                                    <!--<UI:AdControl Margin="20,10,20,0" x:Name="AdControl13" HorizontalAlignment="Center" 
+                                    ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043105" Height="250" VerticalAlignment="Center" Width="250"/>-->
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Viewbox>
+                    <Grid  x:Name="advisible"  Grid.Column="2">
+                        <!--<UI:AdControl x:Name="AdControl" ApplicationId="{StaticResource adApplicationId}" AdUnitId="{StaticResource VerAdUintID}" HorizontalAlignment="Center" Height="600" Margin="0,0,20,0" VerticalAlignment="Center" Width="160"/>-->
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+        <Grid  Visibility="Collapsed" x:Name="snapgrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="53"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center"  Orientation="Horizontal">
+                <Image x:Name="imgTitle1" Style="{StaticResource MainPagesnapLogoAndTitleMargin}" Source="/Images/LogoandTitle.png"/>
+            </StackPanel>
+            <ProgressRing x:Name="progressbarsnap" IsActive="True"  Grid.Row="1"  Style="{StaticResource MainPageSnapProgressRing}"/>
+            <ListView x:ConnectionId='2' x:Name="ItemListView" Grid.Row="1" SelectionMode="None" IsItemClickEnabled="True"                                       ItemTemplate="{StaticResource SnapImageTextCollectionTemplate}" />
+            <Grid  Margin="30,0,10,30"  Grid.Row="2" x:Name="AddControlvisable1" Visibility="Collapsed">
+                <!--<UI:AdControl x:Name="AdControl1" HorizontalAlignment="Center" Height="125" Width="250"/>-->
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
+

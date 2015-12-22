@@ -1,0 +1,62 @@
+﻿<Application
+    x:Class="OnlineVideos.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos">
+
+    <Application.Resources>
+        <ImageBrush x:Name="bipivot" ImageSource="Images/Pivot/Background.jpg"></ImageBrush>
+
+        <Style x:Key="MainHubTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="56"/>
+            <Setter Property="FontFamily" Value="/Fonts/Candara.ttf#Candara"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+        </Style>
+
+        <Style x:Key="SongsPivottyle_New" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="Barrci"/>
+        </Style>
+
+        <Style x:Key="MainMenuItemTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontFamily" Value="/Fonts/whiz bang pow_0.ttf#whiz bang pow"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+
+        <Style x:Key="DetailPagePivotTitle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="15,0,5,0"/>
+            <Setter Property="Width" Value="400"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+        </Style>
+
+        <Style x:Key="DetailPageHubTitleImage" TargetType="Image">
+            <Setter Property="Source" Value="/Images/Pivot/Title.png"></Setter>
+            <Setter Property="Width" Value="36"></Setter>
+            <Setter Property="Height" Value="36"></Setter>
+            <Setter Property="Stretch" Value="Uniform"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Margin" Value="15,0,0,0"/>
+        </Style>
+
+        <ImageBrush x:Name="bi" ImageSource="Images/Panorama/Background.jpg"></ImageBrush>
+
+        <Style x:Key="DetailPagePivotTitleImage" TargetType="Image">
+            <Setter Property="Source" Value="/Images/Pivot/Title.png"></Setter>
+            <Setter Property="Width" Value="36"></Setter>
+            <Setter Property="Height" Value="36"></Setter>
+            <Setter Property="Stretch" Value="Uniform"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Margin" Value="15,0,0,0"/>
+        </Style>
+        
+    </Application.Resources>
+</Application>

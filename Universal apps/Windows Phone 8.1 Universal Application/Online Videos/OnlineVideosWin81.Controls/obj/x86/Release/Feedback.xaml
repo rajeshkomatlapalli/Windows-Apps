@@ -1,0 +1,54 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.Feedback"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" x:Name="ContentPanel" Style="{StaticResource FeedbackPageGrid}" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"  Text="Topics" FontSize="20" Margin="40,0,40,0" />
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="40,5,0,10" HorizontalAlignment="Left">
+                <!--<TextBlock Text="all genres" FontFamily="calibri" FontSize="40" Height="50" />-->
+                <ComboBox x:Name="lstcombobox"  ItemsSource="{Binding}"  Width="420" Height="Auto" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid >
+                                <TextBlock Grid.Row="0" FontSize="22" FontWeight="SemiLight"  FontFamily="Segoe UI"  Text="{Binding Topic}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="40,10,40,20">
+                <TextBlock Text="Email ID" FontSize="20"   />
+                <TextBlock Margin="20,10,0,0" Foreground="Red" x:Name="tblkMailIdValidation" Text="(optional)" />
+            </StackPanel>
+            <TextBox Grid.Row="3" x:Name="tbxMailId" AcceptsReturn="True" Background="White"   Margin="40,0,40,0" />
+            <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="40,20,40,20.25">
+                <TextBlock Text="Message"  FontSize="20"/>
+                <TextBlock Margin="20,10,0,0" x:Name="tblkMessageValidation" Text="Required"  Visibility="Collapsed" Foreground="Red"/>
+            </StackPanel>
+            <TextBox Grid.Row="5" Height="180" x:Name="txtboxFeedback" Background="White" AcceptsReturn="True"  Margin="40,0,40,20" TextWrapping="Wrap" />
+            <Button x:ConnectionId='1' x:Name="btnsend"  Content="Send Feedback"  Grid.Row="6" HorizontalAlignment="Center" Margin="250,30,0,90.5"                                />
+            <TextBlock x:Name="SentMessage" Foreground="Red" Grid.Row="7" Margin="40,-40,0,0" Visibility="Collapsed"></TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>
+

@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73421FF9-FBBF-4795-B803-79B002B65F54}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos</RootNamespace>
+    <AssemblyName>Fitness Programs.WindowsPhone</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Fonts\ABEAKRG.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\AboutUs.xaml.cs">
+      <Link>About Us\AboutUs.xaml.cs</Link>
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\ContactUs.xaml.cs">
+      <Link>About Us\ContactUs.xaml.cs</Link>
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Common\CommonControls81\CommonControls\Feedback.xaml.cs">
+      <Link>About Us\Feedback.xaml.cs</Link>
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\FavoriteVideos.xaml.cs">
+      <Link>UserControls\FavoriteVideos.xaml.cs</Link>
+      <DependentUpon>FavoriteVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\LoginPopup.xaml.cs">
+      <Link>UserControls\LoginPopup.xaml.cs</Link>
+      <DependentUpon>LoginPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\MemoryGame_1.xaml.cs">
+      <Link>UserControls\MemoryGame_1.xaml.cs</Link>
+      <DependentUpon>MemoryGame_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonGallery.xaml.cs">
+      <Link>UserControls\PersonGallery.xaml.cs</Link>
+      <DependentUpon>PersonGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\PersonGalleryPopup.xaml.cs">
+      <Link>UserControls\PersonGalleryPopup.xaml.cs</Link>
+      <DependentUpon>PersonGalleryPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\RatingPopup.xaml.cs">
+      <Link>UserControls\RatingPopup.xaml.cs</Link>
+      <DependentUpon>RatingPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowAudio.xaml.cs">
+      <Link>UserControls\ShowAudio.xaml.cs</Link>
+      <DependentUpon>ShowAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowCast.xaml.cs">
+      <Link>UserControls\ShowCast.xaml.cs</Link>
+      <DependentUpon>ShowCast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\ShowVideos.xaml.cs">
+      <Link>UserControls\ShowVideos.xaml.cs</Link>
+      <DependentUpon>ShowVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\UserControls\VideosHistory.xaml.cs">
+      <Link>UserControls\VideosHistory.xaml.cs</Link>
+      <DependentUpon>VideosHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\AddReminder.cs">
+      <Link>View Models\AddReminder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\Adds\LoadAdds.cs">
+      <Link>View Models\LoadAdds.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\AutoComplete.cs">
+      <Link>View Models\AutoComplete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\BackGroundCheck.cs">
+      <Link>View Models\BackGroundCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\CreateCustomImage.cs">
+      <Link>View Models\CreateCustomImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\Project.cs">
+      <Link>View Models\Project.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\ViewModels\ShowDetail.cs">
+      <Link>View Models\ShowDetail.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\AboutMemory.xaml.cs">
+      <Link>Views\AboutMemory.xaml.cs</Link>
+      <DependentUpon>AboutMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\BackAgentError.xaml.cs">
+      <Link>Views\BackAgentError.xaml.cs</Link>
+      <DependentUpon>BackAgentError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Browser.xaml.cs">
+      <Link>Views\Browser.xaml.cs</Link>
+      <DependentUpon>Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Description.xaml.cs">
+      <Link>Views\Description.xaml.cs</Link>
+      <DependentUpon>Description.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Help.xaml.cs">
+      <Link>Views\Help.xaml.cs</Link>
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\HelpMenu.xaml.cs">
+      <Link>Views\HelpMenu.xaml.cs</Link>
+      <DependentUpon>HelpMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\LinksFromOnline.xaml.cs">
+      <Link>Views\LinksFromOnline.xaml.cs</Link>
+      <DependentUpon>LinksFromOnline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\OnlineImages_New.xaml.cs">
+      <Link>Views\OnlineImages_New.xaml.cs</Link>
+      <DependentUpon>OnlineImages_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\OnlineLinks.xaml.cs">
+      <Link>Views\OnlineLinks.xaml.cs</Link>
+      <DependentUpon>OnlineLinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\PhotoChooser_New.xaml.cs">
+      <Link>Views\PhotoChooser_New.xaml.cs</Link>
+      <DependentUpon>PhotoChooser_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Search.xaml.cs">
+      <Link>Views\Search.xaml.cs</Link>
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\Settings.xaml.cs">
+      <Link>Views\Settings.xaml.cs</Link>
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\ShowDetails.xaml.cs">
+      <Link>Views\ShowDetails.xaml.cs</Link>
+      <DependentUpon>ShowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\ShowList.xaml.cs">
+      <Link>Views\ShowList.xaml.cs</Link>
+      <DependentUpon>ShowList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\UserBrowserPage.xaml.cs">
+      <Link>Views\UserBrowserPage.xaml.cs</Link>
+      <DependentUpon>UserBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\OnlineMovies\Views\UserUpload.xaml.cs">
+      <Link>Views\UserUpload.xaml.cs</Link>
+      <DependentUpon>UserUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MusicSettings.xaml.cs">
+      <DependentUpon>MusicSettings.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\FeedbackTopics.xml">
+      <Link>About Us\FeedbackTopics.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\appbar.feature.email.rest.png">
+      <Link>About Us\Images\appbar.feature.email.rest.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\blog.png">
+      <Link>About Us\Images\blog.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\email.png">
+      <Link>About Us\Images\email.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\facebook.png">
+      <Link>About Us\Images\facebook.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\twitter.png">
+      <Link>About Us\Images\twitter.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\CommonControls81\CommonControls\Images\youtube.png">
+      <Link>About Us\Images\youtube.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.add.rest.png">
+      <Link>Images\appbar.add.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.cancel.rest.png">
+      <Link>Images\appbar.cancel.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.check.rest.png">
+      <Link>Images\appbar.check.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.feature.email.rest.png">
+      <Link>Images\appbar.feature.email.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.feature.search.rest.png">
+      <Link>Images\appbar.feature.search.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.folder.rest %282%29.png">
+      <Link>Images\appbar.folder.rest %282%29.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.sync.rest.png">
+      <Link>Images\appbar.sync.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.transport.pause.rest.png">
+      <Link>Images\appbar.transport.pause.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\appbar.transport.play.rest.png">
+      <Link>Images\appbar.transport.play.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\ArrowImg.png">
+      <Link>Images\ArrowImg.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\broken.png">
+      <Link>Images\broken.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\chain-broke.png">
+      <Link>Images\chain-broke.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Cup.png">
+      <Link>Images\Cup.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Fav.png">
+      <Link>Images\Fav.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\NotFav.png">
+      <Link>Images\NotFav.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Personimage.jpg">
+      <Link>Images\Personimage.jpg</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\pin.png">
+      <Link>Images\pin.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\appbar.cancel.rest.png">
+      <Link>Images\rating\appbar.cancel.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\appbar.check.rest.png">
+      <Link>Images\rating\appbar.check.rest.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\gobutton.png">
+      <Link>Images\rating\gobutton.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img1.png">
+      <Link>Images\rating\img1.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img10.png">
+      <Link>Images\rating\img10.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img11.png">
+      <Link>Images\rating\img11.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img2.png">
+      <Link>Images\rating\img2.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img3.png">
+      <Link>Images\rating\img3.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img4.png">
+      <Link>Images\rating\img4.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img5.png">
+      <Link>Images\rating\img5.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img6.png">
+      <Link>Images\rating\img6.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img7.png">
+      <Link>Images\rating\img7.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img8.png">
+      <Link>Images\rating\img8.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\Rating\img9.png">
+      <Link>Images\rating\img9.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\sharemovie.png">
+      <Link>Images\sharemovie.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\Images\unpin.png">
+      <Link>Images\unpin.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\favorites.png">
+      <Link>Images\MainMenu\favorites.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\getstarted.png">
+      <Link>Images\MainMenu\getstarted.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\history.png">
+      <Link>Images\MainMenu\history.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\movielist.png">
+      <Link>Images\MainMenu\movielist.png</Link>
+    </Content>
+    <Content Include="..\..\OnlineMovies\MainMenu\Images\settings.png">
+      <Link>Images\MainMenu\settings.png</Link>
+    </Content>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="ApplicationLiveTile.png" />
+    <Content Include="Assets\Logo.scale-240.png" />
+    <Content Include="Assets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\SplashScreen.scale-240.png" />
+    <Content Include="Assets\Square71x71Logo.scale-240.png" />
+    <Content Include="Assets\StoreLogo.scale-240.png" />
+    <Content Include="Assets\Tiles\logo159x159.png" />
+    <Content Include="Assets\WideLogo.scale-240.png" />
+    <Content Include="Background.png" />
+    <Content Include="DefaultData\Customization.xml" />
+    <Content Include="DefaultData\defaultAdSettings.xml" />
+    <Content Include="DefaultData\Help.xml" />
+    <Content Include="DefaultData\HelpMenu.xml" />
+    <Content Include="DefaultData\Historys.xml" />
+    <Content Include="DefaultData\SpeechTitles.xml" />
+    <Content Include="DefaultData\Upgrade.xml" />
+    <Content Include="Images\Abs-Workout.jpg" />
+    <Content Include="Images\Aerobic-Excercise.jpg" />
+    <Content Include="Images\Beginners workout.jpg" />
+    <Content Include="Images\Body Building.jpg" />
+    <Content Include="Images\bodyweight.jpg" />
+    <Content Include="Images\cardio.jpg" />
+    <Content Include="Images\Default.jpg" />
+    <Content Include="Images\fromlocal.png" />
+    <Content Include="Images\fromonline.png" />
+    <Content Include="Images\Gymball-men.jpg" />
+    <Content Include="Images\Gymball-women.jpg" />
+    <Content Include="Images\jillian_michaels.jpg" />
+    <Content Include="Images\Jumprope-Men.jpg" />
+    <Content Include="Images\microphone1.png" />
+    <Content Include="Images\microphone2.png" />
+    <Content Include="Images\mike-chang.jpg" />
+    <Content Include="Images\MixedMartialArts.jpg" />
+    <Content Include="Images\Muscle Group.jpg" />
+    <Content Include="Images\online.png" />
+    <Content Include="Images\Panorama\Background.jpg" />
+    <Content Include="Images\Panorama\Logo.png" />
+    <Content Include="Images\Panorama\Title.png" />
+    <Content Include="Images\Pivot\Background.jpg" />
+    <Content Include="Images\Pivot\Title.png" />
+    <Content Include="Images\PlayerImages\cancel.png" />
+    <Content Include="Images\PlayerImages\edit.png" />
+    <Content Include="Images\PlayerImages\save.png" />
+    <Content Include="Images\Rehab Exercise.jpg" />
+    <Content Include="Images\Resistance-band.jpg" />
+    <Content Include="Images\scooby.jpg" />
+    <Content Include="Images\SportsPerformance.jpg" />
+    <Content Include="Images\StartSpeech.png" />
+    <Content Include="Images\stopspeech.png" />
+    <Content Include="Images\Tiffany Rothe.jpg" />
+    <Content Include="Images\warmup.jpg" />
+    <Content Include="Images\weight loss.jpg" />
+    <Content Include="Images\Weights-exercise.JPG" />
+    <Content Include="Images\women workouts.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\AboutUs.xaml">
+      <Link>About Us\AboutUs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\ContactUs.xaml">
+      <Link>About Us\ContactUs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\Common\CommonControls81\CommonControls\Feedback.xaml">
+      <Link>About Us\Feedback.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\FavoriteVideos.xaml">
+      <Link>UserControls\FavoriteVideos.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\LoginPopup.xaml">
+      <Link>UserControls\LoginPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\MemoryGame_1.xaml">
+      <Link>UserControls\MemoryGame_1.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonGallery.xaml">
+      <Link>UserControls\PersonGallery.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\PersonGalleryPopup.xaml">
+      <Link>UserControls\PersonGalleryPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\RatingPopup.xaml">
+      <Link>UserControls\RatingPopup.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowAudio.xaml">
+      <Link>UserControls\ShowAudio.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowCast.xaml">
+      <Link>UserControls\ShowCast.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\ShowVideos.xaml">
+      <Link>UserControls\ShowVideos.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\UserControls\VideosHistory.xaml">
+      <Link>UserControls\VideosHistory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\AboutMemory.xaml">
+      <Link>Views\AboutMemory.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\BackAgentError.xaml">
+      <Link>Views\BackAgentError.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Browser.xaml">
+      <Link>Views\Browser.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Description.xaml">
+      <Link>Views\Description.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Help.xaml">
+      <Link>Views\Help.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\HelpMenu.xaml">
+      <Link>Views\HelpMenu.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\LinksFromOnline.xaml">
+      <Link>Views\LinksFromOnline.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\OnlineImages_New.xaml">
+      <Link>Views\OnlineImages_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\OnlineLinks.xaml">
+      <Link>Views\OnlineLinks.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\PhotoChooser_New.xaml">
+      <Link>Views\PhotoChooser_New.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Search.xaml">
+      <Link>Views\Search.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\Settings.xaml">
+      <Link>Views\Settings.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\ShowDetails.xaml">
+      <Link>Views\ShowDetails.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\ShowList.xaml">
+      <Link>Views\ShowList.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\UserBrowserPage.xaml">
+      <Link>Views\UserBrowserPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\OnlineMovies\Views\UserUpload.xaml">
+      <Link>Views\UserUpload.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\Candara.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\whiz bang pow_0.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.Utilities\Common.Utilities.csproj">
+      <Project>{1fa69077-30cf-404e-b773-a99a62e36a78}</Project>
+      <Name>Common.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common.Library\Common.Library.csproj">
+      <Project>{e5caa85f-49e8-4eed-a860-dc862780b5c2}</Project>
+      <Name>Common.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InsertIntoDataBase\InsertIntoDataBase.csproj">
+      <Project>{73b3e453-cc69-4f28-a96f-1ba45e49bde1}</Project>
+      <Name>InsertIntoDataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Common\OnlineVideos.Common.csproj">
+      <Project>{d554e2f9-2e62-45e0-b8b7-b253d2942e33}</Project>
+      <Name>OnlineVideos.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Data\OnlineVideos.Data.csproj">
+      <Project>{e884a056-f6d7-4221-a11d-388e1debb890}</Project>
+      <Name>OnlineVideos.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.Library\OnlineVideos.Library.csproj">
+      <Project>{877f12ea-a160-4ef6-9a77-7a4f1d3aa100}</Project>
+      <Name>OnlineVideos.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideos.UI\OnlineVideos.UI.csproj">
+      <Project>{55de4c03-a52f-46d6-af07-06ca93dc7c6d}</Project>
+      <Name>OnlineVideos.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OnlineVideosCardGame\OnlineVideosCardGame.csproj">
+      <Project>{2d6848f0-1fb1-485e-8bd3-669208384b00}</Project>
+      <Name>OnlineVideosCardGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PicasaMobileInterface\PicasaMobileInterface.csproj">
+      <Project>{c427ee44-2534-49f2-a8e9-4fd39131970e}</Project>
+      <Name>PicasaMobileInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="LiveSDKXAML, Version=5.6">
+      <Name>Live SDK</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.Advertising.Mobile.Display, Version=8.1">
+      <Name>Microsoft Advertising SDK for Windows Phone 8.1 %28XAML%29</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml, Version=2.0.0.0">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WP81, Version=3.8.8.1">
+      <Name>SQLite for Windows Phone 8.1</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.1.0.1899, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.1.1.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Windows, Version=1.1.0.1906, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsApps.1.1.0\lib\wpa81\Microsoft.ApplicationInsights.Extensibility.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.PersistenceChannel, Version=1.1.0.1903, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.PersistenceChannel.1.1.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.PersistenceChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MyToolkit">
+      <HintPath>..\..\..\Lib\MyToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit.Extended">
+      <HintPath>..\..\..\Lib\MyToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="..\Fitness Programs.Shared\Fitness Programs.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

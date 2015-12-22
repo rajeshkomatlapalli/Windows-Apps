@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://filestoreservice.lartsoft.com/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://filestoreservice.lartsoft.com/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://filestoreservice.lartsoft.com/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_SaveFiletoCloud_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFiletoCloud" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveFiletoCloud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFiletoCloudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendFiletoPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendFiletoPhone" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendFiletoPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendFiletoPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Subscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subscribe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Subscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendToastNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToastNotification" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendToastNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToastNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendRawNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendRawNotification" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendRawNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendRawNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserFileNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFileNames" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserFileNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFileNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RestoreUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestoreUserData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RestoreUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestoreUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppendtoCloud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppendtoCloud" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppendtoCloud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppendtoCloudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAppCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppCount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAppCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveAppCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppCount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveAppCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="SaveFiletoCloud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveFiletoCloud" message="tns:IService1_SaveFiletoCloud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveFiletoCloudResponse" message="tns:IService1_SaveFiletoCloud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFiletoPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendFiletoPhone" message="tns:IService1_SendFiletoPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendFiletoPhoneResponse" message="tns:IService1_SendFiletoPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendMail" message="tns:IService1_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendMailResponse" message="tns:IService1_SendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Subscribe" message="tns:IService1_Subscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SubscribeResponse" message="tns:IService1_Subscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToastNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendToastNotification" message="tns:IService1_SendToastNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendToastNotificationResponse" message="tns:IService1_SendToastNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRawNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendRawNotification" message="tns:IService1_SendRawNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendRawNotificationResponse" message="tns:IService1_SendRawNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteFile" message="tns:IService1_DeleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteFileResponse" message="tns:IService1_DeleteFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFileNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserFileNames" message="tns:IService1_GetUserFileNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserFileNamesResponse" message="tns:IService1_GetUserFileNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestoreUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RestoreUserData" message="tns:IService1_RestoreUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RestoreUserDataResponse" message="tns:IService1_RestoreUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendtoCloud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AppendtoCloud" message="tns:IService1_AppendtoCloud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AppendtoCloudResponse" message="tns:IService1_AppendtoCloud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAppCount" message="tns:IService1_GetAppCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAppCountResponse" message="tns:IService1_GetAppCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveAppCount" message="tns:IService1_SaveAppCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveAppCountResponse" message="tns:IService1_SaveAppCount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IService1" type="tns:IService1">
+    <wsp:PolicyReference URI="#CustomBinding_IService1_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveFiletoCloud">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SaveFiletoCloud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFiletoPhone">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SendFiletoPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <soap12:operation soapAction="http://tempuri.org/IService1/Subscribe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToastNotification">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SendToastNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRawNotification">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SendRawNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFileNames">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetUserFileNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestoreUserData">
+      <soap12:operation soapAction="http://tempuri.org/IService1/RestoreUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendtoCloud">
+      <soap12:operation soapAction="http://tempuri.org/IService1/AppendtoCloud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppCount">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetAppCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppCount">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SaveAppCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="CustomBinding_IService1" binding="tns:CustomBinding_IService1">
+      <soap12:address location="http://filestoreservice.lartsoft.com/Service1.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://filestoreservice.lartsoft.com/Service1.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

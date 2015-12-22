@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.HelpMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource bipivot}" >
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="/Images/Pivot/1.png" Stretch="None" />
+        </Grid.Background>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,10"  Orientation="Horizontal">
+            <Image x:ConnectionId='2' Style="{StaticResource DetailPageHubTitleImage}" x:Name="imgTitle"                                         />
+            <TextBlock  Text="GET STARTED"  Style="{StaticResource DetailPagePivotTitle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" >
+            <Grid.RowDefinitions   >
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ListView x:ConnectionId='1' x:Name="lbxHelpMenu" Grid.Row="0"                                                  Foreground="White"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <StackPanel  Margin="15,0,0,0" >
+                                <TextBlock Text="{Binding Name}" Width="380" Style="{StaticResource HeaderTextBlockStyle}" TextWrapping="Wrap" Margin="10,40,0,0" FontSize="25" Foreground="White"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>        
+        <UI:AdControl x:Name="adstackpl" Grid.Row="2"                       
+                      Height="70" IsAutoRefreshEnabled="True" Width="400"/>
+    </Grid>
+</Page>
+

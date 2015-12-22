@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.PersonProfileShows"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Viewbox>
+        <Grid Margin="0,10,0,0">
+            <StackPanel Orientation="Vertical">
+                <ProgressRing x:Name="progressbar" Width="50" Height="70" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+                <!--<TextBlock x:Name="tbRelatedMovies" Text="related Movies" Margin="50,30,0,0" FontSize="40" FontFamily="Calibri"/>-->
+                <GridView x:Name="grdvwRelatedMovies" Margin="10" SelectionChanged="grdvwRelatedMovies_SelectionChanged"
+          CanReorderItems="True" CanDragItems="True" 
+          ItemTemplate="{StaticResource ImageTextCollectionTemplate}" >
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid MaximumRowsOrColumns="3" 
+                      VerticalChildrenAlignment="Top" HorizontalChildrenAlignment="Center" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</UserControl>

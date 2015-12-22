@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{277A260C-9F85-41B5-8EF9-AC3222105E90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Windows.Common.Entities</RootNamespace>
+    <AssemblyName>Windows.Common.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BattingTable.cs" />
+    <Compile Include="BlogCategoryTable.cs" />
+    <Compile Include="BowlingTable.cs" />
+    <Compile Include="BrowserHistory.cs" />
+    <Compile Include="CastProfile.cs" />
+    <Compile Include="CastRole.cs" />
+    <Compile Include="CastRoles.cs" />
+    <Compile Include="CatageorybyMovieID.cs" />
+    <Compile Include="CatageoryTable.cs" />
+    <Compile Include="CategoriesByShowID.cs" />
+    <Compile Include="CategoryByMovie.cs" />
+    <Compile Include="CelebrityDetails.cs" />
+    <Compile Include="ChartProp.cs" />
+    <Compile Include="CheatTable.cs" />
+    <Compile Include="ConditionTypeAttribute.cs" />
+    <Compile Include="ContactUs.cs" />
+    <Compile Include="CountryTable.cs" />
+    <Compile Include="DownLoadHistory.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="DownloadPivot.cs" />
+    <Compile Include="DownLoadPro.cs" />
+    <Compile Include="DownloadStatus.cs" />
+    <Compile Include="DownloadTable.cs" />
+    <Compile Include="DownLoadVideo.cs" />
+    <Compile Include="ExtrasTable.cs" />
+    <Compile Include="FavoriteLinksTable.cs" />
+    <Compile Include="FeedBack.cs" />
+    <Compile Include="feedclass.cs" />
+    <Compile Include="GalleryImageInfo.cs" />
+    <Compile Include="GameAchievement.cs" />
+    <Compile Include="GameCheats.cs" />
+    <Compile Include="GameControls.cs" />
+    <Compile Include="GameMissions.cs" />
+    <Compile Include="GameVehicles.cs" />
+    <Compile Include="GameVehicleTable.cs" />
+    <Compile Include="GameWeapons.cs" />
+    <Compile Include="GameWeaponsTable.cs" />
+    <Compile Include="HelpItem.cs" />
+    <Compile Include="helpproperties.cs" />
+    <Compile Include="HideShowLinks.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="LinkHistory.cs" />
+    <Compile Include="MatchBattingScore.cs" />
+    <Compile Include="MatchBowlingScore.cs" />
+    <Compile Include="MatchExtras.cs" />
+    <Compile Include="MixVideosPlayListTable.cs" />
+    <Compile Include="PersonGallery.cs" />
+    <Compile Include="PersonImages.cs" />
+    <Compile Include="PlayListTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Questionstable.cs" />
+    <Compile Include="QuizImages.cs" />
+    <Compile Include="QuizList.cs" />
+    <Compile Include="QuizProperties.cs" />
+    <Compile Include="QuizQuestions.cs" />
+    <Compile Include="QuizTable.cs" />
+    <Compile Include="QuizUserAnswers.cs" />
+    <Compile Include="ReminderTable.cs" />
+    <Compile Include="RenameLinkTitleTable.cs" />
+    <Compile Include="RolesTable.cs" />
+    <Compile Include="SearchHistory.cs" />
+    <Compile Include="ShareTable.cs" />
+    <Compile Include="ShareTables.cs" />
+    <Compile Include="ShowCast.cs" />
+    <Compile Include="ShowCategories.cs" />
+    <Compile Include="ShowImages.cs" />
+    <Compile Include="ShowLinks.cs" />
+    <Compile Include="ShowList.cs" />
+    <Compile Include="SocialFeeds.cs" />
+    <Compile Include="SortByShowsTable.cs" />
+    <Compile Include="Stories.cs" />
+    <Compile Include="StoryImages.cs" />
+    <Compile Include="StoryLanguage.cs" />
+    <Compile Include="StoryTable.cs" />
+    <Compile Include="SubjectsTable.cs" />
+    <Compile Include="table_info_record.cs" />
+    <Compile Include="TestClass.cs" />
+    <Compile Include="VideoGameProperties.cs" />
+    <Compile Include="WebDailyTable.cs" />
+    <Compile Include="WebInformation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

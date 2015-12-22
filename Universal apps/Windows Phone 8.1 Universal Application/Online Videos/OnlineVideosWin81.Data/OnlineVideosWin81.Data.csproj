@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C00A4A2-EF4B-41EF-828F-A72D8F4815B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideosWin81.Data</RootNamespace>
+    <AssemblyName>OnlineVideosWin81.Data</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP;NOTANDROID</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\CommonWin81.Library\CommonWin81.Library.csproj">
+      <Project>{135a2cb4-a6c0-4f9f-9fce-754860ac3bf7}</Project>
+      <Name>CommonWin81.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideos.Entities\OnlineVideos.Entities.csproj">
+      <Project>{4f958f4d-6bca-47b4-a108-8c2e79f62f9b}</Project>
+      <Name>OnlineVideos.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{d5bc68f8-6ee0-4eab-a650-39a5a0800509}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineVideosWin81.Services\OnlineVideosWin81.Services.csproj">
+      <Project>{563aa655-f9af-4b91-a1aa-2394a1791e1e}</Project>
+      <Name>OnlineVideosWin81.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\AddShow.cs">
+      <Link>AddShow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ConditionTypeAttribute.cs">
+      <Link>ConditionTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\CricketCast.cs">
+      <Link>CricketCast.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\CricketMatch.cs">
+      <Link>CricketMatch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DataManager.cs">
+      <Link>DataManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownloadManager.cs">
+      <Link>DownloadManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownloadManagerDailyMotion.cs">
+      <Link>DownloadManagerDailyMotion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\DownLoadVideos.cs">
+      <Link>DownLoadVideos.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\EntityHelper.cs">
+      <Link>EntityHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\FavoritesManager.cs">
+      <Link>FavoritesManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\History.cs">
+      <Link>History.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\OnlineShow.cs">
+      <Link>OnlineShow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ParentalControlManager.cs">
+      <Link>ParentalControlManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\PeopleDownloadFromBlog.cs">
+      <Link>PeopleDownloadFromBlog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\PopupManager.cs">
+      <Link>PopupManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\QuizManager.cs">
+      <Link>QuizManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\RatingManager.cs">
+      <Link>RatingManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SaveTileImage.cs">
+      <Link>SaveTileImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SearchHistoryManager.cs">
+      <Link>SearchHistoryManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SearchManager.cs">
+      <Link>SearchManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowCastManager.cs">
+      <Link>ShowCastManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowDownloadForBlogs.cs">
+      <Link>ShowDownloadForBlogs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\ShowsDownloadManager.cs">
+      <Link>ShowsDownloadManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\StoryManager.cs">
+      <Link>StoryManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\SyncFavouritesManager.cs">
+      <Link>SyncFavouritesManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Data\XMLDataManager.cs">
+      <Link>XMLDataManager.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT81, Version=3.9.2">
+      <Name>SQLite for Windows Runtime %28Windows 8.1%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

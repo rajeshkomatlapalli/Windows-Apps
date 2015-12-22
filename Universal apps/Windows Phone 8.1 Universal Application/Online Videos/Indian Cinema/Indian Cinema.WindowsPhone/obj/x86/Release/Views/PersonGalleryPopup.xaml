@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="OnlineVideos.Views.PersonGalleryPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Indian_Cinema.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="maingrid">
+        <Grid 
+                x:Name="theBack" 
+                Grid.Row="0" 
+                Background="#80000000" 
+                VerticalAlignment="Center">
+            <!--<FlipView ItemsSource="{Binding FullImage}">-->
+                
+            <Image x:ConnectionId='1' 
+                
+                ManipulationMode="All"
+            Name="galleryimage" 
+            Source="{Binding FullImage}" 
+            Stretch="Fill"            
+                                                                              
+                                                                       
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+                                                               
+            Height="670" 
+            Width="400">
+                    <Image.Resources>
+                        <Storyboard x:Name="FadeImageStoryboard">
+                            <DoubleAnimation Storyboard.TargetName="galleryimage"/>
+                        </Storyboard>
+                    </Image.Resources>
+                </Image>
+            <!--</FlipView>-->
+        </Grid>
+        <ProgressBar Visibility="Collapsed"
+        VerticalAlignment="Center" 
+        x:Name="_performanceProgressBargallery" 
+        Foreground="Red"/>
+    </Grid>
+</Page>
+

@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.Information_console"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="250"
+    d:DesignWidth="400"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource TextStyleMediumFontSize}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    >
+    
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Popup x:Name="PopUp_Message" Margin="0,220,0,0">
+            <Grid
+                x:Name="gridpopup"
+                Height="150"
+                Width="400"
+                Opacity="1"
+                Background="Black"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock
+                    x:Name="popup_mesg"
+                    Text="Select the action to be performed"
+                    Height="85"
+                    Width="250"
+                    Grid.Row="0"
+                    Margin="15,50,0,0"
+                    FontFamily="Segoe WP"
+                    FontSize="15"
+                    FontWeight="SemiBold"
+                	VerticalAlignment="Center"                    
+                	Foreground="{StaticResource PhoneForegroundBrush}"
+                	HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,-50,0,0">
+                    <Button x:ConnectionId='1'
+                    x:Name="download_video"
+                    Content="Download"
+                    Margin="60,0,0,0"
+                                                
+                    />
+                    <Button x:ConnectionId='2'
+                    x:Name="Play_vid"
+                    Content="Play Online"
+                    HorizontalAlignment="Right"
+                    Margin="65,0,60,0"
+                                              
+                    />
+                </StackPanel>
+            </Grid>
+        </Popup>
+    </Grid>
+</UserControl>
+

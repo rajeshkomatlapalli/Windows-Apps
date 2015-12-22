@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.QuizFavorite"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="GroupedItemVideoHistory">
+            <Grid >
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Image Source="/Images/PlayerImages/play.png" Width="40" Height="40" ></Image>
+                    <TextBlock x:Name="tblkquiz" Text="{Binding Name}" Width="300"  Style="{StaticResource QuizTitle}"    RightTapped="tblkquiz_RightTapped_1"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ProgressRing x:Name="progressbar"  Style="{StaticResource DetailsPageProgressRing}"  />
+
+
+        <ListView x:Name="lstvwquizfav"
+              ItemTemplate="{StaticResource GroupedItemVideoHistory}"  
+              Background="Transparent"  SelectionChanged="lstvwquizfav_SelectionChanged_1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+        <TextBlock x:Name="txtmsg" Style="{StaticResource VideoFavoriteMessage}" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>
+
+<!--Style="{StaticResource QuizGridHeight}" List View Style
+     Style="{StaticResource QuizFavWrapGrid}" Wrap Grid Style-->

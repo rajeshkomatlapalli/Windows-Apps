@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<description>
+  <de id="1">
+    <c title="Search">
+      <des>1.Right click on main page and select search button from bottom app bar.</des>
+      <des>2.Type search keyword in the search box and click on search icon.</des>
+      <des>3.All the audios that match the search keyword are displayed in the list. You can launch a audio directly from this list .</des>
+      <des>4.All the cast Images that match the search keyword are also displayed in the list. You can go to cast panorama page when you click on the Image</des>
+      <des>5.All the movies that match the search keyword are displayed in the list. You can launch a movie directly from this list</des>
+    </c>
+  </de>
+  <de id="2">
+    <c title="Top/Recent">
+      <des>1.The shows which have better rating are displayed first in Top Rated section of the start page. This list will change as we add more shows to the collection.</des>
+      <des>2.The shows which are added recently by us are displayed first in Recent section of the start page. This list will changes as we add more shows to the collection.</des>
+    </c>
+  </de>
+  <de id="3">
+    <c title="Favorites">
+      <des>1.Click on Viewall option in Main Page and then select your favorite show.</des>
+      <des>2.In detail page right click on a audio,songs and chapters , to activate the bottom menu bar. Click on Add to favorites appbar option.</des>
+      <des>3.To view your favorites tap on favorites appbar option from the Main Page.</des>
+      <des>4.To remove a audio from favorites , go to favorites page and use the Remove from favorites menu option in the bottom appbar.</des>
+      <des>5.In detail page right click on a movie to activate the bottom menu bar. Click on Add to favorites appbar option.</des>
+    </c>
+  </de>
+  <de id="4">
+    <c title="History">
+      <des>1.Everytime when audio ,songs and Chapters are  played ,it is stored in the history list.</des>
+      <des>2.History list remembers the last thirty audio.</des>
+      <des>3.History list can be viewed from the appbar section in the main page.</des>
+    </c>
+  </de>
+  <de id="5">
+    <c title="Broken links">
+      <des>1.If you are having any problems in playing any of the audio you can report those audio as broken links.</des>
+      <des>2.Right click on the audio title to activate the bottom appbar menu.</des>
+      <des>3.Tapping on the Report broken link menu option takes you to the feedback page populated with audio name and link.</des>
+      <des>4.Click on the send mail icon at the bottom to submit. Information like time zone and device Info are sent along with the link.</des>
+    </c>
+  </de>
+  <de id="6">
+    <c title="Cast details">
+      <des>1. Go to the menu section of the main page.view the top rated and recent then Select view all for top rated or recent, which takes to you the movie list page</des>
+      <des>2. Select a movie from either  top rated, recent  which takes you to the movie detail page.</des>
+      <des>3. Go to one of  the movie detail page and select one of the cast to see their profile page.</des>
+      <des>4. Cast Profile panorama page has three sections with cast biography, gallery and related movies.</des>
+    </c>
+  </de>
+  <de id="7">
+    <c title="Live tile">
+      <des>1.To add a video in your start screen as live tile, select a video and go to the show list.Right click on the video and select 'pin to start' option from the bottom appbar menu.</des>
+      <des>2.Click on the newly created live tile,it takes you to show list page.</des>
+      <des>3.To remove the live tile right click on the live tile and click on the unpin icon on bottom app bar.</des>
+    </c>
+  </de>
+  <de id="8">
+    <c title="Add Movie">
+      <des>1. Right Click on the main page and select Add Movie button from Bottom app bar.</des>
+      <des>2. Enter the Movie Name.</des>
+      <des>3. Enter the description manually or by choosing web icon on the top of description box which navigates to the browser.Navigate to the appropriate web page and copy the text</des>
+      <des>4. Description can also be edited using the edit icon on the top of description box</des>
+      <des>5. Choose Category for the Movie Language</des>
+      <des>6. Choose Image for movie from local folder or online</des>
+      <des>7. Click on save appbar icon</des>
+    </c>
+  </de>
+  <de id="9">
+    <c title="Add Cast">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Right click on the detail page</des>
+      <des>3. Choose 'add cast'button from bottom appbar menu.</des>
+      <des>4. Enter the Person Name or choose from the Drop down list if the person  already exists.</des>
+      <des>5. Enter the description manually or by choosing web icon on the top of description box which navigates to the browser.Navigate to the appropriate web page and copy the text</des>
+      <des>6. Description can also be edited using the edit icon on the top of description box</des>
+      <des>7. Choose Role for the Person</des>
+      <des>8. Choose Image for person from local folder or online</des>
+      <des>9. Click on save appbar icon</des>
+      <des>10.To delete the person,right click on person grid in detail page.</des>
+      <des>11.select delete cast button from bottom app bar.</des>
+    </c>
+  </de>
+  <de id="10">
+    <c title="Add Chapters">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Right click on the detail page</des>
+      <des>3. Choose 'add chapters' button from bottom appbar menu which navigates to youtube.</des>
+      <des>4. Search for the appropriate video in youtube.</des>
+      <des>5. Click on 'Browse files' button at the top right corner.</des>
+      <des>6. Choose the videos by selecting the checkbox in the Online Links Page</des>
+      <des>7. Click on the save icon at the bottom.</des>
+      <des>8. To delete the chapter, right click on Chapters grid in detail page</des>
+      <des>9. select delete link from from bottom app bar.</des>
+    </c>
+  </de>
+  <de id="11">
+    <c title="Add Songs">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Right click on the detail page.</des>
+      <des>3. Choose 'add songs' from bottom appbar menu which navigates to youtube.</des>
+      <des>4. Search for the appropriate video in youtube.</des>
+      <des>5. Click on 'Browse files' button at the top right corner.</des>
+      <des>6. Choose the videos by selecting the checkbox in the Online Links Page</des>
+      <des>7. Click on the save icon at the bottom.</des>
+      <des>8. To delete the song, right click on songs grid in detail page.</des>
+      <des>9. select delete link from bottom app bar.</des>
+    </c>
+  </de>
+  <de id="12">
+    <c title="Add Audio">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Right click on the detail page.</des>
+      <des>3. Choose 'add audio' from bottom appbar menu.</des>
+      <des>4. Choose the audio language in the pop up.</des>
+      <des>5. Enter the url manually or choose from the Drop down list.</des>
+      <des>6. Navigate to the page where audio songs are listed and click on 'Browse files' button at the top right corner.</des>
+      <des>7. Choose the audio songs by selecting the checkbox in the Online Links Page</des>
+      <des>8. Click on the save icon at the bottom.</des>
+      <des>9. To delete the audio, right click on Audio grid in detail page.</des>
+      <des>10.select delete link from bottom app bar.</des>
+    </c>
+  </de>
+  <de id="13">
+    <c title="Share This Movie">
+      <des>1. Tap on the newly added movie in the main page. </des>
+      <des>2. Choose 'share this movie' from appbar in details page.</des>
+    </c>
+  </de>
+  <de id="14">
+    <c title="DownLoad Videos">
+      <des>1.Right click on the video then Show the app bar.</des>
+      <des>2.Click the Download image on app bar.</des>
+      <des>3.After Download the video  then show the status Offline on select ur video.</des>
+      <des>4.Download video appear in video library,if u remove the video from video library then doesn't show the offline.</des>
+      <des>5.Show the offline on video then Right click on the video deosn't Show the download image.</des>
+      <des>6.Show the offline on video then video playing without internet connection.</des>
+    </c>
+  </de>
+</description>

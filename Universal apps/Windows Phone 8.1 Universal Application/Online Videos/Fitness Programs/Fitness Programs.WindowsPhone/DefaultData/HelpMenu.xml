@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Menus>
+  <menu id="1">
+    <name>1. Search all shows</name>
+    <url>HURM7vzyt90</url>
+  </menu>
+  <menu id="2">
+    <name>2. Top Rated vs Recent</name>
+    <url>N4XwCkuW2Cc</url>
+  </menu>
+  <menu id="3">
+    <name>3. Track favorite shows</name>
+    <url>8jvJb55hRVk</url>
+  </menu>
+  <menu id="4">
+    <name>4. History of shows watched</name>
+    <url>a65xQ2qgOD4</url>
+  </menu>
+  <menu id="5">
+    <name>5. Report broken shows</name>
+    <url>zcDLMD3q_I</url>
+  </menu>
+  <menu id="6">
+    <name>6. Pin show as live tile</name>
+    <url>h0VNKNPtA0o</url>
+  </menu>
+  <menu id="7">
+    <name>7. Add Show</name>
+    <url></url>
+  </menu>
+  <menu id="8">
+    <name>8. Add Video</name>
+    <url></url>
+  </menu>
+  <menu id="9">
+    <name>9. Share This Show</name>
+    <url></url>
+  </menu>
+</Menus>

@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="OnlineVideos.UserControls.FavouriteComedy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideos.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <ListView x:Name="lbxFavoritecomedy" Margin="0,-30,0,10" Grid.Row="0" SelectionChanged="lbxFavoritecomedy_SelectionChanged"  Foreground="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Holding="StackPanel_Holding" Orientation="Horizontal" Height="100" VerticalAlignment="Top">
+                        <FlyoutBase.AttachedFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="remove from favorites" Click="MenuFlyoutItem_Click"/>
+                            </MenuFlyout>
+                        </FlyoutBase.AttachedFlyout>
+                        <Image Source="/Images/ArrowImg.png" Height="35" Width="35" VerticalAlignment="Center" Margin="0,43,20,0"/>
+                        <TextBlock Width="340" Text="{Binding Title}" Margin="-2,40,0,0" FontSize="25" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Canvas>
+            <TextBlock Canvas.Top="200" Canvas.Left="70" FontSize="25" x:Name="tblkFavNoComedy" Visibility="Collapsed" Foreground="White"/>
+        </Canvas>
+    </Grid>
+</UserControl>

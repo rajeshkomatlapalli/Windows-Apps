@@ -1,0 +1,141 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.ShowQuiz"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" Loaded="ShowQuiz_Loaded_1">
+
+    <UserControl.Resources>
+
+        <DataTemplate x:Key="GroupedItemChapters">
+            <Grid HorizontalAlignment="Left" >
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/ArrowImg.png" Style="{StaticResource QuizArrowImage}"/>
+                        <TextBlock Text="{Binding Name}" x:Name="txtquiz"  Style="{StaticResource ShowQuizName}"  Tag="{Binding Sno}" RightTapped="txtquiz_RightTapped_1"/>
+                        <TextBlock Text="{Binding Result}"  Style="{StaticResource ShowQuizResult}" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <Image Style="{StaticResource ShowQuizRatingImage}"  Source="{Binding RatingBitmapImage}" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <VisualStateManager.VisualStateGroups >
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="snap">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="itemsgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="snapgrid">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ProgressRing x:Name="progressbar"  Style="{StaticResource DetailsPageProgressRing}" />
+        <Grid x:Name="itemsgrid">
+            <ListView x:Name="lstvwQuiz"   Style="{StaticResource QuizGridHeight}"
+              ItemTemplate="{StaticResource GroupedItemChapters}"  
+              Background="Transparent"  SelectionChanged="lstvwQuiz_SelectionChanged_1">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Style="{StaticResource ShowQuizWrapGrid}" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+        </Grid>
+        <Grid Margin="0,0,0,0" Visibility="Collapsed" x:Name="snapgrid">
+            <StackPanel>
+                <!--<ScrollViewer Height="600" VerticalScrollBarVisibility="Auto" ZoomMode="Disabled">-->
+                <ListView x:Name="itemlistview" SelectionChanged="itemlistview_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Left" >
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Images/ArrowImg.png"/>
+                                        <TextBlock Text="{Binding Name}" x:Name="txtquiz" Style="{StaticResource ShowQuizName}"  Tag="{Binding Sno}" RightTapped="txtquiz_RightTapped_1"/>
+                                        <TextBlock Text="{Binding Result}"  Style="{StaticResource SnapShowQuizResult}" />
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Left">
+                                        <Image   Source="{Binding RatingBitmapImage}" Style="{StaticResource ShowQuizRatingImage}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--</ScrollViewer>-->
+                <TextBlock   x:Name="txtmsg1" Text="No quiz available"    Style="{StaticResource NoQuizMessage}" Visibility="Collapsed"/>
+            </StackPanel>
+        </Grid>
+        <Grid >
+            <Viewbox  Height="280" Width="550" VerticalAlignment="Top">
+                <StackPanel  x:Name="txtxstackpl" Orientation="Vertical" Margin="20,30,0,0" Visibility="Collapsed">
+                    <TextBlock x:Name="tblktext" Style="{StaticResource ShowQuizText}"  Grid.Row="1"  />
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource QuizTextBlock}" Text="No of questions  : "   />
+                        <TextBlock x:Name="txttotquestions" Style="{StaticResource QuizTextBlockText}" />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Style="{StaticResource QuizTextBlock}" Text="Time limit            : " />
+                        <TextBlock x:Name="txttimelimit" Style="{StaticResource QuizTextBlockText}"  />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+
+
+                        <Image Source="/Images/Start.png" Style="{StaticResource QuizStartImage}" x:Name="imgstart" Tapped="imgstart_Tapped_1"></Image>
+                        <Image Source="/Images/Cancel.png" Style="{StaticResource QuizCancelImage}"  x:Name="imgcancel" Tapped="imgcancel_Tapped_1"></Image>
+                    </StackPanel>
+
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+        <Canvas>
+            <TextBlock   x:Name="txtmsg"    Style="{StaticResource NoQuizMessage}"  Visibility="Collapsed"/>
+            <TextBlock x:Name="tblkquestionsnotavailable"  Canvas.Top="100"  Canvas.Left="10" Visibility="Collapsed" Style="{StaticResource NoQuizMessage}"/>
+        </Canvas>
+
+    </Grid>
+</UserControl>

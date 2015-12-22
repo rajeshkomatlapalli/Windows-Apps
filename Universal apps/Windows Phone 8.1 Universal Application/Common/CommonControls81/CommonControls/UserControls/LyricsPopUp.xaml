@@ -1,0 +1,110 @@
+﻿<UserControl
+    x:Class="OnlineVideosWin81.Controls.LyricsPopUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineVideosWin81.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Height="600" Width="Auto" HorizontalAlignment="Center"  Margin="300,50,300,100">
+        <MediaElement x:Name="MediaPlayer"
+                      AudioCategory="BackgroundCapableMedia" AreTransportControlsEnabled="True"/>
+        <Viewbox Stretch="UniformToFill">
+            <Grid x:Name="Lyricspopup"  Background="#424145"  Visibility="Collapsed">
+                <StackPanel Orientation="Vertical" Margin="0,10,0,0" Width="Auto" Height="Auto">
+                    <Image x:Name="imgclose"  Source="/Images/appbar.close.rest.png" Tapped="imgclose_Tapped"  Margin="0,30,40,15"    HorizontalAlignment="Right"></Image>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="songMovieTitle"  Style="{StaticResource DetailPageHeaderText}" FontSize="35" Margin="22,0,0,20"></TextBlock>
+                        <TextBlock x:Name="songtitle" Style="{StaticResource DetailPageHeaderText}"  FontSize="35" Margin="10,0,0,20" ></TextBlock>
+                    </StackPanel>
+                    <Line x:Name="tt" X1="1000" Y1="0" StrokeStartLineCap="Round" Margin="22,8,15,0" StrokeEndLineCap="Round" StrokeThickness="2" Stroke="White"></Line>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel  x:Name="Musicstak"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Margin="0,60,0,0">
+                            <StackPanel  Orientation="Vertical" HorizontalAlignment="Right">
+                                <Slider x:Name="audioslider1" Background="Black"  Height="20"  Width="300" Margin="10,-10,0,0"></Slider>
+                                <StackPanel  Orientation="Horizontal">
+                                    <StackPanel Orientation="Vertical">
+                                        <Image x:Name="previous"  Source="/Images/PlayerImages/previous.png" Margin="25,15,60,0" Tapped="Previous_Click"></Image>
+                                        <TextBlock
+                                x:Name="TextLabel3"
+                                Text="previous"
+                                Margin="10,0,2,0"
+                                FontSize="25"
+                                TextAlignment="Center"
+                                Width="100"
+                                MaxHeight="32" Visibility="Collapsed"
+                                TextTrimming="WordEllipsis"
+                                Style="{StaticResource BasicTextStyle}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <Image 
+                                            x:Name="playpause" 
+                                            Source="/Images/PlayerImages/play.png" 
+                                            Margin="0,15,60,0" 
+                                            Tapped="PlayPause_Click"
+                                            />
+                                        <TextBlock 
+                                            x:Name="txtplaypause" 
+                                            Margin="0,0,2,0" 
+                                            FontSize="25" 
+                                            Text="play" 
+                                            TextAlignment="Center" 
+                                            Width="100" 
+                                            MaxHeight="32" 
+                                            Visibility="Collapsed" 
+                                            TextTrimming="WordEllipsis" 
+                                            Style="{StaticResource BasicTextStyle}"
+                                            />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <!--<Button x:Name="next" Style="{StaticResource NextAppBarButtonStyle}" Click="Next_Click" Height="70"/>-->
+                                        <Image x:Name="next"  Source="/Images/PlayerImages/next.png" Margin="0,15,15,0" Tapped="Next_Click"></Image>
+                                        <TextBlock
+                                x:Name="TextLabel2"
+                                Text="Next"
+                                Margin="0,0,2,0"
+                                FontSize="25"
+                                TextAlignment="Center"
+                                Width="100"
+                                MaxHeight="32"
+                                TextTrimming="WordEllipsis" Visibility="Collapsed"
+                                Style="{StaticResource BasicTextStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <!--<Grid x:Name="AddControlvisable1" VerticalAlignment="Bottom" Margin="10,100,10,10" Visibility="Visible">
+                                    <UI:AdControl x:Name="AdControl1"
+                                              ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab"
+                                              AdUnitId="10043124"
+                                HorizontalAlignment="Center"    
+                                Height="125" 
+                                Width="250"/>
+                                </Grid>-->
+                                <!--<Grid VerticalAlignment="Bottom" Margin="10,100,10,10" Visibility="Visible">
+                                    <AdRotatorWin8:AdRotatorControl
+	                                 x:Name="AdRotatorWin8"
+                                       AdHeight="125" 
+	                                   AdWidth="250"
+	                                   DefaultSettingsFileUri="defaultAdSettings.xml"
+	                                  SettingsUrl="http://adrotator.apphb.com/defaultAdSettingsWindows8.xml"/>
+                                </Grid>-->
+                            </StackPanel>
+                        </StackPanel>
+                        <ScrollViewer x:Name="lyricsscroll" Height="740" Margin="15,70,0,50"  VerticalAlignment="Top" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="lyrics"  LineHeight="40.1"  Width="700"  FontSize="35" Margin="12,0,0,20" ></TextBlock>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>

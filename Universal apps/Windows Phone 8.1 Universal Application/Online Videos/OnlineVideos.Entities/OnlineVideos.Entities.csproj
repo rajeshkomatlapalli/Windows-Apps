@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F958F4D-6BCA-47B4-A108-8C2E79F62F9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos.Entities</RootNamespace>
+    <AssemblyName>OnlineVideos.Entities</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_PHONE_APP;NOTANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP;NOTANDROID;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\Onlinevideos.Sqlite\Onlinevideos.Sqlite.csproj">
+      <Project>{926e54f4-179b-48a5-a377-8f8641e4428c}</Project>
+      <Name>Onlinevideos.Sqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\BattingTable.cs">
+      <Link>BattingTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\BlogCategoryTable.cs">
+      <Link>BlogCategoryTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\BowlingTable.cs">
+      <Link>BowlingTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\BrowserHistory.cs">
+      <Link>BrowserHistory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CastProfile.cs">
+      <Link>CastProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CastRole.cs">
+      <Link>CastRole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CastRoles.cs">
+      <Link>CastRoles.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CatageorybyMovieID.cs">
+      <Link>CatageorybyMovieID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CatageoryTable.cs">
+      <Link>CatageoryTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CategoriesByShowID.cs">
+      <Link>CategoriesByShowID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CategoryByMovie.cs">
+      <Link>CategoryByMovie.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CelebrityDetails.cs">
+      <Link>CelebrityDetails.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ChartProp.cs">
+      <Link>ChartProp.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CheatTable.cs">
+      <Link>CheatTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ConditionTypeAttribute.cs">
+      <Link>ConditionTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ContactUs.cs">
+      <Link>ContactUs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\CountryTable.cs">
+      <Link>CountryTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownLoadHistory.cs">
+      <Link>DownLoadHistory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownloadInfo.cs">
+      <Link>DownloadInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownloadPivot.cs">
+      <Link>DownloadPivot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownLoadPro.cs">
+      <Link>DownLoadPro.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownloadStatus.cs">
+      <Link>DownloadStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownloadTable.cs">
+      <Link>DownloadTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\DownLoadVideo.cs">
+      <Link>DownLoadVideo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ExtrasTable.cs">
+      <Link>ExtrasTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\FavoriteLinksTable.cs">
+      <Link>FavoriteLinksTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\FeedBack.cs">
+      <Link>FeedBack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\feedclass.cs">
+      <Link>feedclass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GalleryImageInfo.cs">
+      <Link>GalleryImageInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameAchievement.cs">
+      <Link>GameAchievement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameCheats.cs">
+      <Link>GameCheats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameControls.cs">
+      <Link>GameControls.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameMissions.cs">
+      <Link>GameMissions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameVehicles.cs">
+      <Link>GameVehicles.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameVehicleTable.cs">
+      <Link>GameVehicleTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameWeapons.cs">
+      <Link>GameWeapons.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\GameWeaponsTable.cs">
+      <Link>GameWeaponsTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\HelpItem.cs">
+      <Link>HelpItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\helpproperties.cs">
+      <Link>helpproperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\HideShowLinks.cs">
+      <Link>HideShowLinks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\History.cs">
+      <Link>History.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\LinkHistory.cs">
+      <Link>LinkHistory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\MatchBattingScore.cs">
+      <Link>MatchBattingScore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\MatchBowlingScore.cs">
+      <Link>MatchBowlingScore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\MatchExtras.cs">
+      <Link>MatchExtras.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\MixVideosPlayListTable.cs">
+      <Link>MixVideosPlayListTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\PersonGallery.cs">
+      <Link>PersonGallery.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\PersonImages.cs">
+      <Link>PersonImages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\PlayListTable.cs">
+      <Link>PlayListTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\Questionstable.cs">
+      <Link>Questionstable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizImages.cs">
+      <Link>QuizImages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizList.cs">
+      <Link>QuizList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizProperties.cs">
+      <Link>QuizProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizQuestions.cs">
+      <Link>QuizQuestions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizTable.cs">
+      <Link>QuizTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\QuizUserAnswers.cs">
+      <Link>QuizUserAnswers.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ReminderTable.cs">
+      <Link>ReminderTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\RenameLinkTitleTable.cs">
+      <Link>RenameLinkTitleTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\RolesTable.cs">
+      <Link>RolesTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\SearchHistory.cs">
+      <Link>SearchHistory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShareTable.cs">
+      <Link>ShareTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShareTables.cs">
+      <Link>ShareTables.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShowCast.cs">
+      <Link>ShowCast.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShowCategories.cs">
+      <Link>ShowCategories.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShowImages.cs">
+      <Link>ShowImages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShowLinks.cs">
+      <Link>ShowLinks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\ShowList.cs">
+      <Link>ShowList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\SocialFeeds.cs">
+      <Link>SocialFeeds.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\SortByShowsTable.cs">
+      <Link>SortByShowsTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\Stories.cs">
+      <Link>Stories.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\StoryImages.cs">
+      <Link>StoryImages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\StoryLanguage.cs">
+      <Link>StoryLanguage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\StoryTable.cs">
+      <Link>StoryTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\SubjectsTable.cs">
+      <Link>SubjectsTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\table_info_record.cs">
+      <Link>table_info_record.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\TestClass.cs">
+      <Link>TestClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\VideoGameProperties.cs">
+      <Link>VideoGameProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\WebDailyTable.cs">
+      <Link>WebDailyTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Cross Platform\Windows.Common.Entities\WebInformation.cs">
+      <Link>WebInformation.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

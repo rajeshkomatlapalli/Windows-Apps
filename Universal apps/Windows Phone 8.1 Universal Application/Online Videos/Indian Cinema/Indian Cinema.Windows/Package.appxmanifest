@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="4379LARTSOFT.IndianCinema" Publisher="CN=4BE333B2-A780-4999-9169-3D39AE319731" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Indian Cinema</DisplayName>
+    <PublisherDisplayName>LART SOFT</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="OnlineVideos.App">
+      <m2:VisualElements DisplayName="Indian Cinema" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Indian Cinema.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile Wide310x150Logo="Assets\WideLogo.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:LockScreen Notification="badge" BadgeLogo="Assets\badgeLogo.png" />
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#043b51" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" StartPage="OnlineVideosWin81">
+          <BackgroundTasks>
+            <Task Type="audio" />
+            <Task Type="controlChannel" />
+            <Task Type="pushNotification" />
+          </BackgroundTasks>
+        </Extension>
+        <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.SampleBackgroundTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="mp3">
+            <SupportedFileTypes>
+              <FileType>.mp3</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+        <Extension Category="windows.search" Executable="$targetnametoken$.exe" EntryPoint="OnlineVideosWin81.App" />
+        <Extension Category="windows.shareTarget">
+          <ShareTarget m2:Description="Registers the app as a share target, which allows the app to receive sharable content. Only one instance of this declaration is allowed per app.">
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+            <DataFormat>Text</DataFormat>
+            <DataFormat>Uri</DataFormat>
+            <DataFormat>Bitmap</DataFormat>
+          </ShareTarget>
+        </Extension>
+        <Extension Category="windows.backgroundTasks" EntryPoint="OnlineVideos.App">
+          <BackgroundTasks>
+            <Task Type="audio" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="videosLibrary" />
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClientServer" />
+    <DeviceCapability Name="location" />
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
+</Package>
